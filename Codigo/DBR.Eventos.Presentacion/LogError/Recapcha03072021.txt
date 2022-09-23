@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "challenge_ts": "2021-07-03T23:09:48Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-03T23:31:05Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T01:04:28Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T02:46:10Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T03:07:50Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T03:23:46Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T03:40:22Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T03:59:07Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}

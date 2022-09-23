@@ -1,0 +1,236 @@
+[
+  {
+    "outputFileName": "js/pages/Mantenimiento/Correo.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Correo.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Evento.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Evento.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Curso.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Curso.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Modulo.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Modulo.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Cuestionario.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Cuestionario.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Inscripciones.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Inscripciones.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Persona.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Persona.js"
+    ]
+  },
+  {
+    "outputFileName": "js/util/DBR.min.js",
+    "inputFiles": [
+      "js/util/DBR.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/login/login.min.js",
+    "inputFiles": [
+      "js/pages/login/login.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/Site.min.css",
+    "inputFiles": [
+      "Content/Site.css"
+    ]
+  },
+  {
+    "outputFileName": "js/web/Contacto.min.js",
+    "inputFiles": [
+      "js/web/Contacto.js"
+    ]
+  },
+  {
+    "outputFileName": "js/web/Home.min.js",
+    "inputFiles": [
+      "js/web/Home.js"
+    ]
+  },
+  {
+    "outputFileName": "js/web/Eventos.min.js",
+    "inputFiles": [
+      "js/web/Eventos.js"
+    ]
+  },
+  {
+    "outputFileName": "js/web/Galeria.min.js",
+    "inputFiles": [
+      "js/web/Galeria.js"
+    ]
+  },
+  {
+    "outputFileName": "js/web/Registro.min.js",
+    "inputFiles": [
+      "js/web/Registro.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Reporte.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Reporte.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Galeria.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Galeria.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Usuario.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Usuario.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/Asignacion.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/Asignacion.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/Configuracion.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/Configuracion.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/Matricula.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/Matricula.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/ContenidoEvento.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/ContenidoEvento.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/ContenidoCurso.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/ContenidoCurso.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/ContenidoVirtual.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/ContenidoVirtual.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/AccesoUsuario.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/AccesoUsuario.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Layout.min.js",
+    "inputFiles": [
+      "js/pages/Layout.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Portada.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Portada.js"
+    ]
+  },
+  {
+    "outputFileName": "js/web/Desafiliacion.min.js",
+    "inputFiles": [
+      "js/web/Desafiliacion.js"
+    ]
+  },
+  {
+    "outputFileName": "js/web/Participacion.min.js",
+    "inputFiles": [
+      "js/web/Participacion.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/web/static/wordpress_54575/wp-content/themes/theme54575/main-style.min.css",
+    "inputFiles": [
+      "dist/web/static/wordpress_54575/wp-content/themes/theme54575/main-style.css"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/ContenidoEvaluacion.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/ContenidoEvaluacion.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/ContenidoLeccion.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/ContenidoLeccion.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/LayautAula.min.js",
+    "inputFiles": [
+      "js/pages/LayautAula.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/LayoutAula.min.js",
+    "inputFiles": [
+      "js/pages/LayoutAula.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Suceso.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Suceso.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Virtual/Setting.min.js",
+    "inputFiles": [
+      "js/pages/Virtual/Setting.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Documento.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Documento.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/Empresas.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/Empresas.js"
+    ]
+  },
+  {
+    "outputFileName": "js/pages/Mantenimiento/DocumentoUsuario.min.js",
+    "inputFiles": [
+      "js/pages/Mantenimiento/DocumentoUsuario.js"
+    ]
+  }
+]

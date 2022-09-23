@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DBR.Eventos.Base</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{e25f36b3-9d02-40c5-918c-51133dbdcbd7}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DBR.Eventos.Base</RootNamespace>
+    <AssemblyName>DBR.Eventos.Base</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\UsuarioTipo.sql" />
+    <Build Include="dbo\Tables\Usuario.sql" />
+    <Build Include="dbo\Tables\Universidad.sql" />
+    <Build Include="dbo\Tables\Tipo.sql" />
+    <Build Include="dbo\Tables\Profesion.sql" />
+    <Build Include="dbo\Tables\Persona.sql" />
+    <Build Include="dbo\Tables\Inscripcion.sql" />
+    <Build Include="dbo\Tables\Galeria.sql" />
+    <Build Include="dbo\Tables\Expositor.sql" />
+    <Build Include="dbo\Tables\Evento.sql" />
+    <Build Include="dbo\Tables\CorreoDifusion.sql" />
+    <Build Include="dbo\Tables\Correo.sql" />
+    <Build Include="dbo\Tables\ConversacionDetalle.sql" />
+    <Build Include="dbo\Tables\Conversacion.sql" />
+    <Build Include="dbo\Tables\VirtualVideo.sql" />
+    <Build Include="dbo\Tables\VirtualContenido.sql" />
+    <Build Include="dbo\Tables\UsuarioHistorico.sql" />
+    <Build Include="dbo\Tables\UsuarioActividadHistorico.sql" />
+    <Build Include="dbo\Tables\UsuarioActividad.sql" />
+    <Build Include="dbo\Tables\Portada.sql" />
+    <Build Include="dbo\Tables\OpcionUsuarioTipo.sql" />
+    <Build Include="dbo\Tables\Opcion.sql" />
+    <Build Include="dbo\Tables\Modulo.sql" />
+    <Build Include="dbo\Tables\EventoUsuarioVirtualVideo.sql" />
+    <Build Include="dbo\Tables\EventoUsuario.sql" />
+    <Build Include="dbo\Tables\Desafiliado.sql" />
+    <Build Include="dbo\Stored Procedures\UspListUsuarioPaged.sql" />
+    <Build Include="dbo\Stored Procedures\UspListPortadaPaged.sql" />
+    <Build Include="dbo\Stored Procedures\UspListPersonaPaged.sql" />
+    <Build Include="dbo\Stored Procedures\UspListModuloByEventoPaged.sql" />
+    <Build Include="dbo\Stored Procedures\ListVirtualVideoByUsuarioByEvento.sql" />
+    <Build Include="dbo\Stored Procedures\ListHistorialActividadUsuario.sql" />
+    <Build Include="dbo\Stored Procedures\ListEventoUsuarioVirtualVideoByEvento.sql" />
+    <Build Include="dbo\Stored Procedures\ListCantidadMensajesByMes.sql" />
+    <Build Include="dbo\Stored Procedures\CantidadMensajesByMes.sql" />
+    <Build Include="dbo\Tables\Pais.sql" />
+    <Build Include="dbo\Tables\Leccion.sql" />
+    <Build Include="dbo\Stored Procedures\UspListLeccionByModuloPaged.sql" />
+    <Build Include="dbo\Tables\Respuesta.sql" />
+    <Build Include="dbo\Tables\Pregunta.sql" />
+    <Build Include="dbo\Tables\Cuestionario.sql" />
+    <Build Include="dbo\Stored Procedures\UspListPreguntaByCuestionarioPaged.sql" />
+    <Build Include="dbo\Tables\CuestionarioTomado.sql" />
+    <Build Include="dbo\Tables\Configuracion.sql" />
+    <Build Include="dbo\Tables\CuestionarioRespuesta.sql" />
+    <Build Include="dbo\Tables\Suceso.sql" />
+    <Build Include="dbo\Tables\EventoTema.sql" />
+    <Build Include="dbo\Tables\EventoCorreo.sql" />
+    <Build Include="dbo\Tables\Docente.sql" />
+    <Build Include="dbo\Stored Procedures\UspListCorreoPaged.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\InsertData.sql" />
+  </ItemGroup>
+</Project>

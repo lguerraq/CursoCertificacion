@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T05:16:38Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T05:42:41Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2021-07-04T05:50:18Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}

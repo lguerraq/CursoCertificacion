@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "ContenidoEvento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://vjs.zencdn.net/7.3.0/video-js.css" />
+
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        Contenido
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">Contenido</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- About Me Box -->
+            <div class="box box-primary">
+                <div class="box-body">
+                    @ViewBag.Evento
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+    <input type="hidden" value="@ViewBag.IdEvento" id="txtIdEvento" />
+    <div class="row">
+        <div class="col-md-4">
+            <!-- About Me Box -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">
+                        <img alt="http://www.ingenierosx100.org/Documentos/e5277e31-d462-48d6-9fde-83bfae879bdd.jpg" src="http://www.ingenierosx100.org/Documentos/e5277e31-d462-48d6-9fde-83bfae879bdd.jpg">&nbsp;<strong>&nbsp;</strong><strong>TEMARIO:&nbsp;</strong>
+                    </h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div style="padding-left:15px;overflow-x:auto;min-height:400px;" id="ContenidoPreview">
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-8">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs" id="nav-tabs">
+                    <li class="active"><a href="#tabVideo0" data-toggle="tab">Video 1</a></li>
+                </ul>
+                <div class="tab-content" id="tab-content">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+@section scripts{
+    <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
+    <script>
+        var urlListAllEventoCombo = '@Url.Action("ListAllEventoCombo", "Virtual")';
+        var urlGetContenidoVirtualByEvento = '@Url.Action("GetContenidoVirtualByEvento", "Virtual")';
+        var urlListVirtualVideoByEvento = '@Url.Action("ListVirtualVideoByUsuarioByEvento", "Virtual")';
+    </script>
+
+    <script src="~/js/pages/Virtual/ContenidoEvento.min.js?v=@ViewBag.NumeroRelease"></script>
+}
+

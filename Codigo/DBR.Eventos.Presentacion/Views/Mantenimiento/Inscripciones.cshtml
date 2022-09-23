@@ -1,0 +1,516 @@
+﻿
+@{
+    ViewBag.Title = "Inscripciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section beforeStyles{
+    <link href="~/plugins/select2/dist/css/select2-bootstrap.css" rel="stylesheet" />
+    <style>
+        .select2-search__field {
+            text-transform: uppercase;
+        }
+    </style>
+}
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">LISTA DE ASISTENTES</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select class="form-control validar select2" id="cboEventosActivos"></select>
+                    </div>
+                </div>
+                <div class="col-md-6 text-right">
+                    <div class="form-group">
+                        <a id="btnConfigurarCorreo" class="btn btn-primary"><i class="fa fa-envelope"></i>  Correo</a>
+                        <a id="btnEnviarCorreo" class="btn btn-primary"><i class="fa fa-send"></i>  Enviar</a>
+                        <a id="btnDescargarExcel" class="btn btn-primary"><i class="fa fa-file-excel-o"></i>  Reporte</a>
+                        <a id="btnAgregarInscripcion" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridInscripciones" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>                           
+                            <th>Tipo</th>
+                            <th>Nombre</th>
+                            <th>DNI/CE</th>
+                            <th>Celular</th>
+                            <th>Pago</th>
+                            <th>Tipo Pago</th>
+                            <th>Modalidad</th>
+                            <th>Monto</th>
+                            <th>F.Operación</th>
+                            <th># Operación</th>
+                            <th>Certificado</th>
+                            <th>Nota</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalInscripcion">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleAgregarInscripcion">Agregar</h4>
+            </div>
+            <div class="modal-body" id="formInscripcion">
+                <input type="hidden" value="0" id="txtIdInscripcion" />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">DNI <span class="required_field">(*)</span></label>
+                            <div class="input-group">
+                                <input type="text" data-toggle="tooltip" data-placement="bottom" title="Enter para buscar" class="form-control validar uppercase pull-right" id="txtDni" maxlength="11">
+                                <div class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Buscar" id="btnBuscarPorDni" style="cursor:pointer;">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">CIP</label>
+                            <div class="input-group">
+                                <input type="text" data-toggle="tooltip" data-placement="bottom" title="Enter para buscar" class="form-control uppercase pull-right" id="txtCip" maxlength="50">
+                                <div class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Buscar" id="btnBuscarPorCip" style="cursor:pointer;">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Nombres <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtNombres" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Apellido paterno <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoPaterno" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Apellido materno <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoMaterno" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Celular <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtCelular" maxlength="9">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Correo <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtCorreo" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Grado académico <span class="required_field">(*)</span></label>
+                            <select class="form-control validar" id="cboTipoOcupacion"></select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Profesión <span class="required_field">(*)</span></label>
+                            <select class="form-control validar select2" id="cboProfesion"></select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Ocupación y/o Centro laboral</label>
+                            <input type="text" class="form-control uppercase" id="txtDescripcionOcupacion" maxlength="150">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Pago <span class="required_field">(*)</span></label>
+                            <select class="form-control validar" id="cboEstadoPago">
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Tipo pago<span class="required_field">(*)</span></label>
+                            <select class="form-control validar" id="cboTipoPago">
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Modalidad <span class="required_field">(*)</span></label>
+                            <select class="form-control validar select2" id="cboModalidad">
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Monto</label>
+                            <input type="text" class="form-control uppercase" id="txtMonto" maxlength="10" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Pais</label>
+                            <select class="form-control validar select2" id="cboPais">
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Ciudad</label>
+                            <input type="text" class="form-control uppercase" id="txtCiudad" maxlength="50" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Tipo inscripción</label>
+                            <select class="form-control select2" id="cboTipoInscripcion">
+                                <option value="1">PARTICIPANTE</option>
+                                <option value="2">EXPOSITOR</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                            LLENAR EN CASO DE QUE SEA DEPOSITO O TRANSFERENCIA
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Nombre del banco</label>
+                            <input type="text" class="form-control uppercase" id="txtNombreBanco" maxlength="250" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Fecha operación</label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control uppercase pull-right" id="txtFechaOperacion" readonly style="background-color:#FFF;">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label>Número operación</label>
+                            <input type="text" class="form-control uppercase" id="txtNumeroOperacion" maxlength="20" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                            LLENAR EN CASO SE EMITA FACTURA
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label>RUC: </label>
+                            <input type="text" class="form-control" id="txtRuc" maxlength="11" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                            LLENAR EN CASO EL EVENTO TENGA MÓDULOS
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label>Nota: </label>
+                            <input type="text" class="form-control uppercase" id="txtNota" maxlength="5" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarInscripcion" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalVerDocumento" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleAgregarInscripcion"></h4>
+            </div>
+            <div class="modal-body" style="padding:0px;">
+                <iframe id="visorPdf" frameborder="0" src="" style="width:100%;height:75vh;"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalCargaCertificado">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Cargar certificado</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="formEvento">
+                    <input type="hidden" value="0" id="txtIdInscripcionCertificado" />
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Certificado firmado (PDF,Max 4Mb)</label>
+                            <input type="file" class="filestyle" id="fileCertificadoImprimir" accept="application/pdf" data-buttonname="btn-default">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarCertificado" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" id="modalAgregarCorreo">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Enviar correo a inscritos</h4>
+            </div>
+            <div class="modal-body" style="padding-bottom:0px;">
+                <input type="hidden" id="txtIdEventoCorreo" value="0" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtAsuntoMensaje">Asunto</label>
+                            <input type="text" class="form-control uppercase" maxlength="150" id="txtAsuntoMensaje" value="" />
+                            <span class="help-block hide">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="txtAsuntoMensaje">Correo origen</label>
+                            <input type="text" class="form-control uppercase" maxlength="50" id="txtCorreoOrigen" value="" />
+                            <span class="help-block hide">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="txtAsuntoMensaje">Nombre origen</label>
+                            <input type="text" class="form-control uppercase" maxlength="150" id="txtNombreOrigen" value="" />
+                            <span class="help-block hide">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Crear enlace (Max 4MB)</label>
+                            <input type="file" id="inputFileServer" data-buttonname="btn-default" class="filestyle" data-input="false" data-iconname="fa fa-cloud-upload" data-size="sm">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label>Url de archivo</label>
+                            <input type="text" id="txtLink" class="form-control" placeholder="http://...." readonly="readonly" style="background-color:#FFF;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <label for="txtMensajeCompleto">Mensaje</label>
+                    </div>
+                    <div class="col-md-12">
+                        <div>
+                            (Agregue {0} para agregar el nombre a quien se envía)
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea class="form-control" id="txtMensajeCompleto" rows="3" style="min-width:100%;"></textarea>
+                            <span class="help-block hide" id="textErrorObligatorio">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarCorreo" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalUsuarioEvento">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="">Acceso</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtIdEventoUsuario" />
+                <div class="row">
+                    <input type="hidden" id="txtIdEventoUsuario" value="0" />
+                    <input type="hidden" id="txtIdUsuario" value="0" />
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Fecha inicio<span class="required_field">*</span></label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control validar uppercase pull-right" id="txtFechaInicio" readonly style="background-color:#FFF;">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Fecha fin<span class="required_field">*</span></label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control validar uppercase pull-right" id="txtFechaFin" readonly style="background-color:#FFF;">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarEventoUsuario" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    
+    <script src="~/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/plugins/ckeditor/lang/es.js"></script>
+    <script>
+        //Variables de empresa
+        var CorreoOrigen = "@Configuracion.Email";
+        var NombreCorreoOrigen = "@Configuracion.NameEmail";
+        //Metodos
+        var UrlViewPdfIframe = '@Url.Action("", "Mantenimiento")';
+        var urlListEventoCombo = '@Url.Action("ListEventoCombo", "Mantenimiento")';
+        var urlValoresIniciales = '@Url.Action("ValoresIniciales", "Mantenimiento")';
+        var urlListInscripcion = '@Url.Action("ListInscripcion", "Mantenimiento")';
+        var urlGetPersonaXdni = '@Url.Action("GetPersonaXdni", "Mantenimiento")';
+        var urlGetPersonaXcip = '@Url.Action("GetPersonaXcip", "Mantenimiento")';
+        var urlSaveInscripcion = '@Url.Action("SaveInscripcion", "Mantenimiento")';
+        var urlDeleteInscripcion = '@Url.Action("DeleteInscripcion", "Mantenimiento")';
+        var urlGetInscripcion = '@Url.Action("GetInscripcion", "Mantenimiento")';
+        var urlUpdateEntregaCertificadoInscripcion = '@Url.Action("UpdateEntregaCertificadoInscripcion", "Mantenimiento")';
+        var urlVerPdfCertificado = '@Url.Action("VerPdfCertificado", "Mantenimiento")';
+        var urlCargarPdfCertificadoUtomatico = '@Url.Action("CargarPdfCertificadoUtomatico", "Mantenimiento")';
+        var urlDescargarPersonasInscritas = '@Url.Action("DescargarPersonasInscritas", "Mantenimiento")';
+        var urlSaveCertificadoFirmado = '@Url.Action("SaveCertificadoFirmado", "Mantenimiento")';
+        //Correo
+        var urlSaveFileServer = '@Url.Action("SaveFileServer", "Mantenimiento")';
+        var urlSaveCorreoInscritos = '@Url.Action("SaveCorreoInscritos", "Mantenimiento")';
+        var urlSaveCorreoInscritosIndividual = '@Url.Action("SaveCorreoInscritosIndividual", "Mantenimiento")';
+        //EventoUsuario
+        var urlGetEventoUsuario = '@Url.Action("GetEventoUsuario", "Mantenimiento")';
+        var urlSaveEventoUsuario = '@Url.Action("SaveEventoUsuario", "Virtual")';
+        var urlSaveUsuarioAutomativo = '@Url.Action("SaveUsuarioAutomativo", "Mantenimiento")';
+        //File server CKEditor
+        var urlFileServerBrowse = '@Url.Action("FileServerBrowse", "Mantenimiento")';
+        var urlSaveFileServerCkEditor = '@Url.Action("SaveFileServerCkEditor", "Mantenimiento")';
+        //EventoCorreo
+        var urlSaveEventoCorreo = '@Url.Action("SaveEventoCorreo", "Mantenimiento")';
+        var urlGeEventoCorreoByIdEvento = '@Url.Action("GeEventoCorreoByIdEvento", "Mantenimiento")';
+    </script>
+    <script src="~/js/pages/Mantenimiento/Inscripciones.min.js?v=@ViewBag.NumeroRelease"></script>
+}
+

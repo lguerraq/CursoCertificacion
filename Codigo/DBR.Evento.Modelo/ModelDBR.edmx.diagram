@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bb0080b534b94b3b9941692487c08249" Name="Diagram1">
+        <EntityTypeShape EntityType="db_ingenierosModel.Configuracion" Width="1.5" PointX="10.75" PointY="7.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Conversacion" Width="1.5" PointX="10.75" PointY="4.625" />
+        <EntityTypeShape EntityType="db_ingenierosModel.ConversacionDetalle" Width="1.5" PointX="13" PointY="4.625" />
+        <EntityTypeShape EntityType="db_ingenierosModel.CorreoDifusion" Width="1.5" PointX="11" PointY="13.875" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Cuestionario" Width="1.5" PointX="3.75" PointY="7.125" />
+        <EntityTypeShape EntityType="db_ingenierosModel.CuestionarioRespuesta" Width="1.5" PointX="8.25" PointY="9.625" />
+        <EntityTypeShape EntityType="db_ingenierosModel.CuestionarioTomado" Width="1.5" PointX="6" PointY="9.375" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Desafiliado" Width="1.5" PointX="12.75" PointY="7.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Docente" Width="1.5" PointX="13.75" PointY="11.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.EventoTema" Width="1.5" PointX="3" PointY="29.875" />
+        <EntityTypeShape EntityType="db_ingenierosModel.EventoUsuario" Width="1.5" PointX="3" PointY="16.125" />
+        <EntityTypeShape EntityType="db_ingenierosModel.EventoUsuarioVirtualVideo" Width="1.5" PointX="5.25" PointY="22.125" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Expositor" Width="1.5" PointX="13.75" PointY="16.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Galeria" Width="1.5" PointX="14.75" PointY="7.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Inscripcion" Width="1.5" PointX="6" PointY="15.375" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Modulo" Width="1.5" PointX="3" PointY="32.375" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Opcion" Width="1.5" PointX="3.5" PointY="43.75" />
+        <EntityTypeShape EntityType="db_ingenierosModel.OpcionUsuarioTipo" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Pais" Width="1.5" PointX="1.5" PointY="40.625" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Persona" Width="1.5" PointX="3.75" PointY="37.75" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Pregunta" Width="1.5" PointX="6" PointY="4.875" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Profesion" Width="1.5" PointX="1.5" PointY="38.25" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Respuesta" Width="1.5" PointX="8.25" PointY="5.375" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Suceso" Width="1.5" PointX="10.75" PointY="18.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Tipo" Width="1.5" PointX="15.75" PointY="4.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Universidad" Width="1.5" PointX="10.75" PointY="11.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.UsuarioActividad" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="db_ingenierosModel.UsuarioHistorico" Width="1.5" PointX="3" PointY="12" />
+        <EntityTypeShape EntityType="db_ingenierosModel.UsuarioTipo" Width="1.5" PointX="1.5" PointY="6.375" />
+        <EntityTypeShape EntityType="db_ingenierosModel.VirtualVideo" Width="1.5" PointX="3" PointY="26.125" />
+        <EntityTypeShape EntityType="db_ingenierosModel.UsuarioActividadHistorico" Width="1.5" PointX="15.75" PointY="11.5" />
+        <AssociationConnector Association="db_ingenierosModel.FK_ConversacionDetalle_Conversacion" />
+        <AssociationConnector Association="db_ingenierosModel.FK_CuestionarioTomado_Cuestionario" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Pregunta_Cuestionario" />
+        <AssociationConnector Association="db_ingenierosModel.FK_CuestionarioRespuesta_CuestionarioTomado" />
+        <AssociationConnector Association="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_EventoUsuario" />
+        <AssociationConnector Association="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_VirtualVideo" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Inscripcion_Persona" />
+        <AssociationConnector Association="db_ingenierosModel.FK_OpcionUsuarioTipo_Opcion" />
+        <AssociationConnector Association="db_ingenierosModel.FK_OpcionUsuarioTipo_UsuarioTipo" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Persona_Pais" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Persona_Profesion" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Respuesta_Pregunta" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Correo" Width="1.5" PointX="8.75" PointY="22.75" />
+        <AssociationConnector Association="db_ingenierosModel.FK_CorreoDifusion_Correo" />
+        <EntityTypeShape EntityType="db_ingenierosModel.VirtualContenido" Width="1.5" PointX="3" PointY="22.125" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Portada" Width="1.5" PointX="16.375" PointY="14.75" />
+        <EntityTypeShape EntityType="db_ingenierosModel.EventoCorreo" Width="1.5" PointX="3" PointY="47.875" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Leccion" Width="1.5" PointX="5.25" PointY="32.25" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Leccion_Modulo" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Evento" Width="1.5" PointX="0.75" PointY="29.875" />
+        <AssociationConnector Association="db_ingenierosModel.FK_EventoCorreo_Evento" />
+        <AssociationConnector Association="db_ingenierosModel.FK_EventoTema_Evento" />
+        <AssociationConnector Association="db_ingenierosModel.FK_EventoUsuario_Evento" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Inscripcion_Evento" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Modulo_Evento" />
+        <AssociationConnector Association="db_ingenierosModel.FK_VirtualContenido_Evento" />
+        <AssociationConnector Association="db_ingenierosModel.FK_VirtualVideo_Evento" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Documento" Width="1.5" PointX="5.25" PointY="25.875" />
+        <EntityTypeShape EntityType="db_ingenierosModel.DocumentoHistorico" Width="1.5" PointX="18.375" PointY="0.75" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Usuario" Width="1.5" PointX="3.75" PointY="52.875" />
+        <AssociationConnector Association="db_ingenierosModel.FK_EventoUsuario_Usuario" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Usuario_UsuarioTipo" />
+        <AssociationConnector Association="db_ingenierosModel.FK_UsuarioActividad_Usuario" />
+        <AssociationConnector Association="db_ingenierosModel.FK_UsuarioHistorico_Usuario" />
+        <EntityTypeShape EntityType="db_ingenierosModel.Empresa" Width="1.5" PointX="6" PointY="53.125" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Documento_Empresa" />
+        <AssociationConnector Association="db_ingenierosModel.FK_Empresa_Usuario" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

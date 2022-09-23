@@ -1,0 +1,20 @@
+Fecha hora: 27/06/2021 13:56:14
+Mensaje: An error occurred while updating the entries. See the inner exception for details.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.SaveDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 66
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.SaveDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 30
+
+
+
+Fecha hora: 27/06/2021 13:56:42
+Mensaje: An error occurred while updating the entries. See the inner exception for details.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.SaveDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 66
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.SaveDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 30
+
+
+

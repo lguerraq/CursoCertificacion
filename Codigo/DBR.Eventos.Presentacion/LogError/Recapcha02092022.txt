@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "challenge_ts": "2022-09-03T01:14:41Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2022-09-03T01:20:02Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2022-09-03T01:24:56Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2022-09-03T01:24:56Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}

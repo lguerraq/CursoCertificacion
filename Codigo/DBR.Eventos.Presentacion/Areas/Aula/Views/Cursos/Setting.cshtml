@@ -1,0 +1,130 @@
+﻿@using DBR.Eventos.Comun;
+@{
+    ViewBag.Title = "Setting";
+    Layout = "~/Areas/Aula/Views/Shared/_LayoutAula.cshtml";
+}
+
+<!-- Body Start -->
+<div class="sa4d25">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="st_title"><i class='uil uil-cog'></i> Configuración</h2>
+                <div class="setting_tabs">
+                    <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-account-tab" data-toggle="pill" href="#pills-account" role="tab" aria-selected="true">Información cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-closeaccount-tab" data-toggle="pill" href="#pills-closeaccount" role="tab" aria-selected="false">Contraseña</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab">
+                        <div class="account_setting">
+                            <div class="basic_profile">
+                                <div class="basic_ptitle">
+                                    <h4>Perfil básico</h4>
+                                    <p>Agrega información sobre ti</p>
+                                </div>
+                                <div class="basic_form">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="ui search focus mt-30">
+                                                        <div class="ui left icon input swdh11 swdh19">
+                                                            <input class="prompt srch_explore" type="text" value="@Session[NameSession.Nombres].ToString()" placeholder="Nombres">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="ui search focus mt-30">
+                                                        <div class="ui left icon input swdh11 swdh19">
+                                                            <input class="prompt srch_explore" type="text" value="@Session[NameSession.ApellidoPaterno].ToString()" placeholder="Apellido Paterno">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="ui search focus mt-30">
+                                                        <div class="ui left icon input swdh11 swdh19">
+                                                            <input class="prompt srch_explore" type="text" value="@Session[NameSession.ApellidoMaterno].ToString()" placeholder="Apellido Materno">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="divider-1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @*<button class="save_btn" type="submit">Save Changes</button>*@
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-closeaccount" role="tabpanel" aria-labelledby="pills-closeaccount-tab">
+                        <div class="account_setting">
+                            <h4>Ingrese datos</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ui search focus mt-15">
+                                    <div class="ui left icon input swdh11 swdh19">
+                                        <input class="prompt srch_explore" type="password" id="txtOldPassword" maxlength="64" placeholder="Contraseña anterior">
+                                        <div class="input-group-addon"></div>
+                                    </div>
+                                    <div class="help-block hide">Este campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ui search focus mt-15">
+                                    <div class="ui left icon input swdh11 swdh19">
+                                        <input class="prompt srch_explore" type="password" id="txtNewPassword" maxlength="64" placeholder="Nueva contraseña">
+                                        <div class="input-group-addon"></div>
+                                    </div>
+                                    <div class="help-block hide">Este campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ui search focus mt-15">
+                                    <div class="ui left icon input swdh11 swdh19">
+                                        <input class="prompt srch_explore" type="password" id="txtRepNewPassword" maxlength="64" placeholder="Repertir nueva contraseña">
+                                        <div class="input-group-addon"></div>
+                                    </div>
+                                    <div class="help-block hide">Este campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="has-error">
+                                    <span class="text-error hide" style="color:#dd4b39;" id="txtErroForm"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <button class="save_payout_btn mbs20" id="btnActualizar" type="submit">Actualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Body End -->
+@section scripts{
+
+    <script>
+        var urlCambiarPassword = '@Url.Action("CambiarPassword", "Login", new { area = "" })';
+    </script>
+    <script src="~/js/pages/Virtual/Setting.min.js?v=@ViewBag.NumeroRelease"></script>
+}
+

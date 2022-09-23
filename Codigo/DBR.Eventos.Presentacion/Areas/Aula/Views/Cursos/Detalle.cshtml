@@ -1,0 +1,232 @@
+﻿@model DBR.Eventos.Presentacion.Models.CursoDetalleViewModel
+@{
+    ViewBag.Title = "Detalle";
+}
+
+@section afterStyles{
+    <link href='@Url.Content("~/assets/css/style.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/css/responsive.css")' rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet" />
+}
+<!-- Video Model Start -->
+<div class="modal vd_mdl fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <iframe src="https://www.youtube.com/embed/Ohe_JzKksvA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Video Model End -->
+<div class="_215b01">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section3125">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-4 col-lg-5 col-md-6">
+                            <input type="hidden" id="hdfVideo" value="@Model.UrlVideo" />
+                            <div class="preview_video">
+                                @*<a href="#" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
+                                    <img src='@Url.Content("~/assets/images/courses/img-2.jpg")' alt="">
+                                    <div class="course-overlay">
+                                        <div class="badge_seller">Bestseller</div>
+                                        <span class="play_btn1"><i class="uil uil-play"></i></span>
+                                        <span class="_215b02">Ver video acerca del curso</span>
+                                    </div>
+                                    </a>*@
+                            </div>
+                            <div class="_215b10" style="display:none;">
+                                <a href="#" class="_215b11">
+                                    <span><i class='uil uil-heart-alt'></i></span>Wishlist
+                                </a>
+                                <a href="#" class="_215b12">
+                                    <span><i class="uil uil-windsock"></i></span>Report abuse
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-7 col-md-6">
+                            <div class="_215b03">
+                                <h2>@ViewBag.Evento</h2>
+                                <input type="hidden" value="@ViewBag.IdEvento" id="txtIdEvento" />
+                                <span class="_215b04">@ViewBag.Descripcion</span>
+                            </div>
+                            <div class="_215b05" style="display:none;">
+                                <div class="crse_reviews mr-2">
+                                    <i class="uil uil-star"></i>4.5
+                                </div>
+                                (52 calificaciones)
+                            </div>
+                            <div class="_215b05">
+                                @(ViewBag.Inscritos + (ViewBag.Inscritos > 1 ? " estudiantes matriculados" : " estudiante matriculado"))
+                            </div>
+                            <div class="_215b06" style="display:none;">
+                                <div class="_215b07">
+                                    <span><i class='uil uil-comment'></i></span>
+                                    English
+                                </div>
+                                <div class="_215b08">
+                                    <span><i class='uil uil-closed-captioning'></i></span>
+                                    <span>
+                                        English, Dutch
+                                        <span class="caption_tooltip">
+                                            12 more
+                                            <span class="caption-content">
+                                                <span>French</span>
+                                                <span>Hindi</span>
+                                                <span>German [Auto-generated]</span>
+                                                <span>Indonesian [Auto-generated]</span>
+                                                <span>Italian [Auto-generated]</span>
+                                                <span>Japanese [Auto-generated]</span>
+                                                <span>Korean</span>
+                                                <span>Polish</span>
+                                                <span>Portuguese [Auto-generated]</span>
+                                                <span>Spanish [Auto-generated]</span>
+                                                <span>Traditional Chinese</span>
+                                                <span>Turkish [Auto-generated]</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="_215b05">
+                                Última vez accedido el @ViewBag.FechaUltimoAcceso.ToShortDateString() a las @ViewBag.FechaUltimoAcceso.ToShortTimeString()
+                            </div>
+                            <ul class="_215b31" style="display:none;">
+                                <li><button class="btn_adcart">Add to Cart</button></li>
+                                <li><button class="btn_buy">Buy Now</button></li>
+                            </ul>
+                            <div class="_215fgt1" style="display:none;">
+                                30-Day Money-Back Guarantee
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="_215b15 _byt1458">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="user_dt5" style="display:none;">
+                    <div class="user_dt_left">
+                        <div class="live_user_dt">
+                            <div class="user_img5">
+                                <a href="#"><img src='@Url.Content("~/assets/images/left-imgs/img-1.jpg")' alt=""></a>
+                            </div>
+                            <div class="user_cntnt">
+                                <a href="#" class="_df7852">Johnson Smith</a>
+                                <button class="subscribe-btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user_dt_right">
+                        <ul>
+                            <li>
+                                <a href="#" class="lkcm152"><i class="uil uil-eye"></i><span>1452</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="lkcm152"><i class="uil uil-thumbs-up"></i><span>100</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="lkcm152"><i class="uil uil-thumbs-down"></i><span>20</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="lkcm152"><i class="uil uil-share-alt"></i><span>9</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course_tabs">
+                    <nav>
+                        <div class="nav nav-tabs tab_crse justify-content-center" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-selected="true">Detalle del curso</a>
+                            <a class="nav-item nav-link" id="nav-courses-tab" data-toggle="tab" href="#nav-courses" role="tab" aria-selected="false">Contenido del curso</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="_215b17">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="course_tab_content">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-about" role="tabpanel">
+                            <iframe onload="this.style.height=(this.contentWindow.document.body.scrollHeight+50)+'px';" id="ifrDetalle" src="" frameborder="0" class="cke_wysiwyg_frame cke_reset" style="width: 100%; height: 100%;" aria-describedby="cke_63" tabindex="0" allowtransparency="true"></iframe>
+                        </div>
+                        <div class="tab-pane fade" id="nav-courses" role="tabpanel">
+                            <div class="crse_content">
+                                <h3>Contenido del curso</h3>
+                                <div class="_112456">
+                                    <ul class="accordion-expand-holder">
+                                        <li><span class="accordion-expand-all _d1452">Expandir todo</span></li>
+                                        <li><span class="_fgr123"> @Model.CantidadLecciones lecciones</span></li>
+                                        <li><span class="_fgr123">@Model.CantidadHoras horas</span></li>
+                                    </ul>
+                                </div>
+                                <div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+                                    @foreach (var item in Model.Modulos)
+                                    {
+                                        <a href="javascript:void(0)" class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+                                            <div class="section-header-left">
+                                                <span class="section-title-wrapper">
+                                                    <i class='uil uil-presentation-play crse_icon'></i>
+                                                    <span class="section-title-text">@item.Nombre</span>
+                                                </span>
+                                            </div>
+                                            <div class="section-header-right">
+                                                <span class="num-items-in-section">@item.Expositor</span>
+                                                <span class="section-header-length">@item.Lecciones.Sum(l=>l.Duracion) min</span>
+                                            </div>
+                                        </a>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                                            @foreach (var leccion in item.Lecciones)
+                                            {
+                                                <div class="lecture-container">
+                                                    <a href='@Url.Action("VerLeccion","Cursos", new { area="Aula", id=leccion.IdLeccion, rowId = ViewBag.RowId })' class="left-content">
+                                                        <i class='uil uil-file icon_142'></i>
+                                                        <div class="top">
+                                                            <div class="title">@leccion.Nombre</div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="details">
+                                                        <a href='@Url.Action("VerLeccion","Cursos", new { area="Aula", id=leccion.IdLeccion, rowId = ViewBag.RowId })' class="preview-text" title="Ver detalle"><i class="fa fa-eye"></i></a>
+                                                        <span class="content-summary">@leccion.Duracion min</span>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                                @*<a class="btn1458" href="#">20 More Sections</a>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
+    <script>
+        var urlListAllEventoCombo = '@Url.Action("ListAllEventoCombo", "Virtual")';
+        var urlGetContenidoVirtualByEvento = '@Url.Action("GetContenidoVirtualByEvento", "Virtual", new { area="" })';
+        var urlListVirtualVideoByEvento = '@Url.Action("ListVirtualVideoByUsuarioByEvento", "Virtual", new { area="" })';
+        var urlDetalleHtml = '@Url.Action("DetalleHtml", "Cursos", new { area="Aula" })';
+    </script>
+
+    <script src="~/js/pages/Virtual/ContenidoCurso.min.js?v=@ViewBag.NumeroRelease"></script>
+}

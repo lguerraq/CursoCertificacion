@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "Portada";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section beforeStyles{
+    <link href="~/Plugins/cropper/cropper.css" rel="stylesheet" />
+}
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="form-group">
+                        <a id="btnAgregarPortada" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridPortada" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Nombre imagen</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">Imagen</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalPortada">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtIdPortada" value="0" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Descripción 1:<span class="required_field">*</span></label>
+                            <input type="text" class="form-control" id="txtDescripcion" autocomplete="off"  maxlength="500"/>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Descripción 2:</label>
+                            <input type="text" class="form-control" id="txtSubTitulo1" autocomplete="off" maxlength="500" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Sub titulo:</label>
+                            <input type="text" class="form-control" id="txtSubTitulo2" autocomplete="off" maxlength="500"/>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>
+                                Incluir enlace
+                                <input type="checkbox" name="r1" id="ckIncluirEnlance" class="minimal">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 hide" id="containerTexto">
+                        <div class="form-group">
+                            <label for="">Texto enlace: <span class="required_field">*</span></label>
+                            <input type="text" class="form-control" id="txtTextoEnlace" autocomplete="off" maxlength="200" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 hide" id="containerUrl">
+                        <div class="form-group">
+                            <label for="">Url enlace: <span class="required_field">*</span></label>
+                            <input type="text" class="form-control" id="txtUrlEnlace" autocomplete="off" maxlength="500" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Imagen (Max 0.5Mb)<span class="required_field">*</span></label>
+                            <input type="file" class="filestyle" id="fileFoto" accept="image/*" data-buttonname="btn-default">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        Seccione una área
+                        <div class="form-group img-container">
+                            <img src="#" style="max-width:100%;" id="imgPreview" alt="Alternate Text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarPortada" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalVerImagen">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Foto</h4>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" id="viewFoto" alt="" style="max-width:100%;" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"> Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script src="~/Plugins/cropper/cropper.js"></script>
+    <script>
+        var urlListPortadaPaginado = '@Url.Action("ListPortadaPaginado", "Mantenimiento")';
+        var urlSavePortada = '@Url.Action("SavePortada", "Mantenimiento")';
+        var urlDeletePortada = '@Url.Action("DeletePortada", "Mantenimiento")';
+        var urlGetPortada = '@Url.Action("GetPortada", "Mantenimiento")';
+
+        var urlCarpetaGaleria = '@ViewBag.rutaPortada';
+
+        @{ 
+            var widthCropperC = 3;
+            var heightCropperC = 1;
+        }
+        //COnfiguración Cropper
+        @if (Configuracion.CodigoEmpresa==1)
+        {
+            widthCropperC = 2;
+            heightCropperC = 1;
+        }
+        @if (Configuracion.CodigoEmpresa==2)
+        {
+            widthCropperC = 3;
+            heightCropperC = 1;
+        }
+        var widthCropper = @widthCropperC;
+        var heightCropper = @heightCropperC;
+
+    </script>
+    <script src="~/js/pages/Mantenimiento/Portada.min.js?v=@ViewBag.NumeroRelease"></script>
+}

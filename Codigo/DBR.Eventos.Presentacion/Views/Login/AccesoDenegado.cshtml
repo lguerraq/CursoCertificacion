@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "AccesoDenegado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li><a href="#">Acceso denegado</a></li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="error-page">
+        <div class="error-content text-center">
+            <h3>
+                <i class="fa fa-warning text-red fa-3x"></i><br />
+                No cuenta con permisos suficientes.
+            </h3>
+            <p>
+                <a class="btn btn-primary" href="@Url.Action("Bienvenida","Home")"><i class="fa fa-mail-reply"></i> Inicio</a>
+            </p>
+        </div>
+    </div>
+    <!-- /.error-page -->
+</section>
+

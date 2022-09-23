@@ -1,0 +1,221 @@
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ApplicationInsights.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Presentacion.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Presentacion.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Presentacion.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Evento.Modelo.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Comun.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Negocio.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Datos.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Tanneryd.BulkOperations.EF6.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Evento.Modelo.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Evento.Modelo.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Comun.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Negocio.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Negocio.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Datos.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\DBR.Eventos.Datos.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.csproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.csproj.CopyComplete
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Antlr3.Runtime.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\EntityFramework.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\EntityFramework.SqlServer.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\EPPlus.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\itextsharp.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.AI.Agent.Intercept.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.AI.Web.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.AI.WindowsServer.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.ApplicationInsights.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.Data.Edm.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.Data.OData.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.Data.Services.Client.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.Web.Infrastructure.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Newtonsoft.Json.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Rotativa.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Spatial.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Helpers.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Mvc.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Optimization.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Razor.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Deployment.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.WebPages.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Razor.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\WebGrease.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\EntityFramework.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\EntityFramework.SqlServer.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\EPPlus.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\itextsharp.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.AI.Web.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.AI.WindowsServer.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.ApplicationInsights.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.Data.Edm.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.Data.OData.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Microsoft.Data.Services.Client.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Newtonsoft.Json.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Spatial.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Helpers.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Mvc.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Optimization.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.Razor.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.WebPages.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Deployment.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Razor.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\Antlr3.Runtime.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\de\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\it\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\de\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\fr\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\it\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ja\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ko\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ru\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\de\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\fr\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\it\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ja\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ko\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\ru\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hans\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\zh-Hant\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Web.Helpers.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Web.Mvc.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Web.Optimization.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Web.Razor.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Web.WebPages.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Presentacion\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ApplicationInsights.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Presentacion.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Presentacion.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Presentacion.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Antlr3.Runtime.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Evento.Modelo.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Comun.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Negocio.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\EntityFramework.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\EntityFramework.SqlServer.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\EPPlus.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\itextsharp.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.Agent.Intercept.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.DependencyCollector.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.Web.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.WindowsServer.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.ApplicationInsights.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.Data.Edm.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.Data.OData.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.Data.Services.Client.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.Web.Infrastructure.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Newtonsoft.Json.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Rotativa.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Spatial.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Helpers.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Mvc.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Optimization.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Razor.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Deployment.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.WebPages.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Razor.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\WebGrease.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Datos.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Tanneryd.BulkOperations.EF6.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Evento.Modelo.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Evento.Modelo.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Comun.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Negocio.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Negocio.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\EntityFramework.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\EntityFramework.SqlServer.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\EPPlus.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\itextsharp.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.DependencyCollector.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.Web.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.AI.WindowsServer.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.ApplicationInsights.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.Data.Edm.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.Data.OData.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Microsoft.Data.Services.Client.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Newtonsoft.Json.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Spatial.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Helpers.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Mvc.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Optimization.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.Razor.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.WebPages.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Deployment.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\System.Web.WebPages.Razor.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\Antlr3.Runtime.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Datos.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\DBR.Eventos.Datos.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\de\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\it\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\de\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\fr\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\it\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ja\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ko\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ru\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\de\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\fr\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\it\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ja\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ko\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\ru\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hans\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\zh-Hant\System.Spatial.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Web.Helpers.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Web.Mvc.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Web.Optimization.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Web.Razor.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Web.WebPages.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.csproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.csproj.CopyComplete
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Presentacion\obj\Debug\DBR.Eventos.Presentacion.pdb

@@ -1,0 +1,111 @@
+Fecha hora: 3/07/2021 21:59:49
+Mensaje: El valor no puede ser nulo.
+Nombre del parámetro: source
+StackTrace:    en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 273
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 275
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 275
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 248
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 66
+
+
+
+Fecha hora: 3/07/2021 22:03:11
+Mensaje: El valor no puede ser nulo.
+Nombre del parámetro: source
+StackTrace:    en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 273
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 276
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 276
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 248
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 66
+
+
+
+Fecha hora: 3/07/2021 22:04:50
+Mensaje: El valor no puede ser nulo.
+Nombre del parámetro: source
+StackTrace:    en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 273
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 248
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 66
+
+
+
+Fecha hora: 3/07/2021 22:06:48
+Mensaje: El valor no puede ser nulo.
+Nombre del parámetro: source
+StackTrace:    en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 273
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 275
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.EliminarDocumentoRecursivo(List`1 ListDocumentos, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 275
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 248
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 66
+
+
+
+Fecha hora: 3/07/2021 22:52:33
+Mensaje: Unable to update the EntitySet 'DocumentoHistorico' because it has a DefiningQuery and no <InsertFunction> element exists in the <ModificationFunctionMapping> element to support the current operation.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 377
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 307
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 84
+
+
+
+Fecha hora: 3/07/2021 22:53:00
+Mensaje: Unable to update the EntitySet 'DocumentoHistorico' because it has a DefiningQuery and no <InsertFunction> element exists in the <ModificationFunctionMapping> element to support the current operation.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 377
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 307
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 84
+
+
+
+Fecha hora: 3/07/2021 22:53:09
+Mensaje: Unable to update the EntitySet 'DocumentoHistorico' because it has a DefiningQuery and no <InsertFunction> element exists in the <ModificationFunctionMapping> element to support the current operation.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 377
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 307
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 84
+
+
+
+Fecha hora: 3/07/2021 22:53:53
+Mensaje: Unable to update the EntitySet 'DocumentoHistorico' because it has a DefiningQuery and no <InsertFunction> element exists in the <ModificationFunctionMapping> element to support the current operation.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 377
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 307
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 84
+
+
+
+Fecha hora: 3/07/2021 22:54:27
+Mensaje: Unable to update the EntitySet 'DocumentoHistorico' because it has a DefiningQuery and no <InsertFunction> element exists in the <ModificationFunctionMapping> element to support the current operation.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 377
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumentoRecursivo(List`1 ListDocumento, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 354
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 307
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.DeleteFisicoDocumento(DocumentoRequest request, UsuarioLogin user, String pathDocumentos) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 84
+
+
+

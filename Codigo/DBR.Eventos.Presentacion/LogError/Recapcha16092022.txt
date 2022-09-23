@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "challenge_ts": "2022-09-17T00:47:04Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}
+{
+  "success": true,
+  "challenge_ts": "2022-09-17T04:03:46Z",
+  "hostname": "localhost",
+  "score": 0.9,
+  "action": "LoginIntranet"
+}

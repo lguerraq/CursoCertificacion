@@ -1,0 +1,20 @@
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\bin\Debug\DBR.Eventos.Base.dacpac
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\bin\Debug\DBR.Eventos.Base.dll
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\bin\Debug\DBR.Eventos.Base.pdb
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\obj\Debug\Model.xml
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\obj\Debug\refactor.xml
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\obj\Debug\postdeploy.sql
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\obj\Debug\predeploy.sql
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\obj\Debug\DBR.Eventos.Base.dll
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\obj\Debug\DBR.Eventos.Base.pdb
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Base\obj\Debug\DBR.Eventos.Base.sqlprojAssemblyReference.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\bin\Debug\DBR.Eventos.Base.dacpac
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\bin\Debug\DBR.Eventos.Base.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\bin\Debug\DBR.Eventos.Base.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\obj\Debug\DBR.Eventos.Base.sqlproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\obj\Debug\Model.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\obj\Debug\refactor.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\obj\Debug\postdeploy.sql
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\obj\Debug\predeploy.sql
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\obj\Debug\DBR.Eventos.Base.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Base\obj\Debug\DBR.Eventos.Base.pdb

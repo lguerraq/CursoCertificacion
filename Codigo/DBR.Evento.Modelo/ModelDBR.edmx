@@ -1,0 +1,2921 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_ingenierosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Configuracion">
+          <Key>
+            <PropertyRef Name="IdConfiguracion" />
+          </Key>
+          <Property Name="IdConfiguracion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Variable" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Valor" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Conversacion">
+          <Key>
+            <PropertyRef Name="IdConversacion" />
+          </Key>
+          <Property Name="IdConversacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" />
+          <Property Name="NombreInicioConversacion" Type="varchar" MaxLength="250" />
+          <Property Name="IdUsuario" Type="int" />
+        </EntityType>
+        <EntityType Name="ConversacionDetalle">
+          <Key>
+            <PropertyRef Name="IdConversacionDetalle" />
+          </Key>
+          <Property Name="IdConversacionDetalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdConversacion" Type="int" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="FechaHora" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Correo">
+          <Key>
+            <PropertyRef Name="IdCorreo" />
+          </Key>
+          <Property Name="IdCorreo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Asunto" Type="varchar" MaxLength="150" />
+          <Property Name="Origen" Type="varchar" MaxLength="50" />
+          <Property Name="NombreOrigen" Type="varchar" MaxLength="150" />
+          <Property Name="Mensaje" Type="nvarchar(max)" />
+          <Property Name="EstadoCorreo" Type="int" />
+          <Property Name="FechaEnvio" Type="datetime" />
+          <Property Name="NumeroEnvio" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CorreoDifusion">
+          <Key>
+            <PropertyRef Name="IdCorreoDifusion" />
+          </Key>
+          <Property Name="IdCorreoDifusion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCorreo" Type="int" />
+          <Property Name="IdEvento" Type="int" />
+          <Property Name="IdPersona" Type="int" Nullable="false" />
+          <Property Name="Correo" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+          <Property Name="ErrorMensaje" Type="varchar(max)" />
+          <Property Name="ErrorStackTrace" Type="varchar(max)" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="NumeroEnvio" Type="int" />
+          <Property Name="Pago" Type="bit" />
+        </EntityType>
+        <EntityType Name="Cuestionario">
+          <Key>
+            <PropertyRef Name="IdCuestionario" />
+          </Key>
+          <Property Name="IdCuestionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdLeccion" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+          <Property Name="Peso" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CuestionarioRespuesta">
+          <Key>
+            <PropertyRef Name="IdCuestionarioRespuesta" />
+          </Key>
+          <Property Name="IdCuestionarioRespuesta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCuestionarioTomado" Type="int" Nullable="false" />
+          <Property Name="IdPregunta" Type="int" Nullable="false" />
+          <Property Name="IdRespuesta" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CuestionarioTomado">
+          <Key>
+            <PropertyRef Name="IdCuestionarioTomado" />
+          </Key>
+          <Property Name="IdCuestionarioTomado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="IdCuestionario" Type="int" Nullable="false" />
+          <Property Name="Nota" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="Intento" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Desafiliado">
+          <Key>
+            <PropertyRef Name="IdDesafiliado" />
+          </Key>
+          <Property Name="IdDesafiliado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Correo" Type="varchar" MaxLength="250" />
+          <Property Name="Valor" Type="int" />
+          <Property Name="Observacion" Type="varchar" MaxLength="250" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Docente">
+          <Key>
+            <PropertyRef Name="IdDocuente" />
+          </Key>
+          <Property Name="IdDocuente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+          <Property Name="NombreFoto" Type="varchar" MaxLength="150" />
+          <Property Name="Profesion" Type="varchar" MaxLength="250" />
+          <Property Name="Especialista" Type="varchar" MaxLength="250" />
+          <Property Name="Detalle" Type="varchar(max)" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="rowid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdDocumento" />
+          </Key>
+          <Property Name="IdDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdDocumentoPadre" Type="int" />
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="Tipo" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+          <Property Name="NombreOriginal" Type="varchar" MaxLength="150" />
+          <Property Name="Extension" Type="varchar" MaxLength="10" />
+          <Property Name="Tamaño" Type="int" />
+          <Property Name="EstadoDocumento" Type="int" />
+          <Property Name="FechaDescarga" Type="datetime" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="rowid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DocumentoHistorico">
+          <Key>
+            <PropertyRef Name="IdDocumentoHistorico" />
+          </Key>
+          <Property Name="IdDocumentoHistorico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdDocumento" Type="int" Nullable="false" />
+          <Property Name="IdDocumentoPadre" Type="int" />
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="Tipo" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+          <Property Name="NombreOriginal" Type="varchar" MaxLength="150" />
+          <Property Name="Extension" Type="varchar" MaxLength="10" />
+          <Property Name="Tamaño" Type="int" />
+          <Property Name="EstadoDocumento" Type="int" />
+          <Property Name="FechaDescarga" Type="datetime" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="rowid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="Ruc" Type="varchar" MaxLength="20" />
+          <Property Name="RazonSocial" Type="varchar" MaxLength="250" />
+          <Property Name="NombreComercial" Type="varchar" MaxLength="250" />
+          <Property Name="DireccionFiscal" Type="varchar" MaxLength="250" />
+          <Property Name="Logo" Type="varbinary(max)" />
+          <Property Name="Frecuencia" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="rowid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="IdEvento" />
+          </Key>
+          <Property Name="IdEvento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="int" />
+          <Property Name="Modalidad" Type="int" />
+          <Property Name="NombreEvento" Type="varchar" MaxLength="250" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Expositor" Type="varchar(max)" />
+          <Property Name="ImagenEvento" Type="varchar" MaxLength="150" />
+          <Property Name="DocumentoFotocheck" Type="varchar" MaxLength="150" />
+          <Property Name="DocumentoCertificado" Type="varchar" MaxLength="150" />
+          <Property Name="DocumentoCertificadoImprimir" Type="varchar" MaxLength="150" />
+          <Property Name="DocumentoCertificadoExpositor" Type="varchar" MaxLength="150" />
+          <Property Name="Horas" Type="int" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="NotaAprobatoria" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="Costo" Type="varchar" MaxLength="10" />
+          <Property Name="CostoValor" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="CostoValorPromocional" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="DetallarCertificado" Type="bit" />
+          <Property Name="GenerarCertificado" Type="bit" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="rowid" Type="uniqueidentifier" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EventoCorreo">
+          <Key>
+            <PropertyRef Name="IdEventoCorreo" />
+          </Key>
+          <Property Name="IdEventoCorreo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEvento" Type="int" Nullable="false" />
+          <Property Name="Asunto" Type="varchar" MaxLength="150" />
+          <Property Name="Origen" Type="varchar" MaxLength="50" />
+          <Property Name="NombreOrigen" Type="varchar" MaxLength="150" />
+          <Property Name="Mensaje" Type="nvarchar(max)" />
+          <Property Name="EstadoCorreo" Type="int" />
+          <Property Name="FechaEnvio" Type="datetime" />
+          <Property Name="NumeroEnvio" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EventoTema">
+          <Key>
+            <PropertyRef Name="IdEventoTema" />
+          </Key>
+          <Property Name="IdEventoTema" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEvento" Type="int" />
+          <Property Name="TipoTema" Type="int" />
+        </EntityType>
+        <EntityType Name="EventoUsuario">
+          <Key>
+            <PropertyRef Name="IdEventoUsuario" />
+          </Key>
+          <Property Name="IdEventoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEvento" Type="int" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFin" Type="datetime" />
+          <Property Name="FechaUltimoAcceso" Type="datetime" />
+          <Property Name="NotaFinal" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="Abierto" Type="bit" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EventoUsuarioVirtualVideo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEventoUsuario" Type="int" />
+          <Property Name="IdVirtualVideo" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Expositor">
+          <Key>
+            <PropertyRef Name="IdExpositor" />
+          </Key>
+          <Property Name="IdExpositor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+          <Property Name="Correo" Type="varchar" MaxLength="50" />
+          <Property Name="Telefono" Type="varchar" MaxLength="9" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Galeria">
+          <Key>
+            <PropertyRef Name="IdGaleria" />
+          </Key>
+          <Property Name="IdGaleria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="150" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Inscripcion">
+          <Key>
+            <PropertyRef Name="IdInscripcion" />
+          </Key>
+          <Property Name="IdInscripcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEvento" Type="int" />
+          <Property Name="IdPersona" Type="int" />
+          <Property Name="EstadoPago" Type="int" />
+          <Property Name="TipoPago" Type="int" />
+          <Property Name="EntregaCertificado" Type="bit" />
+          <Property Name="TipoModalidad" Type="int" />
+          <Property Name="Monto" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="NombreBanco" Type="varchar" MaxLength="250" />
+          <Property Name="FechaOperacion" Type="datetime" />
+          <Property Name="NumeroOperacion" Type="varchar" MaxLength="50" />
+          <Property Name="NumeroCertificado" Type="int" />
+          <Property Name="Certificado" Type="varchar" MaxLength="150" />
+          <Property Name="Nota" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="TipoInscripcion" Type="int" />
+          <Property Name="Ruc" Type="varchar" MaxLength="20" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+          <Property Name="rowguid" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Leccion">
+          <Key>
+            <PropertyRef Name="IdLeccion" />
+          </Key>
+          <Property Name="IdLeccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdModulo" Type="int" />
+          <Property Name="Tipo" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Descripcion" Type="nvarchar(max)" />
+          <Property Name="Duracion" Type="int" />
+          <Property Name="TipoUrl" Type="int" />
+          <Property Name="Url" Type="varchar" MaxLength="1000" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Peso" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Modulo">
+          <Key>
+            <PropertyRef Name="IdModulo" />
+          </Key>
+          <Property Name="IdModulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEvento" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Expositor" Type="varchar" MaxLength="150" />
+          <Property Name="Horas" Type="int" />
+          <Property Name="Peso" Type="int" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="rowid" Type="uniqueidentifier" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Opcion">
+          <Key>
+            <PropertyRef Name="IdOpcion" />
+          </Key>
+          <Property Name="IdOpcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPadre" Type="int" />
+          <Property Name="Icono" Type="varchar" MaxLength="50" />
+          <Property Name="Descipcion" Type="varchar" MaxLength="135" />
+          <Property Name="UrlDescripcion" Type="varchar" MaxLength="100" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="UsuarioCreacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+          <Property Name="UsuarioModificacion" Type="int" />
+        </EntityType>
+        <EntityType Name="OpcionUsuarioTipo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdOpcion" Type="int" Nullable="false" />
+          <Property Name="IdUsuarioTipo" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="UsuarioCreacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+          <Property Name="UsuarioModificacion" Type="int" />
+        </EntityType>
+        <EntityType Name="Pais">
+          <Key>
+            <PropertyRef Name="IdPais" />
+          </Key>
+          <Property Name="IdPais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombrePais" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="IdPersona" />
+          </Key>
+          <Property Name="IdPersona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+          <Property Name="NumeroDocumento" Type="varchar" MaxLength="11" />
+          <Property Name="CIP" Type="varchar" MaxLength="50" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="Correo" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+          <Property Name="IdProfesion" Type="int" />
+          <Property Name="TipoOcupacion" Type="int" />
+          <Property Name="DescripcionOcupacion" Type="varchar" MaxLength="150" />
+          <Property Name="IdPais" Type="int" />
+          <Property Name="Ciudad" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Portada">
+          <Key>
+            <PropertyRef Name="IdPortada" />
+          </Key>
+          <Property Name="IdPortada" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreImagen" Type="varchar" MaxLength="500" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="SubTitulo1" Type="varchar" MaxLength="500" />
+          <Property Name="SubTitulo2" Type="varchar" MaxLength="500" />
+          <Property Name="TextoEnlace" Type="varchar" MaxLength="200" />
+          <Property Name="UrlEnlace" Type="varchar" MaxLength="500" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="UsuarioCreacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+          <Property Name="UsuarioModificacion" Type="int" />
+        </EntityType>
+        <EntityType Name="Pregunta">
+          <Key>
+            <PropertyRef Name="IdPregunta" />
+          </Key>
+          <Property Name="IdPregunta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCuestionario" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Explicacion" Type="varchar" MaxLength="1500" />
+          <Property Name="Ayuda" Type="varchar" MaxLength="250" />
+          <Property Name="Puntaje" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Profesion">
+          <Key>
+            <PropertyRef Name="IdProfesion" />
+          </Key>
+          <Property Name="IdProfesion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Respuesta">
+          <Key>
+            <PropertyRef Name="IdRespuesta" />
+          </Key>
+          <Property Name="IdRespuesta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPregunta" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="EsCorrecta" Type="bit" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Suceso">
+          <Key>
+            <PropertyRef Name="IdSuceso" />
+          </Key>
+          <Property Name="IdSuceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreSuceso" Type="varchar" MaxLength="250" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="ImagenSuceso" Type="varchar" MaxLength="150" />
+          <Property Name="Horas" Type="int" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="rowid" Type="uniqueidentifier" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="IdTipo" />
+          </Key>
+          <Property Name="IdTipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreTipo" Type="varchar" MaxLength="50" />
+          <Property Name="Grupo" Type="varchar" MaxLength="50" />
+          <Property Name="Valor" Type="int" />
+          <Property Name="Abreviatura" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Universidad">
+          <Key>
+            <PropertyRef Name="IdUniversidad" />
+          </Key>
+          <Property Name="IdUniversidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="200" />
+          <Property Name="Estado" Type="bit" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="NumeroDocumento" Type="varchar" MaxLength="20" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+          <Property Name="Correo" Type="varchar" MaxLength="100" />
+          <Property Name="IdUsuarioTipo" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UsuarioActividad">
+          <Key>
+            <PropertyRef Name="IdUsuarioActividad" />
+          </Key>
+          <Property Name="IdUsuarioActividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="Token" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'db_avas.dbo.UsuarioActividadHistorico' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="UsuarioActividadHistorico">
+          <Key>
+            <PropertyRef Name="IdUsuarioActividad" />
+          </Key>
+          <Property Name="IdUsuarioActividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UsuarioHistorico">
+          <Key>
+            <PropertyRef Name="IdUsuarioHistorico" />
+          </Key>
+          <Property Name="IdUsuarioHistorico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UsuarioTipo">
+          <Key>
+            <PropertyRef Name="IdUsuarioTipo" />
+          </Key>
+          <Property Name="IdUsuarioTipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="VirtualContenido">
+          <Key>
+            <PropertyRef Name="IdVirtualContenido" />
+          </Key>
+          <Property Name="IdVirtualContenido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEvento" Type="int" />
+          <Property Name="Contenido" Type="nvarchar(max)" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="VirtualVideo">
+          <Key>
+            <PropertyRef Name="IdVirtualVideo" />
+          </Key>
+          <Property Name="IdVirtualVideo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEvento" Type="int" />
+          <Property Name="Url" Type="varchar" MaxLength="250" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioModificacion" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_ConversacionDetalle_Conversacion">
+          <End Role="Conversacion" Type="Self.Conversacion" Multiplicity="0..1" />
+          <End Role="ConversacionDetalle" Type="Self.ConversacionDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversacion">
+              <PropertyRef Name="IdConversacion" />
+            </Principal>
+            <Dependent Role="ConversacionDetalle">
+              <PropertyRef Name="IdConversacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CorreoDifusion_Correo">
+          <End Role="Correo" Type="Self.Correo" Multiplicity="0..1" />
+          <End Role="CorreoDifusion" Type="Self.CorreoDifusion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correo">
+              <PropertyRef Name="IdCorreo" />
+            </Principal>
+            <Dependent Role="CorreoDifusion">
+              <PropertyRef Name="IdCorreo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuestionarioRespuesta_CuestionarioTomado">
+          <End Role="CuestionarioTomado" Type="Self.CuestionarioTomado" Multiplicity="1" />
+          <End Role="CuestionarioRespuesta" Type="Self.CuestionarioRespuesta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuestionarioTomado">
+              <PropertyRef Name="IdCuestionarioTomado" />
+            </Principal>
+            <Dependent Role="CuestionarioRespuesta">
+              <PropertyRef Name="IdCuestionarioTomado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuestionarioTomado_Cuestionario">
+          <End Role="Cuestionario" Type="Self.Cuestionario" Multiplicity="1" />
+          <End Role="CuestionarioTomado" Type="Self.CuestionarioTomado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuestionario">
+              <PropertyRef Name="IdCuestionario" />
+            </Principal>
+            <Dependent Role="CuestionarioTomado">
+              <PropertyRef Name="IdCuestionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Empresa">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+          <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Empresa_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Empresa">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoCorreo_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="1" />
+          <End Role="EventoCorreo" Type="Self.EventoCorreo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="EventoCorreo">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoTema_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="0..1" />
+          <End Role="EventoTema" Type="Self.EventoTema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="EventoTema">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoUsuario_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="0..1" />
+          <End Role="EventoUsuario" Type="Self.EventoUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="EventoUsuario">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoUsuario_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="EventoUsuario" Type="Self.EventoUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="EventoUsuario">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoUsuarioVirtualVideo_EventoUsuario">
+          <End Role="EventoUsuario" Type="Self.EventoUsuario" Multiplicity="0..1" />
+          <End Role="EventoUsuarioVirtualVideo" Type="Self.EventoUsuarioVirtualVideo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventoUsuario">
+              <PropertyRef Name="IdEventoUsuario" />
+            </Principal>
+            <Dependent Role="EventoUsuarioVirtualVideo">
+              <PropertyRef Name="IdEventoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoUsuarioVirtualVideo_VirtualVideo">
+          <End Role="VirtualVideo" Type="Self.VirtualVideo" Multiplicity="0..1" />
+          <End Role="EventoUsuarioVirtualVideo" Type="Self.EventoUsuarioVirtualVideo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VirtualVideo">
+              <PropertyRef Name="IdVirtualVideo" />
+            </Principal>
+            <Dependent Role="EventoUsuarioVirtualVideo">
+              <PropertyRef Name="IdVirtualVideo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inscripcion_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="0..1" />
+          <End Role="Inscripcion" Type="Self.Inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="Inscripcion">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inscripcion_Persona">
+          <End Role="Persona" Type="Self.Persona" Multiplicity="0..1" />
+          <End Role="Inscripcion" Type="Self.Inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="IdPersona" />
+            </Principal>
+            <Dependent Role="Inscripcion">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Leccion_Modulo">
+          <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
+          <End Role="Leccion" Type="Self.Leccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulo">
+              <PropertyRef Name="IdModulo" />
+            </Principal>
+            <Dependent Role="Leccion">
+              <PropertyRef Name="IdModulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Modulo_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="0..1" />
+          <End Role="Modulo" Type="Self.Modulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="Modulo">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OpcionUsuarioTipo_Opcion">
+          <End Role="Opcion" Type="Self.Opcion" Multiplicity="1" />
+          <End Role="OpcionUsuarioTipo" Type="Self.OpcionUsuarioTipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Opcion">
+              <PropertyRef Name="IdOpcion" />
+            </Principal>
+            <Dependent Role="OpcionUsuarioTipo">
+              <PropertyRef Name="IdOpcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OpcionUsuarioTipo_UsuarioTipo">
+          <End Role="UsuarioTipo" Type="Self.UsuarioTipo" Multiplicity="1" />
+          <End Role="OpcionUsuarioTipo" Type="Self.OpcionUsuarioTipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioTipo">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Principal>
+            <Dependent Role="OpcionUsuarioTipo">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Persona_Pais">
+          <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pais">
+              <PropertyRef Name="IdPais" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="IdPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Persona_Profesion">
+          <End Role="Profesion" Type="Self.Profesion" Multiplicity="0..1" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profesion">
+              <PropertyRef Name="IdProfesion" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="IdProfesion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pregunta_Cuestionario">
+          <End Role="Cuestionario" Type="Self.Cuestionario" Multiplicity="1" />
+          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuestionario">
+              <PropertyRef Name="IdCuestionario" />
+            </Principal>
+            <Dependent Role="Pregunta">
+              <PropertyRef Name="IdCuestionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Respuesta_Pregunta">
+          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="1" />
+          <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="IdPregunta" />
+            </Principal>
+            <Dependent Role="Respuesta">
+              <PropertyRef Name="IdPregunta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_UsuarioTipo">
+          <End Role="UsuarioTipo" Type="Self.UsuarioTipo" Multiplicity="0..1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioTipo">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioActividad_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="UsuarioActividad" Type="Self.UsuarioActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioActividad">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioHistorico_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="UsuarioHistorico" Type="Self.UsuarioHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioHistorico">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VirtualContenido_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="0..1" />
+          <End Role="VirtualContenido" Type="Self.VirtualContenido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="VirtualContenido">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VirtualVideo_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="0..1" />
+          <End Role="VirtualVideo" Type="Self.VirtualVideo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="VirtualVideo">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_ingenierosModelStoreContainer">
+          <EntitySet Name="Configuracion" EntityType="Self.Configuracion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Conversacion" EntityType="Self.Conversacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ConversacionDetalle" EntityType="Self.ConversacionDetalle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Correo" EntityType="Self.Correo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CorreoDifusion" EntityType="Self.CorreoDifusion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cuestionario" EntityType="Self.Cuestionario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuestionarioRespuesta" EntityType="Self.CuestionarioRespuesta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuestionarioTomado" EntityType="Self.CuestionarioTomado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Desafiliado" EntityType="Self.Desafiliado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Docente" EntityType="Self.Docente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Documento" EntityType="Self.Documento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocumentoHistorico" EntityType="Self.DocumentoHistorico" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Evento" EntityType="Self.Evento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventoCorreo" EntityType="Self.EventoCorreo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventoTema" EntityType="Self.EventoTema" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventoUsuario" EntityType="Self.EventoUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventoUsuarioVirtualVideo" EntityType="Self.EventoUsuarioVirtualVideo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Expositor" EntityType="Self.Expositor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Galeria" EntityType="Self.Galeria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inscripcion" EntityType="Self.Inscripcion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Leccion" EntityType="Self.Leccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Modulo" EntityType="Self.Modulo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Opcion" EntityType="Self.Opcion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OpcionUsuarioTipo" EntityType="Self.OpcionUsuarioTipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Persona" EntityType="Self.Persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Portada" EntityType="Self.Portada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pregunta" EntityType="Self.Pregunta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profesion" EntityType="Self.Profesion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Respuesta" EntityType="Self.Respuesta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suceso" EntityType="Self.Suceso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipo" EntityType="Self.Tipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Universidad" EntityType="Self.Universidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuarioActividad" EntityType="Self.UsuarioActividad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuarioHistorico" EntityType="Self.UsuarioHistorico" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuarioTipo" EntityType="Self.UsuarioTipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VirtualContenido" EntityType="Self.VirtualContenido" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VirtualVideo" EntityType="Self.VirtualVideo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuarioActividadHistorico" EntityType="Self.UsuarioActividadHistorico" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UsuarioActividadHistorico].[IdUsuarioActividad] AS [IdUsuarioActividad], 
+    [UsuarioActividadHistorico].[IdUsuario] AS [IdUsuario], 
+    [UsuarioActividadHistorico].[FechaCreacion] AS [FechaCreacion]
+    FROM [dbo].[UsuarioActividadHistorico] AS [UsuarioActividadHistorico]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_ConversacionDetalle_Conversacion" Association="Self.FK_ConversacionDetalle_Conversacion">
+            <End Role="Conversacion" EntitySet="Conversacion" />
+            <End Role="ConversacionDetalle" EntitySet="ConversacionDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CorreoDifusion_Correo" Association="Self.FK_CorreoDifusion_Correo">
+            <End Role="Correo" EntitySet="Correo" />
+            <End Role="CorreoDifusion" EntitySet="CorreoDifusion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuestionarioRespuesta_CuestionarioTomado" Association="Self.FK_CuestionarioRespuesta_CuestionarioTomado">
+            <End Role="CuestionarioTomado" EntitySet="CuestionarioTomado" />
+            <End Role="CuestionarioRespuesta" EntitySet="CuestionarioRespuesta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuestionarioTomado_Cuestionario" Association="Self.FK_CuestionarioTomado_Cuestionario">
+            <End Role="Cuestionario" EntitySet="Cuestionario" />
+            <End Role="CuestionarioTomado" EntitySet="CuestionarioTomado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Empresa" Association="Self.FK_Documento_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Empresa_Usuario" Association="Self.FK_Empresa_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Empresa" EntitySet="Empresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoCorreo_Evento" Association="Self.FK_EventoCorreo_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="EventoCorreo" EntitySet="EventoCorreo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoTema_Evento" Association="Self.FK_EventoTema_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="EventoTema" EntitySet="EventoTema" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoUsuario_Evento" Association="Self.FK_EventoUsuario_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoUsuario_Usuario" Association="Self.FK_EventoUsuario_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoUsuarioVirtualVideo_EventoUsuario" Association="Self.FK_EventoUsuarioVirtualVideo_EventoUsuario">
+            <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+            <End Role="EventoUsuarioVirtualVideo" EntitySet="EventoUsuarioVirtualVideo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoUsuarioVirtualVideo_VirtualVideo" Association="Self.FK_EventoUsuarioVirtualVideo_VirtualVideo">
+            <End Role="VirtualVideo" EntitySet="VirtualVideo" />
+            <End Role="EventoUsuarioVirtualVideo" EntitySet="EventoUsuarioVirtualVideo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inscripcion_Evento" Association="Self.FK_Inscripcion_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="Inscripcion" EntitySet="Inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inscripcion_Persona" Association="Self.FK_Inscripcion_Persona">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Inscripcion" EntitySet="Inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Leccion_Modulo" Association="Self.FK_Leccion_Modulo">
+            <End Role="Modulo" EntitySet="Modulo" />
+            <End Role="Leccion" EntitySet="Leccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modulo_Evento" Association="Self.FK_Modulo_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="Modulo" EntitySet="Modulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OpcionUsuarioTipo_Opcion" Association="Self.FK_OpcionUsuarioTipo_Opcion">
+            <End Role="Opcion" EntitySet="Opcion" />
+            <End Role="OpcionUsuarioTipo" EntitySet="OpcionUsuarioTipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OpcionUsuarioTipo_UsuarioTipo" Association="Self.FK_OpcionUsuarioTipo_UsuarioTipo">
+            <End Role="UsuarioTipo" EntitySet="UsuarioTipo" />
+            <End Role="OpcionUsuarioTipo" EntitySet="OpcionUsuarioTipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Persona_Pais" Association="Self.FK_Persona_Pais">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Persona_Profesion" Association="Self.FK_Persona_Profesion">
+            <End Role="Profesion" EntitySet="Profesion" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pregunta_Cuestionario" Association="Self.FK_Pregunta_Cuestionario">
+            <End Role="Cuestionario" EntitySet="Cuestionario" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Respuesta_Pregunta" Association="Self.FK_Respuesta_Pregunta">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="Respuesta" EntitySet="Respuesta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_UsuarioTipo" Association="Self.FK_Usuario_UsuarioTipo">
+            <End Role="UsuarioTipo" EntitySet="UsuarioTipo" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioActividad_Usuario" Association="Self.FK_UsuarioActividad_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioActividad" EntitySet="UsuarioActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioHistorico_Usuario" Association="Self.FK_UsuarioHistorico_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioHistorico" EntitySet="UsuarioHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VirtualContenido_Evento" Association="Self.FK_VirtualContenido_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="VirtualContenido" EntitySet="VirtualContenido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VirtualVideo_Evento" Association="Self.FK_VirtualVideo_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="VirtualVideo" EntitySet="VirtualVideo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_ingenierosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="db_ingenierosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Configuracion" EntityType="db_ingenierosModel.Configuracion" />
+          <EntitySet Name="Conversacion" EntityType="db_ingenierosModel.Conversacion" />
+          <EntitySet Name="ConversacionDetalle" EntityType="db_ingenierosModel.ConversacionDetalle" />
+          <EntitySet Name="CorreoDifusion" EntityType="db_ingenierosModel.CorreoDifusion" />
+          <EntitySet Name="Cuestionario" EntityType="db_ingenierosModel.Cuestionario" />
+          <EntitySet Name="CuestionarioRespuesta" EntityType="db_ingenierosModel.CuestionarioRespuesta" />
+          <EntitySet Name="CuestionarioTomado" EntityType="db_ingenierosModel.CuestionarioTomado" />
+          <EntitySet Name="Desafiliado" EntityType="db_ingenierosModel.Desafiliado" />
+          <EntitySet Name="Docente" EntityType="db_ingenierosModel.Docente" />
+          <EntitySet Name="EventoTema" EntityType="db_ingenierosModel.EventoTema" />
+          <EntitySet Name="EventoUsuario" EntityType="db_ingenierosModel.EventoUsuario" />
+          <EntitySet Name="EventoUsuarioVirtualVideo" EntityType="db_ingenierosModel.EventoUsuarioVirtualVideo" />
+          <EntitySet Name="Expositor" EntityType="db_ingenierosModel.Expositor" />
+          <EntitySet Name="Galeria" EntityType="db_ingenierosModel.Galeria" />
+          <EntitySet Name="Inscripcion" EntityType="db_ingenierosModel.Inscripcion" />
+          <EntitySet Name="Modulo" EntityType="db_ingenierosModel.Modulo" />
+          <EntitySet Name="Opcion" EntityType="db_ingenierosModel.Opcion" />
+          <EntitySet Name="OpcionUsuarioTipo" EntityType="db_ingenierosModel.OpcionUsuarioTipo" />
+          <EntitySet Name="Pais" EntityType="db_ingenierosModel.Pais" />
+          <EntitySet Name="Persona" EntityType="db_ingenierosModel.Persona" />
+          <EntitySet Name="Pregunta" EntityType="db_ingenierosModel.Pregunta" />
+          <EntitySet Name="Profesion" EntityType="db_ingenierosModel.Profesion" />
+          <EntitySet Name="Respuesta" EntityType="db_ingenierosModel.Respuesta" />
+          <EntitySet Name="Suceso" EntityType="db_ingenierosModel.Suceso" />
+          <EntitySet Name="Tipo" EntityType="db_ingenierosModel.Tipo" />
+          <EntitySet Name="Universidad" EntityType="db_ingenierosModel.Universidad" />
+          <EntitySet Name="UsuarioActividad" EntityType="db_ingenierosModel.UsuarioActividad" />
+          <EntitySet Name="UsuarioHistorico" EntityType="db_ingenierosModel.UsuarioHistorico" />
+          <EntitySet Name="UsuarioTipo" EntityType="db_ingenierosModel.UsuarioTipo" />
+          <EntitySet Name="VirtualVideo" EntityType="db_ingenierosModel.VirtualVideo" />
+          <EntitySet Name="UsuarioActividadHistorico" EntityType="db_ingenierosModel.UsuarioActividadHistorico" />
+          <AssociationSet Name="FK_ConversacionDetalle_Conversacion" Association="db_ingenierosModel.FK_ConversacionDetalle_Conversacion">
+            <End Role="Conversacion" EntitySet="Conversacion" />
+            <End Role="ConversacionDetalle" EntitySet="ConversacionDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuestionarioTomado_Cuestionario" Association="db_ingenierosModel.FK_CuestionarioTomado_Cuestionario">
+            <End Role="Cuestionario" EntitySet="Cuestionario" />
+            <End Role="CuestionarioTomado" EntitySet="CuestionarioTomado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pregunta_Cuestionario" Association="db_ingenierosModel.FK_Pregunta_Cuestionario">
+            <End Role="Cuestionario" EntitySet="Cuestionario" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuestionarioRespuesta_CuestionarioTomado" Association="db_ingenierosModel.FK_CuestionarioRespuesta_CuestionarioTomado">
+            <End Role="CuestionarioTomado" EntitySet="CuestionarioTomado" />
+            <End Role="CuestionarioRespuesta" EntitySet="CuestionarioRespuesta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoUsuarioVirtualVideo_EventoUsuario" Association="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_EventoUsuario">
+            <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+            <End Role="EventoUsuarioVirtualVideo" EntitySet="EventoUsuarioVirtualVideo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoUsuarioVirtualVideo_VirtualVideo" Association="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_VirtualVideo">
+            <End Role="VirtualVideo" EntitySet="VirtualVideo" />
+            <End Role="EventoUsuarioVirtualVideo" EntitySet="EventoUsuarioVirtualVideo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inscripcion_Persona" Association="db_ingenierosModel.FK_Inscripcion_Persona">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Inscripcion" EntitySet="Inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OpcionUsuarioTipo_Opcion" Association="db_ingenierosModel.FK_OpcionUsuarioTipo_Opcion">
+            <End Role="Opcion" EntitySet="Opcion" />
+            <End Role="OpcionUsuarioTipo" EntitySet="OpcionUsuarioTipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OpcionUsuarioTipo_UsuarioTipo" Association="db_ingenierosModel.FK_OpcionUsuarioTipo_UsuarioTipo">
+            <End Role="UsuarioTipo" EntitySet="UsuarioTipo" />
+            <End Role="OpcionUsuarioTipo" EntitySet="OpcionUsuarioTipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Persona_Pais" Association="db_ingenierosModel.FK_Persona_Pais">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Persona_Profesion" Association="db_ingenierosModel.FK_Persona_Profesion">
+            <End Role="Profesion" EntitySet="Profesion" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Respuesta_Pregunta" Association="db_ingenierosModel.FK_Respuesta_Pregunta">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="Respuesta" EntitySet="Respuesta" />
+          </AssociationSet>
+          <EntitySet Name="Correo" EntityType="db_ingenierosModel.Correo" />
+          <AssociationSet Name="FK_CorreoDifusion_Correo" Association="db_ingenierosModel.FK_CorreoDifusion_Correo">
+            <End Role="Correo" EntitySet="Correo" />
+            <End Role="CorreoDifusion" EntitySet="CorreoDifusion" />
+          </AssociationSet>
+          <EntitySet Name="VirtualContenido" EntityType="db_ingenierosModel.VirtualContenido" />
+          <EntitySet Name="Portada" EntityType="db_ingenierosModel.Portada" />
+          <EntitySet Name="EventoCorreo" EntityType="db_ingenierosModel.EventoCorreo" />
+          <EntitySet Name="Leccion" EntityType="db_ingenierosModel.Leccion" />
+          <AssociationSet Name="FK_Leccion_Modulo" Association="db_ingenierosModel.FK_Leccion_Modulo">
+            <End Role="Modulo" EntitySet="Modulo" />
+            <End Role="Leccion" EntitySet="Leccion" />
+          </AssociationSet>
+          <EntitySet Name="Evento" EntityType="db_ingenierosModel.Evento" />
+          <AssociationSet Name="FK_EventoCorreo_Evento" Association="db_ingenierosModel.FK_EventoCorreo_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="EventoCorreo" EntitySet="EventoCorreo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoTema_Evento" Association="db_ingenierosModel.FK_EventoTema_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="EventoTema" EntitySet="EventoTema" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EventoUsuario_Evento" Association="db_ingenierosModel.FK_EventoUsuario_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inscripcion_Evento" Association="db_ingenierosModel.FK_Inscripcion_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="Inscripcion" EntitySet="Inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modulo_Evento" Association="db_ingenierosModel.FK_Modulo_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="Modulo" EntitySet="Modulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VirtualContenido_Evento" Association="db_ingenierosModel.FK_VirtualContenido_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="VirtualContenido" EntitySet="VirtualContenido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VirtualVideo_Evento" Association="db_ingenierosModel.FK_VirtualVideo_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="VirtualVideo" EntitySet="VirtualVideo" />
+          </AssociationSet>
+          <EntitySet Name="Documento" EntityType="db_ingenierosModel.Documento" />
+          <EntitySet Name="DocumentoHistorico" EntityType="db_ingenierosModel.DocumentoHistorico" />
+          <EntitySet Name="Usuario" EntityType="db_ingenierosModel.Usuario" />
+          <AssociationSet Name="FK_EventoUsuario_Usuario" Association="db_ingenierosModel.FK_EventoUsuario_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_UsuarioTipo" Association="db_ingenierosModel.FK_Usuario_UsuarioTipo">
+            <End Role="UsuarioTipo" EntitySet="UsuarioTipo" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioActividad_Usuario" Association="db_ingenierosModel.FK_UsuarioActividad_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioActividad" EntitySet="UsuarioActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioHistorico_Usuario" Association="db_ingenierosModel.FK_UsuarioHistorico_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioHistorico" EntitySet="UsuarioHistorico" />
+          </AssociationSet>
+          <EntitySet Name="Empresa" EntityType="db_ingenierosModel.Empresa" />
+          <AssociationSet Name="FK_Documento_Empresa" Association="db_ingenierosModel.FK_Documento_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Empresa_Usuario" Association="db_ingenierosModel.FK_Empresa_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Empresa" EntitySet="Empresa" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Configuracion">
+          <Key>
+            <PropertyRef Name="IdConfiguracion" />
+          </Key>
+          <Property Name="IdConfiguracion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Variable" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Conversacion">
+          <Key>
+            <PropertyRef Name="IdConversacion" />
+          </Key>
+          <Property Name="IdConversacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaHora" Type="DateTime" Precision="3" />
+          <Property Name="NombreInicioConversacion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <NavigationProperty Name="ConversacionDetalle" Relationship="db_ingenierosModel.FK_ConversacionDetalle_Conversacion" FromRole="Conversacion" ToRole="ConversacionDetalle" />
+        </EntityType>
+        <EntityType Name="ConversacionDetalle">
+          <Key>
+            <PropertyRef Name="IdConversacionDetalle" />
+          </Key>
+          <Property Name="IdConversacionDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdConversacion" Type="Int32" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHora" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Conversacion" Relationship="db_ingenierosModel.FK_ConversacionDetalle_Conversacion" FromRole="ConversacionDetalle" ToRole="Conversacion" />
+        </EntityType>
+        <EntityType Name="CorreoDifusion">
+          <Key>
+            <PropertyRef Name="IdCorreoDifusion" />
+          </Key>
+          <Property Name="IdCorreoDifusion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCorreo" Type="Int32" />
+          <Property Name="IdEvento" Type="Int32" />
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
+          <Property Name="Correo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <Property Name="ErrorMensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ErrorStackTrace" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NumeroEnvio" Type="Int32" />
+          <Property Name="Pago" Type="Boolean" />
+          <NavigationProperty Name="Correo1" Relationship="db_ingenierosModel.FK_CorreoDifusion_Correo" FromRole="CorreoDifusion" ToRole="Correo" />
+        </EntityType>
+        <EntityType Name="Cuestionario">
+          <Key>
+            <PropertyRef Name="IdCuestionario" />
+          </Key>
+          <Property Name="IdCuestionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdLeccion" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Peso" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CuestionarioTomado" Relationship="db_ingenierosModel.FK_CuestionarioTomado_Cuestionario" FromRole="Cuestionario" ToRole="CuestionarioTomado" />
+          <NavigationProperty Name="Pregunta" Relationship="db_ingenierosModel.FK_Pregunta_Cuestionario" FromRole="Cuestionario" ToRole="Pregunta" />
+        </EntityType>
+        <EntityType Name="CuestionarioRespuesta">
+          <Key>
+            <PropertyRef Name="IdCuestionarioRespuesta" />
+          </Key>
+          <Property Name="IdCuestionarioRespuesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCuestionarioTomado" Type="Int32" Nullable="false" />
+          <Property Name="IdPregunta" Type="Int32" Nullable="false" />
+          <Property Name="IdRespuesta" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CuestionarioTomado" Relationship="db_ingenierosModel.FK_CuestionarioRespuesta_CuestionarioTomado" FromRole="CuestionarioRespuesta" ToRole="CuestionarioTomado" />
+        </EntityType>
+        <EntityType Name="CuestionarioTomado">
+          <Key>
+            <PropertyRef Name="IdCuestionarioTomado" />
+          </Key>
+          <Property Name="IdCuestionarioTomado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="IdCuestionario" Type="Int32" Nullable="false" />
+          <Property Name="Nota" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="Intento" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cuestionario" Relationship="db_ingenierosModel.FK_CuestionarioTomado_Cuestionario" FromRole="CuestionarioTomado" ToRole="Cuestionario" />
+          <NavigationProperty Name="CuestionarioRespuesta" Relationship="db_ingenierosModel.FK_CuestionarioRespuesta_CuestionarioTomado" FromRole="CuestionarioTomado" ToRole="CuestionarioRespuesta" />
+        </EntityType>
+        <EntityType Name="Desafiliado">
+          <Key>
+            <PropertyRef Name="IdDesafiliado" />
+          </Key>
+          <Property Name="IdDesafiliado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Correo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="Int32" />
+          <Property Name="Observacion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Docente">
+          <Key>
+            <PropertyRef Name="IdDocuente" />
+          </Key>
+          <Property Name="IdDocuente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="NombreFoto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Profesion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Especialista" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Detalle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="rowid" Type="Guid" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="EventoTema">
+          <Key>
+            <PropertyRef Name="IdEventoTema" />
+          </Key>
+          <Property Name="IdEventoTema" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" />
+          <Property Name="TipoTema" Type="Int32" />
+          <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_EventoTema_Evento" FromRole="EventoTema" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="EventoUsuario">
+          <Key>
+            <PropertyRef Name="IdEventoUsuario" />
+          </Key>
+          <Property Name="IdEventoUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Precision="3" />
+          <Property Name="FechaUltimoAcceso" Type="DateTime" Precision="3" />
+          <Property Name="NotaFinal" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="Abierto" Type="Boolean" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="EventoUsuarioVirtualVideo" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_EventoUsuario" FromRole="EventoUsuario" ToRole="EventoUsuarioVirtualVideo" />
+          <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_EventoUsuario_Evento" FromRole="EventoUsuario" ToRole="Evento" />
+          <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_EventoUsuario_Usuario" FromRole="EventoUsuario" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="EventoUsuarioVirtualVideo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEventoUsuario" Type="Int32" />
+          <Property Name="IdVirtualVideo" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="EventoUsuario" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_EventoUsuario" FromRole="EventoUsuarioVirtualVideo" ToRole="EventoUsuario" />
+          <NavigationProperty Name="VirtualVideo" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_VirtualVideo" FromRole="EventoUsuarioVirtualVideo" ToRole="VirtualVideo" />
+        </EntityType>
+        <EntityType Name="Expositor">
+          <Key>
+            <PropertyRef Name="IdExpositor" />
+          </Key>
+          <Property Name="IdExpositor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Galeria">
+          <Key>
+            <PropertyRef Name="IdGaleria" />
+          </Key>
+          <Property Name="IdGaleria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Inscripcion">
+          <Key>
+            <PropertyRef Name="IdInscripcion" />
+          </Key>
+          <Property Name="IdInscripcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" />
+          <Property Name="IdPersona" Type="Int32" />
+          <Property Name="EstadoPago" Type="Int32" />
+          <Property Name="TipoPago" Type="Int32" />
+          <Property Name="EntregaCertificado" Type="Boolean" />
+          <Property Name="TipoModalidad" Type="Int32" />
+          <Property Name="Monto" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="NombreBanco" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="FechaOperacion" Type="DateTime" Precision="3" />
+          <Property Name="NumeroOperacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroCertificado" Type="Int32" />
+          <Property Name="Certificado" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Nota" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="TipoInscripcion" Type="Int32" />
+          <Property Name="Ruc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <Property Name="rowguid" Type="Guid" />
+          <NavigationProperty Name="Persona" Relationship="db_ingenierosModel.FK_Inscripcion_Persona" FromRole="Inscripcion" ToRole="Persona" />
+          <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_Inscripcion_Evento" FromRole="Inscripcion" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="Modulo">
+          <Key>
+            <PropertyRef Name="IdModulo" />
+          </Key>
+          <Property Name="IdModulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Expositor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Horas" Type="Int32" />
+          <Property Name="Peso" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="rowid" Type="Guid" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Leccion" Relationship="db_ingenierosModel.FK_Leccion_Modulo" FromRole="Modulo" ToRole="Leccion" />
+          <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_Modulo_Evento" FromRole="Modulo" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="Opcion">
+          <Key>
+            <PropertyRef Name="IdOpcion" />
+          </Key>
+          <Property Name="IdOpcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPadre" Type="Int32" />
+          <Property Name="Icono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Descipcion" Type="String" MaxLength="135" FixedLength="false" Unicode="false" />
+          <Property Name="UrlDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <NavigationProperty Name="OpcionUsuarioTipo" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_Opcion" FromRole="Opcion" ToRole="OpcionUsuarioTipo" />
+        </EntityType>
+        <EntityType Name="OpcionUsuarioTipo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdOpcion" Type="Int32" Nullable="false" />
+          <Property Name="IdUsuarioTipo" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <NavigationProperty Name="Opcion" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_Opcion" FromRole="OpcionUsuarioTipo" ToRole="Opcion" />
+          <NavigationProperty Name="UsuarioTipo" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_UsuarioTipo" FromRole="OpcionUsuarioTipo" ToRole="UsuarioTipo" />
+        </EntityType>
+        <EntityType Name="Pais">
+          <Key>
+            <PropertyRef Name="IdPais" />
+          </Key>
+          <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombrePais" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Persona" Relationship="db_ingenierosModel.FK_Persona_Pais" FromRole="Pais" ToRole="Persona" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="IdPersona" />
+          </Key>
+          <Property Name="IdPersona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroDocumento" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <Property Name="IdProfesion" Type="Int32" />
+          <Property Name="TipoOcupacion" Type="Int32" />
+          <Property Name="DescripcionOcupacion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="IdPais" Type="Int32" />
+          <Property Name="Ciudad" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Inscripcion" Relationship="db_ingenierosModel.FK_Inscripcion_Persona" FromRole="Persona" ToRole="Inscripcion" />
+          <NavigationProperty Name="Pais" Relationship="db_ingenierosModel.FK_Persona_Pais" FromRole="Persona" ToRole="Pais" />
+          <NavigationProperty Name="Profesion" Relationship="db_ingenierosModel.FK_Persona_Profesion" FromRole="Persona" ToRole="Profesion" />
+        </EntityType>
+        <EntityType Name="Pregunta">
+          <Key>
+            <PropertyRef Name="IdPregunta" />
+          </Key>
+          <Property Name="IdPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCuestionario" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Explicacion" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Ayuda" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Puntaje" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cuestionario" Relationship="db_ingenierosModel.FK_Pregunta_Cuestionario" FromRole="Pregunta" ToRole="Cuestionario" />
+          <NavigationProperty Name="Respuesta" Relationship="db_ingenierosModel.FK_Respuesta_Pregunta" FromRole="Pregunta" ToRole="Respuesta" />
+        </EntityType>
+        <EntityType Name="Profesion">
+          <Key>
+            <PropertyRef Name="IdProfesion" />
+          </Key>
+          <Property Name="IdProfesion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Persona" Relationship="db_ingenierosModel.FK_Persona_Profesion" FromRole="Profesion" ToRole="Persona" />
+        </EntityType>
+        <EntityType Name="Respuesta">
+          <Key>
+            <PropertyRef Name="IdRespuesta" />
+          </Key>
+          <Property Name="IdRespuesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPregunta" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="EsCorrecta" Type="Boolean" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Pregunta" Relationship="db_ingenierosModel.FK_Respuesta_Pregunta" FromRole="Respuesta" ToRole="Pregunta" />
+        </EntityType>
+        <EntityType Name="Suceso">
+          <Key>
+            <PropertyRef Name="IdSuceso" />
+          </Key>
+          <Property Name="IdSuceso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreSuceso" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="ImagenSuceso" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Horas" Type="Int32" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="rowid" Type="Guid" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="IdTipo" />
+          </Key>
+          <Property Name="IdTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreTipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Grupo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="Int32" />
+          <Property Name="Abreviatura" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Universidad">
+          <Key>
+            <PropertyRef Name="IdUniversidad" />
+          </Key>
+          <Property Name="IdUniversidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="UsuarioActividad">
+          <Key>
+            <PropertyRef Name="IdUsuarioActividad" />
+          </Key>
+          <Property Name="IdUsuarioActividad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="Token" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_UsuarioActividad_Usuario" FromRole="UsuarioActividad" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="UsuarioHistorico">
+          <Key>
+            <PropertyRef Name="IdUsuarioHistorico" />
+          </Key>
+          <Property Name="IdUsuarioHistorico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_UsuarioHistorico_Usuario" FromRole="UsuarioHistorico" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="UsuarioTipo">
+          <Key>
+            <PropertyRef Name="IdUsuarioTipo" />
+          </Key>
+          <Property Name="IdUsuarioTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="OpcionUsuarioTipo" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_UsuarioTipo" FromRole="UsuarioTipo" ToRole="OpcionUsuarioTipo" />
+          <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_Usuario_UsuarioTipo" FromRole="UsuarioTipo" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="VirtualVideo">
+          <Key>
+            <PropertyRef Name="IdVirtualVideo" />
+          </Key>
+          <Property Name="IdVirtualVideo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" />
+          <Property Name="Url" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="EventoUsuarioVirtualVideo" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_VirtualVideo" FromRole="VirtualVideo" ToRole="EventoUsuarioVirtualVideo" />
+          <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_VirtualVideo_Evento" FromRole="VirtualVideo" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="UsuarioActividadHistorico">
+          <Key>
+            <PropertyRef Name="IdUsuarioActividad" />
+          </Key>
+          <Property Name="IdUsuarioActividad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK_ConversacionDetalle_Conversacion">
+          <End Type="db_ingenierosModel.Conversacion" Role="Conversacion" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.ConversacionDetalle" Role="ConversacionDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversacion">
+              <PropertyRef Name="IdConversacion" />
+            </Principal>
+            <Dependent Role="ConversacionDetalle">
+              <PropertyRef Name="IdConversacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuestionarioTomado_Cuestionario">
+          <End Type="db_ingenierosModel.Cuestionario" Role="Cuestionario" Multiplicity="1" />
+          <End Type="db_ingenierosModel.CuestionarioTomado" Role="CuestionarioTomado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuestionario">
+              <PropertyRef Name="IdCuestionario" />
+            </Principal>
+            <Dependent Role="CuestionarioTomado">
+              <PropertyRef Name="IdCuestionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pregunta_Cuestionario">
+          <End Type="db_ingenierosModel.Cuestionario" Role="Cuestionario" Multiplicity="1" />
+          <End Type="db_ingenierosModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuestionario">
+              <PropertyRef Name="IdCuestionario" />
+            </Principal>
+            <Dependent Role="Pregunta">
+              <PropertyRef Name="IdCuestionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuestionarioRespuesta_CuestionarioTomado">
+          <End Type="db_ingenierosModel.CuestionarioTomado" Role="CuestionarioTomado" Multiplicity="1" />
+          <End Type="db_ingenierosModel.CuestionarioRespuesta" Role="CuestionarioRespuesta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuestionarioTomado">
+              <PropertyRef Name="IdCuestionarioTomado" />
+            </Principal>
+            <Dependent Role="CuestionarioRespuesta">
+              <PropertyRef Name="IdCuestionarioTomado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoUsuarioVirtualVideo_EventoUsuario">
+          <End Type="db_ingenierosModel.EventoUsuario" Role="EventoUsuario" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.EventoUsuarioVirtualVideo" Role="EventoUsuarioVirtualVideo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventoUsuario">
+              <PropertyRef Name="IdEventoUsuario" />
+            </Principal>
+            <Dependent Role="EventoUsuarioVirtualVideo">
+              <PropertyRef Name="IdEventoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoUsuarioVirtualVideo_VirtualVideo">
+          <End Type="db_ingenierosModel.VirtualVideo" Role="VirtualVideo" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.EventoUsuarioVirtualVideo" Role="EventoUsuarioVirtualVideo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VirtualVideo">
+              <PropertyRef Name="IdVirtualVideo" />
+            </Principal>
+            <Dependent Role="EventoUsuarioVirtualVideo">
+              <PropertyRef Name="IdVirtualVideo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inscripcion_Persona">
+          <End Type="db_ingenierosModel.Persona" Role="Persona" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Inscripcion" Role="Inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="IdPersona" />
+            </Principal>
+            <Dependent Role="Inscripcion">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OpcionUsuarioTipo_Opcion">
+          <End Type="db_ingenierosModel.Opcion" Role="Opcion" Multiplicity="1" />
+          <End Type="db_ingenierosModel.OpcionUsuarioTipo" Role="OpcionUsuarioTipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Opcion">
+              <PropertyRef Name="IdOpcion" />
+            </Principal>
+            <Dependent Role="OpcionUsuarioTipo">
+              <PropertyRef Name="IdOpcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OpcionUsuarioTipo_UsuarioTipo">
+          <End Type="db_ingenierosModel.UsuarioTipo" Role="UsuarioTipo" Multiplicity="1" />
+          <End Type="db_ingenierosModel.OpcionUsuarioTipo" Role="OpcionUsuarioTipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioTipo">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Principal>
+            <Dependent Role="OpcionUsuarioTipo">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Persona_Pais">
+          <End Type="db_ingenierosModel.Pais" Role="Pais" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Persona" Role="Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pais">
+              <PropertyRef Name="IdPais" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="IdPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Persona_Profesion">
+          <End Type="db_ingenierosModel.Profesion" Role="Profesion" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Persona" Role="Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profesion">
+              <PropertyRef Name="IdProfesion" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="IdProfesion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Respuesta_Pregunta">
+          <End Type="db_ingenierosModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+          <End Type="db_ingenierosModel.Respuesta" Role="Respuesta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="IdPregunta" />
+            </Principal>
+            <Dependent Role="Respuesta">
+              <PropertyRef Name="IdPregunta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Correo">
+          <Key>
+            <PropertyRef Name="IdCorreo" />
+          </Key>
+          <Property Name="IdCorreo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Asunto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Origen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreOrigen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Mensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoCorreo" Type="Int32" />
+          <Property Name="FechaEnvio" Type="DateTime" Precision="3" />
+          <Property Name="NumeroEnvio" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CorreoDifusion" Relationship="db_ingenierosModel.FK_CorreoDifusion_Correo" FromRole="Correo" ToRole="CorreoDifusion" />
+        </EntityType>
+        <Association Name="FK_CorreoDifusion_Correo">
+          <End Type="db_ingenierosModel.Correo" Role="Correo" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.CorreoDifusion" Role="CorreoDifusion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correo">
+              <PropertyRef Name="IdCorreo" />
+            </Principal>
+            <Dependent Role="CorreoDifusion">
+              <PropertyRef Name="IdCorreo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VirtualContenido">
+          <Key>
+            <PropertyRef Name="IdVirtualContenido" />
+          </Key>
+          <Property Name="IdVirtualContenido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" />
+          <Property Name="Contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_VirtualContenido_Evento" FromRole="VirtualContenido" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="Portada">
+          <Key>
+            <PropertyRef Name="IdPortada" />
+          </Key>
+          <Property Name="IdPortada" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreImagen" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SubTitulo1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SubTitulo2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TextoEnlace" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="UrlEnlace" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EventoCorreo">
+          <Key>
+            <PropertyRef Name="IdEventoCorreo" />
+          </Key>
+          <Property Name="IdEventoCorreo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" Nullable="false" />
+          <Property Name="Asunto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Origen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreOrigen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Mensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoCorreo" Type="Int32" />
+          <Property Name="FechaEnvio" Type="DateTime" Precision="3" />
+          <Property Name="NumeroEnvio" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_EventoCorreo_Evento" FromRole="EventoCorreo" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="Leccion">
+          <Key>
+            <PropertyRef Name="IdLeccion" />
+          </Key>
+          <Property Name="IdLeccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdModulo" Type="Int32" />
+          <Property Name="Tipo" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Duracion" Type="Int32" />
+          <Property Name="TipoUrl" Type="Int32" />
+          <Property Name="Url" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Peso" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Modulo" Relationship="db_ingenierosModel.FK_Leccion_Modulo" FromRole="Leccion" ToRole="Modulo" />
+        </EntityType>
+        <Association Name="FK_Leccion_Modulo">
+          <End Type="db_ingenierosModel.Modulo" Role="Modulo" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Leccion" Role="Leccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulo">
+              <PropertyRef Name="IdModulo" />
+            </Principal>
+            <Dependent Role="Leccion">
+              <PropertyRef Name="IdModulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="IdEvento" />
+          </Key>
+          <Property Name="IdEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="Int32" />
+          <Property Name="Modalidad" Type="Int32" />
+          <Property Name="NombreEvento" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Expositor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ImagenEvento" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentoFotocheck" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentoCertificado" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentoCertificadoImprimir" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentoCertificadoExpositor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Horas" Type="Int32" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="NotaAprobatoria" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="Costo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CostoValor" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="CostoValorPromocional" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="DetallarCertificado" Type="Boolean" />
+          <Property Name="GenerarCertificado" Type="Boolean" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="rowid" Type="Guid" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="EventoCorreo" Relationship="db_ingenierosModel.FK_EventoCorreo_Evento" FromRole="Evento" ToRole="EventoCorreo" />
+          <NavigationProperty Name="EventoTema" Relationship="db_ingenierosModel.FK_EventoTema_Evento" FromRole="Evento" ToRole="EventoTema" />
+          <NavigationProperty Name="EventoUsuario" Relationship="db_ingenierosModel.FK_EventoUsuario_Evento" FromRole="Evento" ToRole="EventoUsuario" />
+          <NavigationProperty Name="Inscripcion" Relationship="db_ingenierosModel.FK_Inscripcion_Evento" FromRole="Evento" ToRole="Inscripcion" />
+          <NavigationProperty Name="Modulo" Relationship="db_ingenierosModel.FK_Modulo_Evento" FromRole="Evento" ToRole="Modulo" />
+          <NavigationProperty Name="VirtualContenido" Relationship="db_ingenierosModel.FK_VirtualContenido_Evento" FromRole="Evento" ToRole="VirtualContenido" />
+          <NavigationProperty Name="VirtualVideo" Relationship="db_ingenierosModel.FK_VirtualVideo_Evento" FromRole="Evento" ToRole="VirtualVideo" />
+        </EntityType>
+        <Association Name="FK_EventoCorreo_Evento">
+          <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="1" />
+          <End Type="db_ingenierosModel.EventoCorreo" Role="EventoCorreo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="EventoCorreo">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoTema_Evento">
+          <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.EventoTema" Role="EventoTema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="EventoTema">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EventoUsuario_Evento">
+          <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.EventoUsuario" Role="EventoUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="EventoUsuario">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inscripcion_Evento">
+          <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Inscripcion" Role="Inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="Inscripcion">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Modulo_Evento">
+          <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Modulo" Role="Modulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="Modulo">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VirtualContenido_Evento">
+          <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.VirtualContenido" Role="VirtualContenido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="VirtualContenido">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VirtualVideo_Evento">
+          <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.VirtualVideo" Role="VirtualVideo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IdEvento" />
+            </Principal>
+            <Dependent Role="VirtualVideo">
+              <PropertyRef Name="IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdDocumento" />
+          </Key>
+          <Property Name="IdDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdDocumentoPadre" Type="Int32" />
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="Tipo" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="NombreOriginal" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Tamaño" Type="Int32" />
+          <Property Name="EstadoDocumento" Type="Int32" />
+          <Property Name="FechaDescarga" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="rowid" Type="Guid" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Empresa" Relationship="db_ingenierosModel.FK_Documento_Empresa" FromRole="Documento" ToRole="Empresa" />
+        </EntityType>
+        <EntityType Name="DocumentoHistorico">
+          <Key>
+            <PropertyRef Name="IdDocumentoHistorico" />
+          </Key>
+          <Property Name="IdDocumentoHistorico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdDocumento" Type="Int32" Nullable="false" />
+          <Property Name="IdDocumentoPadre" Type="Int32" />
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="Tipo" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="NombreOriginal" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Tamaño" Type="Int32" />
+          <Property Name="EstadoDocumento" Type="Int32" />
+          <Property Name="FechaDescarga" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="rowid" Type="Guid" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdUsuarioTipo" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="EventoUsuario" Relationship="db_ingenierosModel.FK_EventoUsuario_Usuario" FromRole="Usuario" ToRole="EventoUsuario" />
+          <NavigationProperty Name="UsuarioTipo" Relationship="db_ingenierosModel.FK_Usuario_UsuarioTipo" FromRole="Usuario" ToRole="UsuarioTipo" />
+          <NavigationProperty Name="UsuarioActividad" Relationship="db_ingenierosModel.FK_UsuarioActividad_Usuario" FromRole="Usuario" ToRole="UsuarioActividad" />
+          <NavigationProperty Name="UsuarioHistorico" Relationship="db_ingenierosModel.FK_UsuarioHistorico_Usuario" FromRole="Usuario" ToRole="UsuarioHistorico" />
+          <NavigationProperty Name="Empresa" Relationship="db_ingenierosModel.FK_Empresa_Usuario" FromRole="Usuario" ToRole="Empresa" />
+        </EntityType>
+        <Association Name="FK_EventoUsuario_Usuario">
+          <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.EventoUsuario" Role="EventoUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="EventoUsuario">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_UsuarioTipo">
+          <End Type="db_ingenierosModel.UsuarioTipo" Role="UsuarioTipo" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioTipo">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdUsuarioTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioActividad_Usuario">
+          <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.UsuarioActividad" Role="UsuarioActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioActividad">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioHistorico_Usuario">
+          <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.UsuarioHistorico" Role="UsuarioHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioHistorico">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="Ruc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NombreComercial" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="DireccionFiscal" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Frecuencia" Type="Int32" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="rowid" Type="Guid" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioModificacion" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Documento" Relationship="db_ingenierosModel.FK_Documento_Empresa" FromRole="Empresa" ToRole="Documento" />
+          <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_Empresa_Usuario" FromRole="Empresa" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FK_Documento_Empresa">
+          <End Type="db_ingenierosModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Documento" Role="Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Empresa_Usuario">
+          <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="db_ingenierosModel.Empresa" Role="Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Empresa">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_ingenierosModelStoreContainer" CdmEntityContainer="db_ingenierosEntities">
+          <EntitySetMapping Name="Configuracion">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Configuracion">
+              <MappingFragment StoreEntitySet="Configuracion">
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Variable" ColumnName="Variable" />
+                <ScalarProperty Name="IdConfiguracion" ColumnName="IdConfiguracion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Conversacion">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Conversacion">
+              <MappingFragment StoreEntitySet="Conversacion">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="NombreInicioConversacion" ColumnName="NombreInicioConversacion" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="IdConversacion" ColumnName="IdConversacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConversacionDetalle">
+            <EntityTypeMapping TypeName="db_ingenierosModel.ConversacionDetalle">
+              <MappingFragment StoreEntitySet="ConversacionDetalle">
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdConversacion" ColumnName="IdConversacion" />
+                <ScalarProperty Name="IdConversacionDetalle" ColumnName="IdConversacionDetalle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CorreoDifusion">
+            <EntityTypeMapping TypeName="db_ingenierosModel.CorreoDifusion">
+              <MappingFragment StoreEntitySet="CorreoDifusion">
+                <ScalarProperty Name="Pago" ColumnName="Pago" />
+                <ScalarProperty Name="NumeroEnvio" ColumnName="NumeroEnvio" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="ErrorStackTrace" ColumnName="ErrorStackTrace" />
+                <ScalarProperty Name="ErrorMensaje" ColumnName="ErrorMensaje" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdCorreo" ColumnName="IdCorreo" />
+                <ScalarProperty Name="IdCorreoDifusion" ColumnName="IdCorreoDifusion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cuestionario">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Cuestionario">
+              <MappingFragment StoreEntitySet="Cuestionario">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdLeccion" ColumnName="IdLeccion" />
+                <ScalarProperty Name="IdCuestionario" ColumnName="IdCuestionario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuestionarioRespuesta">
+            <EntityTypeMapping TypeName="db_ingenierosModel.CuestionarioRespuesta">
+              <MappingFragment StoreEntitySet="CuestionarioRespuesta">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+                <ScalarProperty Name="IdCuestionarioTomado" ColumnName="IdCuestionarioTomado" />
+                <ScalarProperty Name="IdCuestionarioRespuesta" ColumnName="IdCuestionarioRespuesta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuestionarioTomado">
+            <EntityTypeMapping TypeName="db_ingenierosModel.CuestionarioTomado">
+              <MappingFragment StoreEntitySet="CuestionarioTomado">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Intento" ColumnName="Intento" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="IdCuestionario" ColumnName="IdCuestionario" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdCuestionarioTomado" ColumnName="IdCuestionarioTomado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Desafiliado">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Desafiliado">
+              <MappingFragment StoreEntitySet="Desafiliado">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="IdDesafiliado" ColumnName="IdDesafiliado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Docente">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Docente">
+              <MappingFragment StoreEntitySet="Docente">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+                <ScalarProperty Name="Especialista" ColumnName="Especialista" />
+                <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+                <ScalarProperty Name="NombreFoto" ColumnName="NombreFoto" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdDocuente" ColumnName="IdDocuente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventoTema">
+            <EntityTypeMapping TypeName="db_ingenierosModel.EventoTema">
+              <MappingFragment StoreEntitySet="EventoTema">
+                <ScalarProperty Name="TipoTema" ColumnName="TipoTema" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdEventoTema" ColumnName="IdEventoTema" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventoUsuario">
+            <EntityTypeMapping TypeName="db_ingenierosModel.EventoUsuario">
+              <MappingFragment StoreEntitySet="EventoUsuario">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Abierto" ColumnName="Abierto" />
+                <ScalarProperty Name="NotaFinal" ColumnName="NotaFinal" />
+                <ScalarProperty Name="FechaUltimoAcceso" ColumnName="FechaUltimoAcceso" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdEventoUsuario" ColumnName="IdEventoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventoUsuarioVirtualVideo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.EventoUsuarioVirtualVideo">
+              <MappingFragment StoreEntitySet="EventoUsuarioVirtualVideo">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdVirtualVideo" ColumnName="IdVirtualVideo" />
+                <ScalarProperty Name="IdEventoUsuario" ColumnName="IdEventoUsuario" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Expositor">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Expositor">
+              <MappingFragment StoreEntitySet="Expositor">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="IdExpositor" ColumnName="IdExpositor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Galeria">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Galeria">
+              <MappingFragment StoreEntitySet="Galeria">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdGaleria" ColumnName="IdGaleria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inscripcion">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Inscripcion">
+              <MappingFragment StoreEntitySet="Inscripcion">
+                <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+                <ScalarProperty Name="TipoInscripcion" ColumnName="TipoInscripcion" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="Certificado" ColumnName="Certificado" />
+                <ScalarProperty Name="NumeroCertificado" ColumnName="NumeroCertificado" />
+                <ScalarProperty Name="NumeroOperacion" ColumnName="NumeroOperacion" />
+                <ScalarProperty Name="FechaOperacion" ColumnName="FechaOperacion" />
+                <ScalarProperty Name="NombreBanco" ColumnName="NombreBanco" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="TipoModalidad" ColumnName="TipoModalidad" />
+                <ScalarProperty Name="EntregaCertificado" ColumnName="EntregaCertificado" />
+                <ScalarProperty Name="TipoPago" ColumnName="TipoPago" />
+                <ScalarProperty Name="EstadoPago" ColumnName="EstadoPago" />
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdInscripcion" ColumnName="IdInscripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modulo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Modulo">
+              <MappingFragment StoreEntitySet="Modulo">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="Expositor" ColumnName="Expositor" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdModulo" ColumnName="IdModulo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Opcion">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Opcion">
+              <MappingFragment StoreEntitySet="Opcion">
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="UrlDescripcion" ColumnName="UrlDescripcion" />
+                <ScalarProperty Name="Descipcion" ColumnName="Descipcion" />
+                <ScalarProperty Name="Icono" ColumnName="Icono" />
+                <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+                <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OpcionUsuarioTipo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.OpcionUsuarioTipo">
+              <MappingFragment StoreEntitySet="OpcionUsuarioTipo">
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdUsuarioTipo" ColumnName="IdUsuarioTipo" />
+                <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pais">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Pais">
+              <MappingFragment StoreEntitySet="Pais">
+                <ScalarProperty Name="NombrePais" ColumnName="NombrePais" />
+                <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persona">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Persona">
+              <MappingFragment StoreEntitySet="Persona">
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+                <ScalarProperty Name="DescripcionOcupacion" ColumnName="DescripcionOcupacion" />
+                <ScalarProperty Name="TipoOcupacion" ColumnName="TipoOcupacion" />
+                <ScalarProperty Name="IdProfesion" ColumnName="IdProfesion" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="CIP" ColumnName="CIP" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pregunta">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Pregunta">
+              <MappingFragment StoreEntitySet="Pregunta">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Puntaje" ColumnName="Puntaje" />
+                <ScalarProperty Name="Ayuda" ColumnName="Ayuda" />
+                <ScalarProperty Name="Explicacion" ColumnName="Explicacion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IdCuestionario" ColumnName="IdCuestionario" />
+                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profesion">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Profesion">
+              <MappingFragment StoreEntitySet="Profesion">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdProfesion" ColumnName="IdProfesion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Respuesta">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Respuesta">
+              <MappingFragment StoreEntitySet="Respuesta">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="EsCorrecta" ColumnName="EsCorrecta" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+                <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suceso">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Suceso">
+              <MappingFragment StoreEntitySet="Suceso">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="ImagenSuceso" ColumnName="ImagenSuceso" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="NombreSuceso" ColumnName="NombreSuceso" />
+                <ScalarProperty Name="IdSuceso" ColumnName="IdSuceso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Tipo">
+              <MappingFragment StoreEntitySet="Tipo">
+                <ScalarProperty Name="Abreviatura" ColumnName="Abreviatura" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="NombreTipo" ColumnName="NombreTipo" />
+                <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Universidad">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Universidad">
+              <MappingFragment StoreEntitySet="Universidad">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdUniversidad" ColumnName="IdUniversidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioActividad">
+            <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioActividad">
+              <MappingFragment StoreEntitySet="UsuarioActividad">
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdUsuarioActividad" ColumnName="IdUsuarioActividad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioHistorico">
+            <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioHistorico">
+              <MappingFragment StoreEntitySet="UsuarioHistorico">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdUsuarioHistorico" ColumnName="IdUsuarioHistorico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioTipo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioTipo">
+              <MappingFragment StoreEntitySet="UsuarioTipo">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdUsuarioTipo" ColumnName="IdUsuarioTipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VirtualVideo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.VirtualVideo">
+              <MappingFragment StoreEntitySet="VirtualVideo">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdVirtualVideo" ColumnName="IdVirtualVideo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioActividadHistorico">
+            <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioActividadHistorico">
+              <MappingFragment StoreEntitySet="UsuarioActividadHistorico">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdUsuarioActividad" ColumnName="IdUsuarioActividad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Correo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Correo">
+              <MappingFragment StoreEntitySet="Correo">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="NumeroEnvio" ColumnName="NumeroEnvio" />
+                <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+                <ScalarProperty Name="EstadoCorreo" ColumnName="EstadoCorreo" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+                <ScalarProperty Name="NombreOrigen" ColumnName="NombreOrigen" />
+                <ScalarProperty Name="Origen" ColumnName="Origen" />
+                <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+                <ScalarProperty Name="IdCorreo" ColumnName="IdCorreo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VirtualContenido">
+            <EntityTypeMapping TypeName="db_ingenierosModel.VirtualContenido">
+              <MappingFragment StoreEntitySet="VirtualContenido">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdVirtualContenido" ColumnName="IdVirtualContenido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Portada">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Portada">
+              <MappingFragment StoreEntitySet="Portada">
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="UrlEnlace" ColumnName="UrlEnlace" />
+                <ScalarProperty Name="TextoEnlace" ColumnName="TextoEnlace" />
+                <ScalarProperty Name="SubTitulo2" ColumnName="SubTitulo2" />
+                <ScalarProperty Name="SubTitulo1" ColumnName="SubTitulo1" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="NombreImagen" ColumnName="NombreImagen" />
+                <ScalarProperty Name="IdPortada" ColumnName="IdPortada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventoCorreo">
+            <EntityTypeMapping TypeName="db_ingenierosModel.EventoCorreo">
+              <MappingFragment StoreEntitySet="EventoCorreo">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="NumeroEnvio" ColumnName="NumeroEnvio" />
+                <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+                <ScalarProperty Name="EstadoCorreo" ColumnName="EstadoCorreo" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+                <ScalarProperty Name="NombreOrigen" ColumnName="NombreOrigen" />
+                <ScalarProperty Name="Origen" ColumnName="Origen" />
+                <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+                <ScalarProperty Name="IdEventoCorreo" ColumnName="IdEventoCorreo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Leccion">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Leccion">
+              <MappingFragment StoreEntitySet="Leccion">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="TipoUrl" ColumnName="TipoUrl" />
+                <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IdModulo" ColumnName="IdModulo" />
+                <ScalarProperty Name="IdLeccion" ColumnName="IdLeccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Evento">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Evento">
+              <MappingFragment StoreEntitySet="Evento">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="GenerarCertificado" ColumnName="GenerarCertificado" />
+                <ScalarProperty Name="DetallarCertificado" ColumnName="DetallarCertificado" />
+                <ScalarProperty Name="CostoValorPromocional" ColumnName="CostoValorPromocional" />
+                <ScalarProperty Name="CostoValor" ColumnName="CostoValor" />
+                <ScalarProperty Name="Costo" ColumnName="Costo" />
+                <ScalarProperty Name="NotaAprobatoria" ColumnName="NotaAprobatoria" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="DocumentoCertificadoExpositor" ColumnName="DocumentoCertificadoExpositor" />
+                <ScalarProperty Name="DocumentoCertificadoImprimir" ColumnName="DocumentoCertificadoImprimir" />
+                <ScalarProperty Name="DocumentoCertificado" ColumnName="DocumentoCertificado" />
+                <ScalarProperty Name="DocumentoFotocheck" ColumnName="DocumentoFotocheck" />
+                <ScalarProperty Name="ImagenEvento" ColumnName="ImagenEvento" />
+                <ScalarProperty Name="Expositor" ColumnName="Expositor" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="NombreEvento" ColumnName="NombreEvento" />
+                <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documento">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Documento">
+              <MappingFragment StoreEntitySet="Documento">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaDescarga" ColumnName="FechaDescarga" />
+                <ScalarProperty Name="EstadoDocumento" ColumnName="EstadoDocumento" />
+                <ScalarProperty Name="Tamaño" ColumnName="Tamaño" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="NombreOriginal" ColumnName="NombreOriginal" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdDocumentoPadre" ColumnName="IdDocumentoPadre" />
+                <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentoHistorico">
+            <EntityTypeMapping TypeName="db_ingenierosModel.DocumentoHistorico">
+              <MappingFragment StoreEntitySet="DocumentoHistorico">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaDescarga" ColumnName="FechaDescarga" />
+                <ScalarProperty Name="EstadoDocumento" ColumnName="EstadoDocumento" />
+                <ScalarProperty Name="Tamaño" ColumnName="Tamaño" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="NombreOriginal" ColumnName="NombreOriginal" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdDocumentoPadre" ColumnName="IdDocumentoPadre" />
+                <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+                <ScalarProperty Name="IdDocumentoHistorico" ColumnName="IdDocumentoHistorico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdUsuarioTipo" ColumnName="IdUsuarioTipo" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empresa">
+            <EntityTypeMapping TypeName="db_ingenierosModel.Empresa">
+              <MappingFragment StoreEntitySet="Empresa">
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Frecuencia" ColumnName="Frecuencia" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="DireccionFiscal" ColumnName="DireccionFiscal" />
+                <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

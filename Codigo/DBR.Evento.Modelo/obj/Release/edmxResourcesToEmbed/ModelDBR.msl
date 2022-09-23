@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_ingenierosModelStoreContainer" CdmEntityContainer="db_ingenierosEntities">
+    <EntitySetMapping Name="Configuracion">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Configuracion">
+        <MappingFragment StoreEntitySet="Configuracion">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Variable" ColumnName="Variable" />
+          <ScalarProperty Name="IdConfiguracion" ColumnName="IdConfiguracion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conversacion">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Conversacion">
+        <MappingFragment StoreEntitySet="Conversacion">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="NombreInicioConversacion" ColumnName="NombreInicioConversacion" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="IdConversacion" ColumnName="IdConversacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConversacionDetalle">
+      <EntityTypeMapping TypeName="db_ingenierosModel.ConversacionDetalle">
+        <MappingFragment StoreEntitySet="ConversacionDetalle">
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdConversacion" ColumnName="IdConversacion" />
+          <ScalarProperty Name="IdConversacionDetalle" ColumnName="IdConversacionDetalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorreoDifusion">
+      <EntityTypeMapping TypeName="db_ingenierosModel.CorreoDifusion">
+        <MappingFragment StoreEntitySet="CorreoDifusion">
+          <ScalarProperty Name="Pago" ColumnName="Pago" />
+          <ScalarProperty Name="NumeroEnvio" ColumnName="NumeroEnvio" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="ErrorStackTrace" ColumnName="ErrorStackTrace" />
+          <ScalarProperty Name="ErrorMensaje" ColumnName="ErrorMensaje" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdCorreo" ColumnName="IdCorreo" />
+          <ScalarProperty Name="IdCorreoDifusion" ColumnName="IdCorreoDifusion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuestionario">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Cuestionario">
+        <MappingFragment StoreEntitySet="Cuestionario">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdLeccion" ColumnName="IdLeccion" />
+          <ScalarProperty Name="IdCuestionario" ColumnName="IdCuestionario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuestionarioRespuesta">
+      <EntityTypeMapping TypeName="db_ingenierosModel.CuestionarioRespuesta">
+        <MappingFragment StoreEntitySet="CuestionarioRespuesta">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+          <ScalarProperty Name="IdCuestionarioTomado" ColumnName="IdCuestionarioTomado" />
+          <ScalarProperty Name="IdCuestionarioRespuesta" ColumnName="IdCuestionarioRespuesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuestionarioTomado">
+      <EntityTypeMapping TypeName="db_ingenierosModel.CuestionarioTomado">
+        <MappingFragment StoreEntitySet="CuestionarioTomado">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Intento" ColumnName="Intento" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="IdCuestionario" ColumnName="IdCuestionario" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdCuestionarioTomado" ColumnName="IdCuestionarioTomado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Desafiliado">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Desafiliado">
+        <MappingFragment StoreEntitySet="Desafiliado">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="IdDesafiliado" ColumnName="IdDesafiliado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Docente">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Docente">
+        <MappingFragment StoreEntitySet="Docente">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="Especialista" ColumnName="Especialista" />
+          <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+          <ScalarProperty Name="NombreFoto" ColumnName="NombreFoto" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdDocuente" ColumnName="IdDocuente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventoTema">
+      <EntityTypeMapping TypeName="db_ingenierosModel.EventoTema">
+        <MappingFragment StoreEntitySet="EventoTema">
+          <ScalarProperty Name="TipoTema" ColumnName="TipoTema" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdEventoTema" ColumnName="IdEventoTema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventoUsuario">
+      <EntityTypeMapping TypeName="db_ingenierosModel.EventoUsuario">
+        <MappingFragment StoreEntitySet="EventoUsuario">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Abierto" ColumnName="Abierto" />
+          <ScalarProperty Name="NotaFinal" ColumnName="NotaFinal" />
+          <ScalarProperty Name="FechaUltimoAcceso" ColumnName="FechaUltimoAcceso" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdEventoUsuario" ColumnName="IdEventoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventoUsuarioVirtualVideo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.EventoUsuarioVirtualVideo">
+        <MappingFragment StoreEntitySet="EventoUsuarioVirtualVideo">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdVirtualVideo" ColumnName="IdVirtualVideo" />
+          <ScalarProperty Name="IdEventoUsuario" ColumnName="IdEventoUsuario" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expositor">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Expositor">
+        <MappingFragment StoreEntitySet="Expositor">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="IdExpositor" ColumnName="IdExpositor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Galeria">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Galeria">
+        <MappingFragment StoreEntitySet="Galeria">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdGaleria" ColumnName="IdGaleria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inscripcion">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Inscripcion">
+        <MappingFragment StoreEntitySet="Inscripcion">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+          <ScalarProperty Name="TipoInscripcion" ColumnName="TipoInscripcion" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="Certificado" ColumnName="Certificado" />
+          <ScalarProperty Name="NumeroCertificado" ColumnName="NumeroCertificado" />
+          <ScalarProperty Name="NumeroOperacion" ColumnName="NumeroOperacion" />
+          <ScalarProperty Name="FechaOperacion" ColumnName="FechaOperacion" />
+          <ScalarProperty Name="NombreBanco" ColumnName="NombreBanco" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="TipoModalidad" ColumnName="TipoModalidad" />
+          <ScalarProperty Name="EntregaCertificado" ColumnName="EntregaCertificado" />
+          <ScalarProperty Name="TipoPago" ColumnName="TipoPago" />
+          <ScalarProperty Name="EstadoPago" ColumnName="EstadoPago" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdInscripcion" ColumnName="IdInscripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modulo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Modulo">
+        <MappingFragment StoreEntitySet="Modulo">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="Expositor" ColumnName="Expositor" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdModulo" ColumnName="IdModulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opcion">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Opcion">
+        <MappingFragment StoreEntitySet="Opcion">
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="UrlDescripcion" ColumnName="UrlDescripcion" />
+          <ScalarProperty Name="Descipcion" ColumnName="Descipcion" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+          <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpcionUsuarioTipo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.OpcionUsuarioTipo">
+        <MappingFragment StoreEntitySet="OpcionUsuarioTipo">
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdUsuarioTipo" ColumnName="IdUsuarioTipo" />
+          <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Pais">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="NombrePais" ColumnName="NombrePais" />
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Persona">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+          <ScalarProperty Name="DescripcionOcupacion" ColumnName="DescripcionOcupacion" />
+          <ScalarProperty Name="TipoOcupacion" ColumnName="TipoOcupacion" />
+          <ScalarProperty Name="IdProfesion" ColumnName="IdProfesion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CIP" ColumnName="CIP" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pregunta">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Pregunta">
+        <MappingFragment StoreEntitySet="Pregunta">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Puntaje" ColumnName="Puntaje" />
+          <ScalarProperty Name="Ayuda" ColumnName="Ayuda" />
+          <ScalarProperty Name="Explicacion" ColumnName="Explicacion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdCuestionario" ColumnName="IdCuestionario" />
+          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesion">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Profesion">
+        <MappingFragment StoreEntitySet="Profesion">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdProfesion" ColumnName="IdProfesion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Respuesta">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Respuesta">
+        <MappingFragment StoreEntitySet="Respuesta">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="EsCorrecta" ColumnName="EsCorrecta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suceso">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Suceso">
+        <MappingFragment StoreEntitySet="Suceso">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="ImagenSuceso" ColumnName="ImagenSuceso" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="NombreSuceso" ColumnName="NombreSuceso" />
+          <ScalarProperty Name="IdSuceso" ColumnName="IdSuceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="Abreviatura" ColumnName="Abreviatura" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="NombreTipo" ColumnName="NombreTipo" />
+          <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Universidad">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Universidad">
+        <MappingFragment StoreEntitySet="Universidad">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdUniversidad" ColumnName="IdUniversidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioActividad">
+      <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioActividad">
+        <MappingFragment StoreEntitySet="UsuarioActividad">
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdUsuarioActividad" ColumnName="IdUsuarioActividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioHistorico">
+      <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioHistorico">
+        <MappingFragment StoreEntitySet="UsuarioHistorico">
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdUsuarioHistorico" ColumnName="IdUsuarioHistorico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioTipo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioTipo">
+        <MappingFragment StoreEntitySet="UsuarioTipo">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdUsuarioTipo" ColumnName="IdUsuarioTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirtualVideo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.VirtualVideo">
+        <MappingFragment StoreEntitySet="VirtualVideo">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdVirtualVideo" ColumnName="IdVirtualVideo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioActividadHistorico">
+      <EntityTypeMapping TypeName="db_ingenierosModel.UsuarioActividadHistorico">
+        <MappingFragment StoreEntitySet="UsuarioActividadHistorico">
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdUsuarioActividad" ColumnName="IdUsuarioActividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Correo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Correo">
+        <MappingFragment StoreEntitySet="Correo">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="NumeroEnvio" ColumnName="NumeroEnvio" />
+          <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+          <ScalarProperty Name="EstadoCorreo" ColumnName="EstadoCorreo" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+          <ScalarProperty Name="NombreOrigen" ColumnName="NombreOrigen" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="IdCorreo" ColumnName="IdCorreo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirtualContenido">
+      <EntityTypeMapping TypeName="db_ingenierosModel.VirtualContenido">
+        <MappingFragment StoreEntitySet="VirtualContenido">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdVirtualContenido" ColumnName="IdVirtualContenido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Portada">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Portada">
+        <MappingFragment StoreEntitySet="Portada">
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="UrlEnlace" ColumnName="UrlEnlace" />
+          <ScalarProperty Name="TextoEnlace" ColumnName="TextoEnlace" />
+          <ScalarProperty Name="SubTitulo2" ColumnName="SubTitulo2" />
+          <ScalarProperty Name="SubTitulo1" ColumnName="SubTitulo1" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="NombreImagen" ColumnName="NombreImagen" />
+          <ScalarProperty Name="IdPortada" ColumnName="IdPortada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventoCorreo">
+      <EntityTypeMapping TypeName="db_ingenierosModel.EventoCorreo">
+        <MappingFragment StoreEntitySet="EventoCorreo">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="NumeroEnvio" ColumnName="NumeroEnvio" />
+          <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+          <ScalarProperty Name="EstadoCorreo" ColumnName="EstadoCorreo" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+          <ScalarProperty Name="NombreOrigen" ColumnName="NombreOrigen" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+          <ScalarProperty Name="IdEventoCorreo" ColumnName="IdEventoCorreo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leccion">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Leccion">
+        <MappingFragment StoreEntitySet="Leccion">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="TipoUrl" ColumnName="TipoUrl" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdModulo" ColumnName="IdModulo" />
+          <ScalarProperty Name="IdLeccion" ColumnName="IdLeccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evento">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Evento">
+        <MappingFragment StoreEntitySet="Evento">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="GenerarCertificado" ColumnName="GenerarCertificado" />
+          <ScalarProperty Name="DetallarCertificado" ColumnName="DetallarCertificado" />
+          <ScalarProperty Name="CostoValorPromocional" ColumnName="CostoValorPromocional" />
+          <ScalarProperty Name="CostoValor" ColumnName="CostoValor" />
+          <ScalarProperty Name="Costo" ColumnName="Costo" />
+          <ScalarProperty Name="NotaAprobatoria" ColumnName="NotaAprobatoria" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="DocumentoCertificadoExpositor" ColumnName="DocumentoCertificadoExpositor" />
+          <ScalarProperty Name="DocumentoCertificadoImprimir" ColumnName="DocumentoCertificadoImprimir" />
+          <ScalarProperty Name="DocumentoCertificado" ColumnName="DocumentoCertificado" />
+          <ScalarProperty Name="DocumentoFotocheck" ColumnName="DocumentoFotocheck" />
+          <ScalarProperty Name="ImagenEvento" ColumnName="ImagenEvento" />
+          <ScalarProperty Name="Expositor" ColumnName="Expositor" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="NombreEvento" ColumnName="NombreEvento" />
+          <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdEvento" ColumnName="IdEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documento">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Documento">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaDescarga" ColumnName="FechaDescarga" />
+          <ScalarProperty Name="EstadoDocumento" ColumnName="EstadoDocumento" />
+          <ScalarProperty Name="Tamaño" ColumnName="Tamaño" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="NombreOriginal" ColumnName="NombreOriginal" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdDocumentoPadre" ColumnName="IdDocumentoPadre" />
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentoHistorico">
+      <EntityTypeMapping TypeName="db_ingenierosModel.DocumentoHistorico">
+        <MappingFragment StoreEntitySet="DocumentoHistorico">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaDescarga" ColumnName="FechaDescarga" />
+          <ScalarProperty Name="EstadoDocumento" ColumnName="EstadoDocumento" />
+          <ScalarProperty Name="Tamaño" ColumnName="Tamaño" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="NombreOriginal" ColumnName="NombreOriginal" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdDocumentoPadre" ColumnName="IdDocumentoPadre" />
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="IdDocumentoHistorico" ColumnName="IdDocumentoHistorico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdUsuarioTipo" ColumnName="IdUsuarioTipo" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="db_ingenierosModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Frecuencia" ColumnName="Frecuencia" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="DireccionFiscal" ColumnName="DireccionFiscal" />
+          <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

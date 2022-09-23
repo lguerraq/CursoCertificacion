@@ -1,0 +1,71 @@
+﻿@model List<DBR.Evento.Modelo.Response.EventoResponse>
+@{
+    ViewBag.Title = "Matriculados";
+}
+<div class="sa4d25">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="st_title"><i class="uil uil-book-alt"></i>Cursos adquiridos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="my_courses_tabs mp-30">
+                    <div class="table-responsive ">
+                        <table class="table ucp-table" id="gridEventos">
+                            <thead class="thead-s">
+                                <tr>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col" id="roNombre">Nombre</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Expositor</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{ var index = 1;}
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@index.ToString().PadLeft(3, '0')</td>
+                                        <td>@item.TipoCursoNombre</td>
+                                        <td><a href="@Url.Action("Detalle", "Cursos", new { area = "Aula", id = item.rowid })">@item.NombreEvento</a></td>
+                                        <td>@item.Fecha.ToShortDateString()</td>
+                                        <td><b class="course_active">@item.Expositor</b></td>
+                                        <td class="text-center">
+                                            <a style="cursor:pointer;" title="Descargar certificado" data-idevento="@item.IdEvento" data-nombrecertificado="@item.DocumentoCertificadoImprimir"  class="gray-s btnCertificado"><i class="fa fa-file-pdf"></i></a>
+                                            <a href='@Url.Action("Detalle", "Cursos", new { area = "Aula", id = item.rowid })' title="Ver detalle del curso" class="gray-s"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    index++;
+                                }
+                                @if (Model.Count == 0)
+                                {
+                                    <tr>
+                                        <td colspan="7">
+                                            No se encontraron cursos disponibles
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="width:100%;min-height:55vh"></div>
+
+@section scripts{
+
+    <script>
+        var urlListEventoUsuarioPaged = '@Url.Action("ListEventoUsuarioPaged", "Virtual", new { area="" })';
+        var urlIrContenidoEvento = '@Url.Action("Detalle", "Cursos", new { area = "Aula" })';
+        var urlCargarPdfCertificadoUtomatico = '@Url.Action("CargarPdfCertificadoUtomatico", "Cursos", new { area = "Aula" })';
+        var urlDescargarPdfGenerado = '@Url.Action("DescargarPdfGenerado", "Cursos", new { area = "Aula" })';
+    </script>
+    <script src="~/js/pages/Virtual/Matricula.min.js?v=@ViewBag.NumeroRelease"></script>
+}

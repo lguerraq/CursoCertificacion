@@ -1,0 +1,1141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_ingenierosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="db_ingenierosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Configuracion" EntityType="db_ingenierosModel.Configuracion" />
+    <EntitySet Name="Conversacion" EntityType="db_ingenierosModel.Conversacion" />
+    <EntitySet Name="ConversacionDetalle" EntityType="db_ingenierosModel.ConversacionDetalle" />
+    <EntitySet Name="CorreoDifusion" EntityType="db_ingenierosModel.CorreoDifusion" />
+    <EntitySet Name="Cuestionario" EntityType="db_ingenierosModel.Cuestionario" />
+    <EntitySet Name="CuestionarioRespuesta" EntityType="db_ingenierosModel.CuestionarioRespuesta" />
+    <EntitySet Name="CuestionarioTomado" EntityType="db_ingenierosModel.CuestionarioTomado" />
+    <EntitySet Name="Desafiliado" EntityType="db_ingenierosModel.Desafiliado" />
+    <EntitySet Name="Docente" EntityType="db_ingenierosModel.Docente" />
+    <EntitySet Name="EventoTema" EntityType="db_ingenierosModel.EventoTema" />
+    <EntitySet Name="EventoUsuario" EntityType="db_ingenierosModel.EventoUsuario" />
+    <EntitySet Name="EventoUsuarioVirtualVideo" EntityType="db_ingenierosModel.EventoUsuarioVirtualVideo" />
+    <EntitySet Name="Expositor" EntityType="db_ingenierosModel.Expositor" />
+    <EntitySet Name="Galeria" EntityType="db_ingenierosModel.Galeria" />
+    <EntitySet Name="Inscripcion" EntityType="db_ingenierosModel.Inscripcion" />
+    <EntitySet Name="Modulo" EntityType="db_ingenierosModel.Modulo" />
+    <EntitySet Name="Opcion" EntityType="db_ingenierosModel.Opcion" />
+    <EntitySet Name="OpcionUsuarioTipo" EntityType="db_ingenierosModel.OpcionUsuarioTipo" />
+    <EntitySet Name="Pais" EntityType="db_ingenierosModel.Pais" />
+    <EntitySet Name="Persona" EntityType="db_ingenierosModel.Persona" />
+    <EntitySet Name="Pregunta" EntityType="db_ingenierosModel.Pregunta" />
+    <EntitySet Name="Profesion" EntityType="db_ingenierosModel.Profesion" />
+    <EntitySet Name="Respuesta" EntityType="db_ingenierosModel.Respuesta" />
+    <EntitySet Name="Suceso" EntityType="db_ingenierosModel.Suceso" />
+    <EntitySet Name="Tipo" EntityType="db_ingenierosModel.Tipo" />
+    <EntitySet Name="Universidad" EntityType="db_ingenierosModel.Universidad" />
+    <EntitySet Name="UsuarioActividad" EntityType="db_ingenierosModel.UsuarioActividad" />
+    <EntitySet Name="UsuarioHistorico" EntityType="db_ingenierosModel.UsuarioHistorico" />
+    <EntitySet Name="UsuarioTipo" EntityType="db_ingenierosModel.UsuarioTipo" />
+    <EntitySet Name="VirtualVideo" EntityType="db_ingenierosModel.VirtualVideo" />
+    <EntitySet Name="UsuarioActividadHistorico" EntityType="db_ingenierosModel.UsuarioActividadHistorico" />
+    <AssociationSet Name="FK_ConversacionDetalle_Conversacion" Association="db_ingenierosModel.FK_ConversacionDetalle_Conversacion">
+      <End Role="Conversacion" EntitySet="Conversacion" />
+      <End Role="ConversacionDetalle" EntitySet="ConversacionDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuestionarioTomado_Cuestionario" Association="db_ingenierosModel.FK_CuestionarioTomado_Cuestionario">
+      <End Role="Cuestionario" EntitySet="Cuestionario" />
+      <End Role="CuestionarioTomado" EntitySet="CuestionarioTomado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pregunta_Cuestionario" Association="db_ingenierosModel.FK_Pregunta_Cuestionario">
+      <End Role="Cuestionario" EntitySet="Cuestionario" />
+      <End Role="Pregunta" EntitySet="Pregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuestionarioRespuesta_CuestionarioTomado" Association="db_ingenierosModel.FK_CuestionarioRespuesta_CuestionarioTomado">
+      <End Role="CuestionarioTomado" EntitySet="CuestionarioTomado" />
+      <End Role="CuestionarioRespuesta" EntitySet="CuestionarioRespuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventoUsuarioVirtualVideo_EventoUsuario" Association="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_EventoUsuario">
+      <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+      <End Role="EventoUsuarioVirtualVideo" EntitySet="EventoUsuarioVirtualVideo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventoUsuarioVirtualVideo_VirtualVideo" Association="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_VirtualVideo">
+      <End Role="VirtualVideo" EntitySet="VirtualVideo" />
+      <End Role="EventoUsuarioVirtualVideo" EntitySet="EventoUsuarioVirtualVideo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inscripcion_Persona" Association="db_ingenierosModel.FK_Inscripcion_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Inscripcion" EntitySet="Inscripcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionUsuarioTipo_Opcion" Association="db_ingenierosModel.FK_OpcionUsuarioTipo_Opcion">
+      <End Role="Opcion" EntitySet="Opcion" />
+      <End Role="OpcionUsuarioTipo" EntitySet="OpcionUsuarioTipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionUsuarioTipo_UsuarioTipo" Association="db_ingenierosModel.FK_OpcionUsuarioTipo_UsuarioTipo">
+      <End Role="UsuarioTipo" EntitySet="UsuarioTipo" />
+      <End Role="OpcionUsuarioTipo" EntitySet="OpcionUsuarioTipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persona_Pais" Association="db_ingenierosModel.FK_Persona_Pais">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persona_Profesion" Association="db_ingenierosModel.FK_Persona_Profesion">
+      <End Role="Profesion" EntitySet="Profesion" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuesta_Pregunta" Association="db_ingenierosModel.FK_Respuesta_Pregunta">
+      <End Role="Pregunta" EntitySet="Pregunta" />
+      <End Role="Respuesta" EntitySet="Respuesta" />
+    </AssociationSet>
+    <EntitySet Name="Correo" EntityType="db_ingenierosModel.Correo" />
+    <AssociationSet Name="FK_CorreoDifusion_Correo" Association="db_ingenierosModel.FK_CorreoDifusion_Correo">
+      <End Role="Correo" EntitySet="Correo" />
+      <End Role="CorreoDifusion" EntitySet="CorreoDifusion" />
+    </AssociationSet>
+    <EntitySet Name="VirtualContenido" EntityType="db_ingenierosModel.VirtualContenido" />
+    <EntitySet Name="Portada" EntityType="db_ingenierosModel.Portada" />
+    <EntitySet Name="EventoCorreo" EntityType="db_ingenierosModel.EventoCorreo" />
+    <EntitySet Name="Leccion" EntityType="db_ingenierosModel.Leccion" />
+    <AssociationSet Name="FK_Leccion_Modulo" Association="db_ingenierosModel.FK_Leccion_Modulo">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Leccion" EntitySet="Leccion" />
+    </AssociationSet>
+    <EntitySet Name="Evento" EntityType="db_ingenierosModel.Evento" />
+    <AssociationSet Name="FK_EventoCorreo_Evento" Association="db_ingenierosModel.FK_EventoCorreo_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="EventoCorreo" EntitySet="EventoCorreo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventoTema_Evento" Association="db_ingenierosModel.FK_EventoTema_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="EventoTema" EntitySet="EventoTema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventoUsuario_Evento" Association="db_ingenierosModel.FK_EventoUsuario_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inscripcion_Evento" Association="db_ingenierosModel.FK_Inscripcion_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="Inscripcion" EntitySet="Inscripcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modulo_Evento" Association="db_ingenierosModel.FK_Modulo_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="Modulo" EntitySet="Modulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualContenido_Evento" Association="db_ingenierosModel.FK_VirtualContenido_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="VirtualContenido" EntitySet="VirtualContenido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualVideo_Evento" Association="db_ingenierosModel.FK_VirtualVideo_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="VirtualVideo" EntitySet="VirtualVideo" />
+    </AssociationSet>
+    <EntitySet Name="Documento" EntityType="db_ingenierosModel.Documento" />
+    <EntitySet Name="DocumentoHistorico" EntityType="db_ingenierosModel.DocumentoHistorico" />
+    <EntitySet Name="Usuario" EntityType="db_ingenierosModel.Usuario" />
+    <AssociationSet Name="FK_EventoUsuario_Usuario" Association="db_ingenierosModel.FK_EventoUsuario_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EventoUsuario" EntitySet="EventoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_UsuarioTipo" Association="db_ingenierosModel.FK_Usuario_UsuarioTipo">
+      <End Role="UsuarioTipo" EntitySet="UsuarioTipo" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioActividad_Usuario" Association="db_ingenierosModel.FK_UsuarioActividad_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioActividad" EntitySet="UsuarioActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioHistorico_Usuario" Association="db_ingenierosModel.FK_UsuarioHistorico_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioHistorico" EntitySet="UsuarioHistorico" />
+    </AssociationSet>
+    <EntitySet Name="Empresa" EntityType="db_ingenierosModel.Empresa" />
+    <AssociationSet Name="FK_Documento_Empresa" Association="db_ingenierosModel.FK_Documento_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_Usuario" Association="db_ingenierosModel.FK_Empresa_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Configuracion">
+    <Key>
+      <PropertyRef Name="IdConfiguracion" />
+    </Key>
+    <Property Name="IdConfiguracion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Variable" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Conversacion">
+    <Key>
+      <PropertyRef Name="IdConversacion" />
+    </Key>
+    <Property Name="IdConversacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHora" Type="DateTime" Precision="3" />
+    <Property Name="NombreInicioConversacion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <NavigationProperty Name="ConversacionDetalle" Relationship="db_ingenierosModel.FK_ConversacionDetalle_Conversacion" FromRole="Conversacion" ToRole="ConversacionDetalle" />
+  </EntityType>
+  <EntityType Name="ConversacionDetalle">
+    <Key>
+      <PropertyRef Name="IdConversacionDetalle" />
+    </Key>
+    <Property Name="IdConversacionDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdConversacion" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHora" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Conversacion" Relationship="db_ingenierosModel.FK_ConversacionDetalle_Conversacion" FromRole="ConversacionDetalle" ToRole="Conversacion" />
+  </EntityType>
+  <EntityType Name="CorreoDifusion">
+    <Key>
+      <PropertyRef Name="IdCorreoDifusion" />
+    </Key>
+    <Property Name="IdCorreoDifusion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCorreo" Type="Int32" />
+    <Property Name="IdEvento" Type="Int32" />
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="Correo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="ErrorMensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorStackTrace" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NumeroEnvio" Type="Int32" />
+    <Property Name="Pago" Type="Boolean" />
+    <NavigationProperty Name="Correo1" Relationship="db_ingenierosModel.FK_CorreoDifusion_Correo" FromRole="CorreoDifusion" ToRole="Correo" />
+  </EntityType>
+  <EntityType Name="Cuestionario">
+    <Key>
+      <PropertyRef Name="IdCuestionario" />
+    </Key>
+    <Property Name="IdCuestionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdLeccion" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Peso" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CuestionarioTomado" Relationship="db_ingenierosModel.FK_CuestionarioTomado_Cuestionario" FromRole="Cuestionario" ToRole="CuestionarioTomado" />
+    <NavigationProperty Name="Pregunta" Relationship="db_ingenierosModel.FK_Pregunta_Cuestionario" FromRole="Cuestionario" ToRole="Pregunta" />
+  </EntityType>
+  <EntityType Name="CuestionarioRespuesta">
+    <Key>
+      <PropertyRef Name="IdCuestionarioRespuesta" />
+    </Key>
+    <Property Name="IdCuestionarioRespuesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCuestionarioTomado" Type="Int32" Nullable="false" />
+    <Property Name="IdPregunta" Type="Int32" Nullable="false" />
+    <Property Name="IdRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CuestionarioTomado" Relationship="db_ingenierosModel.FK_CuestionarioRespuesta_CuestionarioTomado" FromRole="CuestionarioRespuesta" ToRole="CuestionarioTomado" />
+  </EntityType>
+  <EntityType Name="CuestionarioTomado">
+    <Key>
+      <PropertyRef Name="IdCuestionarioTomado" />
+    </Key>
+    <Property Name="IdCuestionarioTomado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="IdCuestionario" Type="Int32" Nullable="false" />
+    <Property Name="Nota" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="Intento" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Cuestionario" Relationship="db_ingenierosModel.FK_CuestionarioTomado_Cuestionario" FromRole="CuestionarioTomado" ToRole="Cuestionario" />
+    <NavigationProperty Name="CuestionarioRespuesta" Relationship="db_ingenierosModel.FK_CuestionarioRespuesta_CuestionarioTomado" FromRole="CuestionarioTomado" ToRole="CuestionarioRespuesta" />
+  </EntityType>
+  <EntityType Name="Desafiliado">
+    <Key>
+      <PropertyRef Name="IdDesafiliado" />
+    </Key>
+    <Property Name="IdDesafiliado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Correo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Observacion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Docente">
+    <Key>
+      <PropertyRef Name="IdDocuente" />
+    </Key>
+    <Property Name="IdDocuente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="NombreFoto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Profesion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Especialista" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Detalle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="rowid" Type="Guid" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="EventoTema">
+    <Key>
+      <PropertyRef Name="IdEventoTema" />
+    </Key>
+    <Property Name="IdEventoTema" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" />
+    <Property Name="TipoTema" Type="Int32" />
+    <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_EventoTema_Evento" FromRole="EventoTema" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="EventoUsuario">
+    <Key>
+      <PropertyRef Name="IdEventoUsuario" />
+    </Key>
+    <Property Name="IdEventoUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+    <Property Name="FechaFin" Type="DateTime" Precision="3" />
+    <Property Name="FechaUltimoAcceso" Type="DateTime" Precision="3" />
+    <Property Name="NotaFinal" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="Abierto" Type="Boolean" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="EventoUsuarioVirtualVideo" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_EventoUsuario" FromRole="EventoUsuario" ToRole="EventoUsuarioVirtualVideo" />
+    <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_EventoUsuario_Evento" FromRole="EventoUsuario" ToRole="Evento" />
+    <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_EventoUsuario_Usuario" FromRole="EventoUsuario" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="EventoUsuarioVirtualVideo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEventoUsuario" Type="Int32" />
+    <Property Name="IdVirtualVideo" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="EventoUsuario" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_EventoUsuario" FromRole="EventoUsuarioVirtualVideo" ToRole="EventoUsuario" />
+    <NavigationProperty Name="VirtualVideo" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_VirtualVideo" FromRole="EventoUsuarioVirtualVideo" ToRole="VirtualVideo" />
+  </EntityType>
+  <EntityType Name="Expositor">
+    <Key>
+      <PropertyRef Name="IdExpositor" />
+    </Key>
+    <Property Name="IdExpositor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Galeria">
+    <Key>
+      <PropertyRef Name="IdGaleria" />
+    </Key>
+    <Property Name="IdGaleria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Inscripcion">
+    <Key>
+      <PropertyRef Name="IdInscripcion" />
+    </Key>
+    <Property Name="IdInscripcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" />
+    <Property Name="IdPersona" Type="Int32" />
+    <Property Name="EstadoPago" Type="Int32" />
+    <Property Name="TipoPago" Type="Int32" />
+    <Property Name="EntregaCertificado" Type="Boolean" />
+    <Property Name="TipoModalidad" Type="Int32" />
+    <Property Name="Monto" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="NombreBanco" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FechaOperacion" Type="DateTime" Precision="3" />
+    <Property Name="NumeroOperacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NumeroCertificado" Type="Int32" />
+    <Property Name="Certificado" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Nota" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="TipoInscripcion" Type="Int32" />
+    <Property Name="Ruc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="rowguid" Type="Guid" />
+    <NavigationProperty Name="Persona" Relationship="db_ingenierosModel.FK_Inscripcion_Persona" FromRole="Inscripcion" ToRole="Persona" />
+    <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_Inscripcion_Evento" FromRole="Inscripcion" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="IdModulo" />
+    </Key>
+    <Property Name="IdModulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Expositor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Horas" Type="Int32" />
+    <Property Name="Peso" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" />
+    <Property Name="rowid" Type="Guid" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Leccion" Relationship="db_ingenierosModel.FK_Leccion_Modulo" FromRole="Modulo" ToRole="Leccion" />
+    <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_Modulo_Evento" FromRole="Modulo" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="Opcion">
+    <Key>
+      <PropertyRef Name="IdOpcion" />
+    </Key>
+    <Property Name="IdOpcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPadre" Type="Int32" />
+    <Property Name="Icono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descipcion" Type="String" MaxLength="135" FixedLength="false" Unicode="false" />
+    <Property Name="UrlDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioCreacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <NavigationProperty Name="OpcionUsuarioTipo" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_Opcion" FromRole="Opcion" ToRole="OpcionUsuarioTipo" />
+  </EntityType>
+  <EntityType Name="OpcionUsuarioTipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdOpcion" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuarioTipo" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioCreacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <NavigationProperty Name="Opcion" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_Opcion" FromRole="OpcionUsuarioTipo" ToRole="Opcion" />
+    <NavigationProperty Name="UsuarioTipo" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_UsuarioTipo" FromRole="OpcionUsuarioTipo" ToRole="UsuarioTipo" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="IdPais" />
+    </Key>
+    <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombrePais" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Persona" Relationship="db_ingenierosModel.FK_Persona_Pais" FromRole="Pais" ToRole="Persona" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NumeroDocumento" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="CIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="IdProfesion" Type="Int32" />
+    <Property Name="TipoOcupacion" Type="Int32" />
+    <Property Name="DescripcionOcupacion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IdPais" Type="Int32" />
+    <Property Name="Ciudad" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Inscripcion" Relationship="db_ingenierosModel.FK_Inscripcion_Persona" FromRole="Persona" ToRole="Inscripcion" />
+    <NavigationProperty Name="Pais" Relationship="db_ingenierosModel.FK_Persona_Pais" FromRole="Persona" ToRole="Pais" />
+    <NavigationProperty Name="Profesion" Relationship="db_ingenierosModel.FK_Persona_Profesion" FromRole="Persona" ToRole="Profesion" />
+  </EntityType>
+  <EntityType Name="Pregunta">
+    <Key>
+      <PropertyRef Name="IdPregunta" />
+    </Key>
+    <Property Name="IdPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCuestionario" Type="Int32" Nullable="false" />
+    <Property Name="Tipo" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Explicacion" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="Ayuda" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Puntaje" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Cuestionario" Relationship="db_ingenierosModel.FK_Pregunta_Cuestionario" FromRole="Pregunta" ToRole="Cuestionario" />
+    <NavigationProperty Name="Respuesta" Relationship="db_ingenierosModel.FK_Respuesta_Pregunta" FromRole="Pregunta" ToRole="Respuesta" />
+  </EntityType>
+  <EntityType Name="Profesion">
+    <Key>
+      <PropertyRef Name="IdProfesion" />
+    </Key>
+    <Property Name="IdProfesion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Persona" Relationship="db_ingenierosModel.FK_Persona_Profesion" FromRole="Profesion" ToRole="Persona" />
+  </EntityType>
+  <EntityType Name="Respuesta">
+    <Key>
+      <PropertyRef Name="IdRespuesta" />
+    </Key>
+    <Property Name="IdRespuesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPregunta" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="EsCorrecta" Type="Boolean" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Pregunta" Relationship="db_ingenierosModel.FK_Respuesta_Pregunta" FromRole="Respuesta" ToRole="Pregunta" />
+  </EntityType>
+  <EntityType Name="Suceso">
+    <Key>
+      <PropertyRef Name="IdSuceso" />
+    </Key>
+    <Property Name="IdSuceso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreSuceso" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="ImagenSuceso" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Horas" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Estado" Type="Boolean" />
+    <Property Name="rowid" Type="Guid" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Tipo">
+    <Key>
+      <PropertyRef Name="IdTipo" />
+    </Key>
+    <Property Name="IdTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreTipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Grupo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="Int32" />
+    <Property Name="Abreviatura" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Universidad">
+    <Key>
+      <PropertyRef Name="IdUniversidad" />
+    </Key>
+    <Property Name="IdUniversidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="UsuarioActividad">
+    <Key>
+      <PropertyRef Name="IdUsuarioActividad" />
+    </Key>
+    <Property Name="IdUsuarioActividad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="Token" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_UsuarioActividad_Usuario" FromRole="UsuarioActividad" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="UsuarioHistorico">
+    <Key>
+      <PropertyRef Name="IdUsuarioHistorico" />
+    </Key>
+    <Property Name="IdUsuarioHistorico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_UsuarioHistorico_Usuario" FromRole="UsuarioHistorico" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="UsuarioTipo">
+    <Key>
+      <PropertyRef Name="IdUsuarioTipo" />
+    </Key>
+    <Property Name="IdUsuarioTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OpcionUsuarioTipo" Relationship="db_ingenierosModel.FK_OpcionUsuarioTipo_UsuarioTipo" FromRole="UsuarioTipo" ToRole="OpcionUsuarioTipo" />
+    <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_Usuario_UsuarioTipo" FromRole="UsuarioTipo" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="VirtualVideo">
+    <Key>
+      <PropertyRef Name="IdVirtualVideo" />
+    </Key>
+    <Property Name="IdVirtualVideo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="EventoUsuarioVirtualVideo" Relationship="db_ingenierosModel.FK_EventoUsuarioVirtualVideo_VirtualVideo" FromRole="VirtualVideo" ToRole="EventoUsuarioVirtualVideo" />
+    <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_VirtualVideo_Evento" FromRole="VirtualVideo" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="UsuarioActividadHistorico">
+    <Key>
+      <PropertyRef Name="IdUsuarioActividad" />
+    </Key>
+    <Property Name="IdUsuarioActividad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_ConversacionDetalle_Conversacion">
+    <End Type="db_ingenierosModel.Conversacion" Role="Conversacion" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.ConversacionDetalle" Role="ConversacionDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conversacion">
+        <PropertyRef Name="IdConversacion" />
+      </Principal>
+      <Dependent Role="ConversacionDetalle">
+        <PropertyRef Name="IdConversacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuestionarioTomado_Cuestionario">
+    <End Type="db_ingenierosModel.Cuestionario" Role="Cuestionario" Multiplicity="1" />
+    <End Type="db_ingenierosModel.CuestionarioTomado" Role="CuestionarioTomado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuestionario">
+        <PropertyRef Name="IdCuestionario" />
+      </Principal>
+      <Dependent Role="CuestionarioTomado">
+        <PropertyRef Name="IdCuestionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pregunta_Cuestionario">
+    <End Type="db_ingenierosModel.Cuestionario" Role="Cuestionario" Multiplicity="1" />
+    <End Type="db_ingenierosModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuestionario">
+        <PropertyRef Name="IdCuestionario" />
+      </Principal>
+      <Dependent Role="Pregunta">
+        <PropertyRef Name="IdCuestionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuestionarioRespuesta_CuestionarioTomado">
+    <End Type="db_ingenierosModel.CuestionarioTomado" Role="CuestionarioTomado" Multiplicity="1" />
+    <End Type="db_ingenierosModel.CuestionarioRespuesta" Role="CuestionarioRespuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuestionarioTomado">
+        <PropertyRef Name="IdCuestionarioTomado" />
+      </Principal>
+      <Dependent Role="CuestionarioRespuesta">
+        <PropertyRef Name="IdCuestionarioTomado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventoUsuarioVirtualVideo_EventoUsuario">
+    <End Type="db_ingenierosModel.EventoUsuario" Role="EventoUsuario" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.EventoUsuarioVirtualVideo" Role="EventoUsuarioVirtualVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventoUsuario">
+        <PropertyRef Name="IdEventoUsuario" />
+      </Principal>
+      <Dependent Role="EventoUsuarioVirtualVideo">
+        <PropertyRef Name="IdEventoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventoUsuarioVirtualVideo_VirtualVideo">
+    <End Type="db_ingenierosModel.VirtualVideo" Role="VirtualVideo" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.EventoUsuarioVirtualVideo" Role="EventoUsuarioVirtualVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VirtualVideo">
+        <PropertyRef Name="IdVirtualVideo" />
+      </Principal>
+      <Dependent Role="EventoUsuarioVirtualVideo">
+        <PropertyRef Name="IdVirtualVideo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inscripcion_Persona">
+    <End Type="db_ingenierosModel.Persona" Role="Persona" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Inscripcion" Role="Inscripcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Inscripcion">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionUsuarioTipo_Opcion">
+    <End Type="db_ingenierosModel.Opcion" Role="Opcion" Multiplicity="1" />
+    <End Type="db_ingenierosModel.OpcionUsuarioTipo" Role="OpcionUsuarioTipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opcion">
+        <PropertyRef Name="IdOpcion" />
+      </Principal>
+      <Dependent Role="OpcionUsuarioTipo">
+        <PropertyRef Name="IdOpcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionUsuarioTipo_UsuarioTipo">
+    <End Type="db_ingenierosModel.UsuarioTipo" Role="UsuarioTipo" Multiplicity="1" />
+    <End Type="db_ingenierosModel.OpcionUsuarioTipo" Role="OpcionUsuarioTipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsuarioTipo">
+        <PropertyRef Name="IdUsuarioTipo" />
+      </Principal>
+      <Dependent Role="OpcionUsuarioTipo">
+        <PropertyRef Name="IdUsuarioTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persona_Pais">
+    <End Type="db_ingenierosModel.Pais" Role="Pais" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Persona" Role="Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="IdPais" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persona_Profesion">
+    <End Type="db_ingenierosModel.Profesion" Role="Profesion" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Persona" Role="Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesion">
+        <PropertyRef Name="IdProfesion" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdProfesion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuesta_Pregunta">
+    <End Type="db_ingenierosModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+    <End Type="db_ingenierosModel.Respuesta" Role="Respuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pregunta">
+        <PropertyRef Name="IdPregunta" />
+      </Principal>
+      <Dependent Role="Respuesta">
+        <PropertyRef Name="IdPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Correo">
+    <Key>
+      <PropertyRef Name="IdCorreo" />
+    </Key>
+    <Property Name="IdCorreo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Asunto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Origen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NombreOrigen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Mensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EstadoCorreo" Type="Int32" />
+    <Property Name="FechaEnvio" Type="DateTime" Precision="3" />
+    <Property Name="NumeroEnvio" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CorreoDifusion" Relationship="db_ingenierosModel.FK_CorreoDifusion_Correo" FromRole="Correo" ToRole="CorreoDifusion" />
+  </EntityType>
+  <Association Name="FK_CorreoDifusion_Correo">
+    <End Type="db_ingenierosModel.Correo" Role="Correo" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.CorreoDifusion" Role="CorreoDifusion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Correo">
+        <PropertyRef Name="IdCorreo" />
+      </Principal>
+      <Dependent Role="CorreoDifusion">
+        <PropertyRef Name="IdCorreo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="VirtualContenido">
+    <Key>
+      <PropertyRef Name="IdVirtualContenido" />
+    </Key>
+    <Property Name="IdVirtualContenido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" />
+    <Property Name="Contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_VirtualContenido_Evento" FromRole="VirtualContenido" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="Portada">
+    <Key>
+      <PropertyRef Name="IdPortada" />
+    </Key>
+    <Property Name="IdPortada" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreImagen" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SubTitulo1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SubTitulo2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TextoEnlace" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UrlEnlace" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioCreacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EventoCorreo">
+    <Key>
+      <PropertyRef Name="IdEventoCorreo" />
+    </Key>
+    <Property Name="IdEventoCorreo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" Nullable="false" />
+    <Property Name="Asunto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Origen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NombreOrigen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Mensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EstadoCorreo" Type="Int32" />
+    <Property Name="FechaEnvio" Type="DateTime" Precision="3" />
+    <Property Name="NumeroEnvio" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Evento" Relationship="db_ingenierosModel.FK_EventoCorreo_Evento" FromRole="EventoCorreo" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="Leccion">
+    <Key>
+      <PropertyRef Name="IdLeccion" />
+    </Key>
+    <Property Name="IdLeccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdModulo" Type="Int32" />
+    <Property Name="Tipo" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Duracion" Type="Int32" />
+    <Property Name="TipoUrl" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="Peso" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Modulo" Relationship="db_ingenierosModel.FK_Leccion_Modulo" FromRole="Leccion" ToRole="Modulo" />
+  </EntityType>
+  <Association Name="FK_Leccion_Modulo">
+    <End Type="db_ingenierosModel.Modulo" Role="Modulo" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Leccion" Role="Leccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="IdModulo" />
+      </Principal>
+      <Dependent Role="Leccion">
+        <PropertyRef Name="IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Evento">
+    <Key>
+      <PropertyRef Name="IdEvento" />
+    </Key>
+    <Property Name="IdEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="Int32" />
+    <Property Name="Modalidad" Type="Int32" />
+    <Property Name="NombreEvento" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Expositor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagenEvento" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentoFotocheck" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentoCertificado" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentoCertificadoImprimir" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentoCertificadoExpositor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Horas" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="NotaAprobatoria" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="Costo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CostoValor" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="CostoValorPromocional" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="DetallarCertificado" Type="Boolean" />
+    <Property Name="GenerarCertificado" Type="Boolean" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="rowid" Type="Guid" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="EventoCorreo" Relationship="db_ingenierosModel.FK_EventoCorreo_Evento" FromRole="Evento" ToRole="EventoCorreo" />
+    <NavigationProperty Name="EventoTema" Relationship="db_ingenierosModel.FK_EventoTema_Evento" FromRole="Evento" ToRole="EventoTema" />
+    <NavigationProperty Name="EventoUsuario" Relationship="db_ingenierosModel.FK_EventoUsuario_Evento" FromRole="Evento" ToRole="EventoUsuario" />
+    <NavigationProperty Name="Inscripcion" Relationship="db_ingenierosModel.FK_Inscripcion_Evento" FromRole="Evento" ToRole="Inscripcion" />
+    <NavigationProperty Name="Modulo" Relationship="db_ingenierosModel.FK_Modulo_Evento" FromRole="Evento" ToRole="Modulo" />
+    <NavigationProperty Name="VirtualContenido" Relationship="db_ingenierosModel.FK_VirtualContenido_Evento" FromRole="Evento" ToRole="VirtualContenido" />
+    <NavigationProperty Name="VirtualVideo" Relationship="db_ingenierosModel.FK_VirtualVideo_Evento" FromRole="Evento" ToRole="VirtualVideo" />
+  </EntityType>
+  <Association Name="FK_EventoCorreo_Evento">
+    <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="1" />
+    <End Type="db_ingenierosModel.EventoCorreo" Role="EventoCorreo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="EventoCorreo">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventoTema_Evento">
+    <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.EventoTema" Role="EventoTema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="EventoTema">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventoUsuario_Evento">
+    <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.EventoUsuario" Role="EventoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="EventoUsuario">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inscripcion_Evento">
+    <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Inscripcion" Role="Inscripcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="Inscripcion">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modulo_Evento">
+    <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Modulo" Role="Modulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="Modulo">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualContenido_Evento">
+    <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.VirtualContenido" Role="VirtualContenido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="VirtualContenido">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualVideo_Evento">
+    <End Type="db_ingenierosModel.Evento" Role="Evento" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.VirtualVideo" Role="VirtualVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="VirtualVideo">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="IdDocumento" />
+    </Key>
+    <Property Name="IdDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDocumentoPadre" Type="Int32" />
+    <Property Name="IdEmpresa" Type="Int32" />
+    <Property Name="Tipo" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="NombreOriginal" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tamaño" Type="Int32" />
+    <Property Name="EstadoDocumento" Type="Int32" />
+    <Property Name="FechaDescarga" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="rowid" Type="Guid" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Empresa" Relationship="db_ingenierosModel.FK_Documento_Empresa" FromRole="Documento" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="DocumentoHistorico">
+    <Key>
+      <PropertyRef Name="IdDocumentoHistorico" />
+    </Key>
+    <Property Name="IdDocumentoHistorico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDocumento" Type="Int32" Nullable="false" />
+    <Property Name="IdDocumentoPadre" Type="Int32" />
+    <Property Name="IdEmpresa" Type="Int32" />
+    <Property Name="Tipo" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="NombreOriginal" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tamaño" Type="Int32" />
+    <Property Name="EstadoDocumento" Type="Int32" />
+    <Property Name="FechaDescarga" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="rowid" Type="Guid" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NumeroDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdUsuarioTipo" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="EventoUsuario" Relationship="db_ingenierosModel.FK_EventoUsuario_Usuario" FromRole="Usuario" ToRole="EventoUsuario" />
+    <NavigationProperty Name="UsuarioTipo" Relationship="db_ingenierosModel.FK_Usuario_UsuarioTipo" FromRole="Usuario" ToRole="UsuarioTipo" />
+    <NavigationProperty Name="UsuarioActividad" Relationship="db_ingenierosModel.FK_UsuarioActividad_Usuario" FromRole="Usuario" ToRole="UsuarioActividad" />
+    <NavigationProperty Name="UsuarioHistorico" Relationship="db_ingenierosModel.FK_UsuarioHistorico_Usuario" FromRole="Usuario" ToRole="UsuarioHistorico" />
+    <NavigationProperty Name="Empresa" Relationship="db_ingenierosModel.FK_Empresa_Usuario" FromRole="Usuario" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK_EventoUsuario_Usuario">
+    <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.EventoUsuario" Role="EventoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="EventoUsuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_UsuarioTipo">
+    <End Type="db_ingenierosModel.UsuarioTipo" Role="UsuarioTipo" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsuarioTipo">
+        <PropertyRef Name="IdUsuarioTipo" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdUsuarioTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioActividad_Usuario">
+    <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.UsuarioActividad" Role="UsuarioActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioActividad">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioHistorico_Usuario">
+    <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.UsuarioHistorico" Role="UsuarioHistorico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioHistorico">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <Property Name="Ruc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NombreComercial" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DireccionFiscal" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Frecuencia" Type="Int32" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="rowid" Type="Guid" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Documento" Relationship="db_ingenierosModel.FK_Documento_Empresa" FromRole="Empresa" ToRole="Documento" />
+    <NavigationProperty Name="Usuario" Relationship="db_ingenierosModel.FK_Empresa_Usuario" FromRole="Empresa" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_Documento_Empresa">
+    <End Type="db_ingenierosModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Documento" Role="Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_Usuario">
+    <End Type="db_ingenierosModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="db_ingenierosModel.Empresa" Role="Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

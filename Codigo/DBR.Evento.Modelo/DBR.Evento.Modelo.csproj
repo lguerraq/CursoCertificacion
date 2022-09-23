@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D268D39-FA6C-42D5-88FB-8FA3889BDF39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBR.Evento.Modelo</RootNamespace>
+    <AssemblyName>DBR.Evento.Modelo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuracion.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conversacion.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConversacionDetalle.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Correo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CorreoDifusion.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cuestionario.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuestionarioRespuesta.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuestionarioTomado.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Desafiliado.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Docente.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Documento.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentoHistorico.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Evento.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventoCorreo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventoTema.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventoUsuario.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventoUsuarioVirtualVideo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Expositor.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Galeria.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripcion.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Leccion.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDBR.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDBR.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDBR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDBR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDBR.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Opcion.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionUsuarioTipo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Paged.cs" />
+    <Compile Include="Pais.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persona.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Portada.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Profesion.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\CorreoDifusionRequest.cs" />
+    <Compile Include="Request\CorreoEmpresaRequest.cs" />
+    <Compile Include="Request\CuestionarioRequest.cs" />
+    <Compile Include="Request\DesafiliadoRequest.cs" />
+    <Compile Include="Request\DocenteRequest.cs" />
+    <Compile Include="Request\DocumentoRequest.cs" />
+    <Compile Include="Request\EmpresaRequest.cs" />
+    <Compile Include="Request\EvaluacionRequest.cs" />
+    <Compile Include="Request\EventoCorreoRequest.cs" />
+    <Compile Include="Request\EventoRequest.cs" />
+    <Compile Include="Request\EventoUsuarioRequest.cs" />
+    <Compile Include="Request\GaleriaRequest.cs" />
+    <Compile Include="Request\InscripcionRequest.cs" />
+    <Compile Include="Request\LeccionRequest.cs" />
+    <Compile Include="Request\ModuloRequest.cs" />
+    <Compile Include="Request\OpcionRequest.cs" />
+    <Compile Include="Request\PageRequest.cs" />
+    <Compile Include="Request\PagoRequest.cs" />
+    <Compile Include="Request\PagoResponse.cs" />
+    <Compile Include="Request\PersonaRequest.cs" />
+    <Compile Include="Request\PortadaRequest.cs" />
+    <Compile Include="Request\PreguntaRequest.cs" />
+    <Compile Include="Request\RespuestaRequest.cs" />
+    <Compile Include="Request\SucesoRequest.cs" />
+    <Compile Include="Request\UsuarioRequest.cs" />
+    <Compile Include="Request\VirtualContenidoRequest.cs" />
+    <Compile Include="Request\VirtualVideoRequest.cs" />
+    <Compile Include="Response\ComboResponse.cs" />
+    <Compile Include="Response\ConsultaEnvioResponse.cs" />
+    <Compile Include="Response\CorreoReporteResponse.cs" />
+    <Compile Include="Response\CorreoRequest.cs" />
+    <Compile Include="Response\CorreoResponse.cs" />
+    <Compile Include="Response\CuestionarioResponse.cs" />
+    <Compile Include="Response\CuestionarioTomatosValidar.cs" />
+    <Compile Include="Response\DocenteResponse.cs" />
+    <Compile Include="Response\DocumentoResponse.cs" />
+    <Compile Include="Response\EmpresaResponse.cs" />
+    <Compile Include="Response\EstadisticaResponse.cs" />
+    <Compile Include="Response\EvaluacionResponse.cs" />
+    <Compile Include="Response\EventoCorreoResponse.cs" />
+    <Compile Include="Response\EventoResponse.cs" />
+    <Compile Include="Response\EventoUsuarioResponse.cs" />
+    <Compile Include="Response\GaleriaResponse.cs" />
+    <Compile Include="Response\InscripcionResponse.cs" />
+    <Compile Include="Response\LeccionResponse.cs" />
+    <Compile Include="Response\ModuloLeccionResponse.cs" />
+    <Compile Include="Response\ModuloResponse.cs" />
+    <Compile Include="Response\ModuloWebResponse.cs" />
+    <Compile Include="Response\OpcionResponse.cs" />
+    <Compile Include="Response\PagedResponse.cs" />
+    <Compile Include="Response\PersonaResponse.cs" />
+    <Compile Include="Response\PortadaResponse.cs" />
+    <Compile Include="Response\PreguntaResponse.cs" />
+    <Compile Include="Response\PreguntaRespuestaResponse.cs" />
+    <Compile Include="Response\ResponseCapcha.cs" />
+    <Compile Include="Response\RespuestaResponse.cs" />
+    <Compile Include="Response\SucesoResponse.cs" />
+    <Compile Include="Response\UsuarioActividadResponse.cs" />
+    <Compile Include="Response\UsuarioResponse.cs" />
+    <Compile Include="Response\VirtualContenidoResponse.cs" />
+    <Compile Include="Response\VirtualVideoResponse.cs" />
+    <Compile Include="Respuesta.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Result.cs" />
+    <Compile Include="Suceso.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Universidad.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioActividad.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioActividadHistorico.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioHistorico.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioLogin.cs" />
+    <Compile Include="UsuarioTipo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualContenido.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualVideo.cs">
+      <DependentUpon>ModelDBR.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ModelDBR.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDBR.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="ModelDBR.edmx.diagram">
+      <DependentUpon>ModelDBR.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelDBR.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDBR.edmx</DependentUpon>
+      <LastGenOutput>ModelDBR.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDBR.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDBR.edmx</DependentUpon>
+      <LastGenOutput>ModelDBR.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

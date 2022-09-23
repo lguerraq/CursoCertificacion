@@ -1,0 +1,30 @@
+Fecha hora: 30/06/2021 01:15:51
+Mensaje: An error occurred while updating the entries. See the inner exception for details.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.UpdateDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 154
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.UpdateDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 48
+
+
+
+Fecha hora: 30/06/2021 01:16:01
+Mensaje: An error occurred while updating the entries. See the inner exception for details.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.UpdateDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 154
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.UpdateDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 48
+
+
+
+Fecha hora: 30/06/2021 01:16:17
+Mensaje: An error occurred while updating the entries. See the inner exception for details.
+StackTrace:    en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en DBR.Eventos.Datos.Implementacion.DocumentoDatos.UpdateDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\Implementacion\DocumentoDatos.cs:línea 154
+   en DBR.Eventos.Negocio.Implementacion.DocumentoNegocio.UpdateDocumento(DocumentoRequest request, UsuarioLogin user) en D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\Implementacion\DocumentoNegocio.cs:línea 48
+
+
+

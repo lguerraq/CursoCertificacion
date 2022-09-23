@@ -1,0 +1,321 @@
+﻿
+@{
+    ViewBag.Title = "Correo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="form-group">
+                        <a id="btnAgregarCorreo" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridCorreo" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Asunto</th>
+                            <th>Origen</th>
+                            <th>NombreOrigen</th>
+                            @*<th>Estado</th>*@
+                            <th>FechaEnvio</th>
+                            <th>N° Envio</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="modalVerCorreo" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="">Mensaje</h4>
+            </div>
+            <div class="modal-body">
+                @if (Configuracion.CodigoEmpresa == 1)
+                {
+                    <div style="background-color:#ececec;width:100%;overflow-x:auto;">
+                        <div style="width:700px;background:#FFF;font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color: #333;line-height: 1.42857143;padding: 15px 15px 0 15px;margin:auto;">
+                            <div id="mensajePreview">
+
+                            </div>
+                            <div style="background-color:rgb(51, 51, 51);height:100px;width:calc(100% + 30px);margin-left:-15px;">
+                                <div style="width:50%;text-align:center;float:left;color:#FFF;font-size:1.8em;font-family:fantasy;height:100px;display: table;">
+                                    <div style="display: table-cell;vertical-align: middle;">
+                                        <a style="color:#FFF;" href="http://www.ingenierosx100.org/" target="_blank">100% INGENIEROS</a>
+                                    </div>
+                                </div>
+                                <div style="width:50%;text-align:center;float:left;height:100px;display: table;">
+                                    <div style="display: table-cell;vertical-align: middle;">
+                                        <a title="Facebook" href="https://www.facebook.com/ingenierosx100/" target="_blank"><img src="~/images/Correo/fb.png" alt="Facebook" height="50" /></a>
+                                        <a title="(+51)947852211" href="https://api.whatsapp.com/send?phone=51947852211&text=&source=&data=" target="_blank"><img src="~/images/Correo/ws.png" alt="Whatsapp" height="50" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;height:50px;color:#999999;text-align:center;width:100%;">
+                        <div style="margin:15px;">¿Deseas dejar de recibir estos emails? <a href="https://www.ingenierosx100.org/web/Desafiliacion">Click aquí</a></div>
+                        <div style="margin:15px;">100%INGENIEROS · Mz. G - Lote 14 - Urb. Las Capullanas · Trujillo - Perú</div>
+                    </div>
+                }
+                @if (Configuracion.CodigoEmpresa == 2)
+                {
+                    <div style="background-color:#ececec;width:100%;overflow-x:auto;">
+                        <div style="width:700px;background:#FFF;font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color: #333;line-height: 1.42857143;padding: 15px 15px 0 15px;margin:auto;">
+                            <div id="mensajePreview">
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" id="modalAgregarCorreo">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Agregar nuevo correo</h4>
+            </div>
+            <div class="modal-body" style="padding-bottom:0px;">
+                <input type="hidden" id="txtIdCorreo" value="0" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtAsuntoMensaje">Asunto</label>
+                            <input type="text" class="form-control uppercase" maxlength="150" id="txtAsuntoMensaje" value="" />
+                            <span class="help-block hide">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="txtAsuntoMensaje">Correo origen</label>
+                            <input type="text" class="form-control uppercase" maxlength="50" id="txtCorreoOrigen" value="" />
+                            <span class="help-block hide">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="txtAsuntoMensaje">Nombre origen</label>
+                            <input type="text" class="form-control uppercase" maxlength="150" id="txtNombreOrigen" value="" />
+                            <span class="help-block hide">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Crear enlace (Max 4MB)</label>
+                            <input type="file" id="inputFileServer" data-buttonname="btn-default" class="filestyle" data-input="false" data-iconname="fa fa-cloud-upload" data-size="sm">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label>Url de archivo</label>
+                            <input type="text" id="txtLink" class="form-control" placeholder="http://...." readonly="readonly" style="background-color:#FFF;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <label for="txtMensajeCompleto">Mensaje</label>
+                    </div>
+                    <div class="col-md-12">
+                        <div>
+                            (Agregue {0} para agregar el nombre a quien se envía)
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea class="form-control" id="txtMensajeCompleto" rows="3" style="min-width:100%;"></textarea>
+                            <span class="help-block hide" id="textErrorObligatorio">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarCorreo" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalEnvioIndividual">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Envio individual</h4>
+            </div>
+            <div class="modal-body" id="formEnviarIndividual">
+                <input type="hidden" value="0" id="txtIdCorreoEnvioIndividual" />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">DNI <span>*</span></label>
+                            <div class="input-group">
+                                <input type="text" data-toggle="tooltip" data-placement="bottom" title="Enter para buscar" class="form-control validar uppercase pull-right" id="txtDni" maxlength="11">
+                                <div class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Buscar" id="btnBuscarPorDni" style="cursor:pointer;">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">CIP</label>
+                            <div class="input-group">
+                                <input type="text" data-toggle="tooltip" data-placement="bottom" title="Enter para buscar" class="form-control uppercase pull-right" id="txtCip" maxlength="50">
+                                <div class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Buscar" id="btnBuscarPorCip" style="cursor:pointer;">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Nombres <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtNombres" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Apellido paterno <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoPaterno" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Apellido materno <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoMaterno" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Correo <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtCorreo" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnEnviarIndividual" class="btn btn-primary"><i class="fa fa-mail-forward"></i> Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalEnvioPorProfesion">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Envio correo</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" value="0" id="txtIdCorreo2" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Profesión <span class="required_field">*</span></label>
+                            <select class="form-control select2" id="cboProfesion" multiple data-placeholder="Seleccionar">
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnEnviarPorProfesion" class="btn btn-primary"><i class="fa fa-mail-forward"></i> Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalProcesoEnvio" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img src="~/images/loading.gif" width="50" />
+                <label id="lblTextoEnvio">No cierre ni actualice esta ventanta hasta que el proceso de envio termine</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    
+    <script src="~/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/plugins/ckeditor/lang/es.js"></script>
+    <script>
+        //Variables de empresa
+        var CorreoOrigen = "@Configuracion.Email";
+        var NombreCorreoOrigen = "@Configuracion.NameEmail";
+        //Metodos
+        var urlListCorreoPaged = '@Url.Action("ListCorreoPaged", "Mantenimiento")';
+        var urlEnviarCorreoMasivo = '@Url.Action("EnviarCorreoMasivo", "Mantenimiento")';
+        var urlEnviarCorreoMasivoFaltantes = '@Url.Action("EnviarCorreoMasivoFaltantes", "Mantenimiento")';
+        var urlEnviarCorreoIndividual = '@Url.Action("EnviarCorreoIndividual", "Mantenimiento")';
+        var urlDeleteCorreo = '@Url.Action("DeleteCorreo", "Mantenimiento")';
+        var urlConsultarEnvios = '@Url.Action("ConsultarEnvios", "Mantenimiento")';
+        var urlGetCorreo = '@Url.Action("GetCorreo", "Mantenimiento")';
+        var urlSaveCorreo = '@Url.Action("SaveCorreo", "Mantenimiento")';
+        var urlSaveFileServer = '@Url.Action("SaveFileServer", "Mantenimiento")';
+        var urlFileServerBrowse = '@Url.Action("FileServerBrowse", "Mantenimiento")';
+        var urlSaveFileServerCkEditor = '@Url.Action("SaveFileServerCkEditor", "Mantenimiento")';
+        var urlValoresInicialesCorreo = '@Url.Action("ValoresInicialesCorreo", "Mantenimiento")';
+        var urlEnviarCorreoMasivoPorProfesion = '@Url.Action("EnviarCorreoMasivoPorProfesion", "Mantenimiento")';
+        //Se usa desde inscripcion
+        var urlGetPersonaXdni = '@Url.Action("GetPersonaXdni", "Mantenimiento")';
+        var urlGetPersonaXcip = '@Url.Action("GetPersonaXcip", "Mantenimiento")';
+    </script>
+
+    <script src="~/js/pages/Mantenimiento/Correo.min.js?v=@ViewBag.NumeroRelease"></script>
+}

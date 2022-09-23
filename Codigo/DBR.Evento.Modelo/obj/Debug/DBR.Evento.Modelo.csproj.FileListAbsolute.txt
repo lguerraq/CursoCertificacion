@@ -1,0 +1,36 @@
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll.config
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.pdb
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\bin\Debug\EntityFramework.dll
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.dll
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\bin\Debug\EntityFramework.xml
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.xml
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CoreCompileInputs.cache
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CopyComplete
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.dll
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.pdb
+D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csprojAssemblyReference.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CopyComplete
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\bin\Debug\EntityFramework.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\bin\Debug\EntityFramework.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll.config
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.pdb
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CopyComplete
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.dll
+D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.pdb

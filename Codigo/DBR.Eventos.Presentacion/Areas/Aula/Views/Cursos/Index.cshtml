@@ -1,0 +1,130 @@
+﻿@model DBR.Eventos.Presentacion.Models.CursoDashboardViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@section afterStyles{
+    <link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet" />
+}
+
+<div class="sa4d25">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="st_title"><i class="uil uil-apps"></i> ¡Bienvenid@@!</h2>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="card_dash">
+                    <div class="card_dash_left">
+                        <h5>Total de cursos matriculados</h5>
+                        <h2>@Model.TotalCursos</h2>
+                        <span class="crdbg_3">@Model.NuevosCursos nuevos</span>
+                    </div>
+                    <div class="card_dash_right">
+                        <img src='@Url.Content("~/assets/images/dashboard/online-course.svg")' alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="section3125 mt-50">
+                    <h4 class="item_title">Ultimos cursos lanzados</h4>
+                    <div class="la5lo1">
+                        <div class="owl-carousel edututs_news owl-theme">
+                            @foreach (var item in Model.UltimosCursos)
+                            {
+                                <div class="item">
+                                    <div class="fcrse_1">
+                                        <input type="hidden" id='@("hdfVideo" + item.IdEvento)' data-id="@item.IdEvento" value="@item.UrlVideo" />
+                                        <div class="preview_video" data-id="@item.IdEvento">
+
+                                        </div>
+                                        <div class="fcrse_content">
+                                            <a href="#" class="crsedt145 mt-15">@item.NombreEvento</a>
+                                            <p class="news_des45">@item.Descripcion</p>
+                                            <div class="auth1lnkprce">
+                                                <a href="#" class="cr1fot50">Ver mas detalles</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="section3125 mt-50">
+                    <h4 class="item_title">Novedades en el sistema</h4>
+                    <div class="la5lo1">
+                        <div class="fcrse_1">
+                            <div class="fcrse_content">
+                                <a href="#" class="new_links10">Mejoras en el rendimiento y panel de actualizaciones</a>
+                                <a href="#" class="new_links10">Ver mas actualizaciones</a>
+                                <a href="#" class="new_links10">Ver detalles de la última versión</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
+
+    <script type="text/javascript">
+        var Eventos = {
+            FillVideo: function (data, contador) {
+                var content = "";
+                var e = 0;
+
+                var array = data.Url.split('&');
+                array[0] = array[0].replace("https://onedrive.live.com/?", "https://onedrive.live.com/download.aspx?");
+                array[2] = "res" + array[2];
+
+                if (data.MostrarVideo) {
+
+                    content = content +
+                        '<video id="VideoJs' + contador + '" class="video-js vjs-fluid" controls preload="auto" width="640" height="360" poster="http://www.ingenierosx100.org/Images/Videos/VIDEO' + (e + 1) + '.jpg"> ' +
+                        '<source src="' + array[0] + '&' + array[2] + '&' + array[3] + '&' + array[4] + '" type="video/mp4"> ' +
+                        '<p class="vjs-no-js"> ' +
+                        'Para ver este video, habilite JavaScript y considere actualizar a un navegador web que admita video HTML5' +
+                        '</p> ' +
+                        '</video>';
+                }
+                $(".preview_video[data-id=" + contador + "]").html(content);
+                let player0 = videojs('VideoJs' + contador);
+            }
+        }
+
+        $(document).ready(function () {
+            $("body").on("contextmenu", function (e) {
+                return false;
+            });
+
+            //Disable part of page
+            $("#id").on("contextmenu", function (e) {
+                return false;
+            });
+
+            $(".preview-text").on("click", function () {
+                $("#modalLeccion").modal("show");
+            });
+
+            $.each($("input[id^=hdfVideo]"), function (i, v) {
+                if ($(v).val() != null && $(v).val() != "") {
+                    var data = new Object();
+                    data.Url = $(v).val();
+                    data.MostrarVideo = true;
+                    Eventos.FillVideo(data, $(v).data("id"));
+                }
+            });
+            
+        });
+
+    </script>
+}
