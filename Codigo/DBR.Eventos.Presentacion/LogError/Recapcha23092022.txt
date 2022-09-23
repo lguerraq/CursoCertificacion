@@ -1,83 +1,62 @@
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:40:00Z",
+  "challenge_ts": "2022-09-23T05:07:41Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:45:40Z",
+  "challenge_ts": "2022-09-23T05:19:18Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:46:31Z",
+  "challenge_ts": "2022-09-23T05:21:00Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:47:21Z",
+  "challenge_ts": "2022-09-23T05:21:14Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:49:00Z",
+  "challenge_ts": "2022-09-23T05:21:59Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:52:48Z",
+  "challenge_ts": "2022-09-23T05:25:43Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:52:55Z",
+  "challenge_ts": "2022-09-23T05:25:53Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:52:59Z",
+  "challenge_ts": "2022-09-23T05:26:36Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
 }
 {
   "success": true,
-  "challenge_ts": "2022-09-23T00:53:15Z",
-  "hostname": "localhost",
-  "score": 0.9,
-  "action": "LoginIntranet"
-}
-{
-  "success": true,
-  "challenge_ts": "2022-09-23T00:53:54Z",
-  "hostname": "localhost",
-  "score": 0.9,
-  "action": "LoginIntranet"
-}
-{
-  "success": true,
-  "challenge_ts": "2022-09-23T03:11:43Z",
-  "hostname": "localhost",
-  "score": 0.9,
-  "action": "LoginIntranet"
-}
-{
-  "success": true,
-  "challenge_ts": "2022-09-23T04:26:59Z",
+  "challenge_ts": "2022-09-23T05:27:28Z",
   "hostname": "localhost",
   "score": 0.9,
   "action": "LoginIntranet"
