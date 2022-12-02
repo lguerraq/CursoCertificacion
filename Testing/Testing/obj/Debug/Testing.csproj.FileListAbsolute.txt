@@ -1,0 +1,8 @@
+C:\Users\jhuam\source\repos\Testing\Testing\bin\Debug\Testing.exe.config
+C:\Users\jhuam\source\repos\Testing\Testing\bin\Debug\Testing.exe
+C:\Users\jhuam\source\repos\Testing\Testing\bin\Debug\Testing.pdb
+C:\Users\jhuam\source\repos\Testing\Testing\obj\Debug\Testing.csproj.AssemblyReference.cache
+C:\Users\jhuam\source\repos\Testing\Testing\obj\Debug\Testing.csproj.SuggestedBindingRedirects.cache
+C:\Users\jhuam\source\repos\Testing\Testing\obj\Debug\Testing.csproj.CoreCompileInputs.cache
+C:\Users\jhuam\source\repos\Testing\Testing\obj\Debug\Testing.exe
+C:\Users\jhuam\source\repos\Testing\Testing\obj\Debug\Testing.pdb
