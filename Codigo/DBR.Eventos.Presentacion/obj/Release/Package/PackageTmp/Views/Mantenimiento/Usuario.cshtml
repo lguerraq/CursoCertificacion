@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="form-group">
+                        <a id="btnAgregarUsuario" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridUsuarios" class="table table-bordered table-striped dt-responsive" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Login</th>
+                            <th>Password</th>
+                            <th>Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>Tipo</th>                           
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalUsuario">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleAgregarUsuario">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <input type="hidden" value="0" id="txtIdUsuario" />
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Usuario:<span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar" id="txtLogin" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Password: <span class="required_field">*</span></label>
+                            <input class="form-control validar" id="txtPassword" autocomplete="off" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">N°Documento: <span class="required_field">*</span></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control validar" id="txtNumeroDocumento" autocomplete="off">
+                                <div class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Buscar" id="btnBuscarPorDni" style="cursor:pointer;">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Nombres: <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtNombres" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Apellido Paterno: <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoPaterno" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Apellido Materno: <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoMaterno" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Correo: <span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtCorreo" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Tipo usuario: <span class="required_field">*</span></label>
+                            <select class="form-control" id="cboTipoUsuario">
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarUsuario" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        var urlListUsuarioPaged = '@Url.Action("ListUsuarioPaged", "Mantenimiento")';
+        var urlSaveUsuario = '@Url.Action("SaveUsuario", "Mantenimiento")';
+        var urlDeleteUsuario = '@Url.Action("DeleteUsuario", "Mantenimiento")';
+        var urlListUsuarioTipo = '@Url.Action("ListUsuarioTipo", "Mantenimiento")';
+        var urlGetUsuario = '@Url.Action("GetUsuario", "Mantenimiento")';
+        var urlRenviarCredenciales = '@Url.Action("RenviarCredenciales", "Mantenimiento")';
+        var urlGetPersonaXdni = '@Url.Action("GetPersonaXdni", "Mantenimiento")';
+    </script>
+    <script src="~/js/pages/Mantenimiento/Usuario.min.js?v=@ViewBag.NumeroRelease"></script>
+}

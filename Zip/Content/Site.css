@@ -1,0 +1,99 @@
+﻿.uppercase{
+    text-transform:uppercase;
+}
+.skin-blue .main-header .logo {
+    background-color: #ffffff;
+}
+.skin-blue .main-header .logo:hover {
+    background-color: #ffffff;
+}
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+    cursor: no-drop !important; 
+}
+.container_loadin {
+    width: 100%;
+    height: 100%;
+    background-color: #808080;
+    opacity: 0.5;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    text-align: center;
+    padding-top: 15%;
+    display: none;
+    cursor:progress;
+}
+.container_loadin_img {
+    text-align: center;
+    z-index: 999999;
+    position: fixed;
+    top: 30%;
+    left: 47%;
+    display: none;
+}
+.select2-error{
+    border: 1px solid #dd4b39 !important;
+}
+.select2-container{
+    width:100% !important;
+}
+label .required_field{
+    color:#dd4b39;
+}
+.blockOverlay{
+    z-index:99999 !important;
+}
+.blockMsg{
+    z-index:1000000 !important;
+}
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+    background: #3c8dbc;
+    color: white;
+}
+.SinHover:hover{
+    background-color: #3c8dbc !important;
+    color: #FFF !important;
+}
+.folder-personalizado {
+    cursor: pointer !important;
+    color: #333;
+}
+    .folder-personalizado:hover {
+        color: #333 !important;
+    }
+    .folder-personalizado .fa-folder {
+        color: #ffc401;
+    }
+
+.file-personalizado {
+    color: #333;
+}
+
+    .file-personalizado:hover {
+        color: #333 !important;
+    }
+
+    .file-personalizado .fa-file-pdf-o {
+        color: #f40f02;
+    }
+
+    .file-personalizado .fa-file-zip-o {
+        color: #d2aa34;
+    }
+
+    .file-personalizado .fa-file-word-o {
+        color: #185bbe
+    }
+
+    .file-personalizado .fa-file-powerpoint-o {
+        color: #c43e1c
+    }
+
+    .file-personalizado .fa-file-excel-o {
+        color: #107c41
+    }
+
+    .file-personalizado .fa-file-image-o {
+        color: #1a9ba1
+    }

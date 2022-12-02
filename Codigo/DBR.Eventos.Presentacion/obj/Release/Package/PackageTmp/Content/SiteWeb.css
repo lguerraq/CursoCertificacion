@@ -1,0 +1,111 @@
+﻿.elementor-social-icon-twitter {
+    background-color: #1da1f2;
+}
+.elementor-social-icon-facebook {
+    background-color: #3b5998;
+}
+.elementor-social-icon-instagram {
+    background-color: #9c3faa;
+}
+.elementor-social-icon-whatsappp {
+    background-color: #4caf50;
+}
+.elementor-social-icon {
+    font-size: 25px;
+    text-align: center;
+    padding: .5em;
+    margin-right: 5px;
+    cursor: pointer;
+    width: 24px;
+}
+.elementor-icon {
+    display: inline-block;
+    line-height: 1;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    color: #FFF;
+    text-align: center;
+}
+.elementor-screen-only, .screen-reader-text, .screen-reader-text span, .ui-helper-hidden-accessible {
+    position: absolute;
+    top: -10000em;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.elementor-social-icons-wrapper a:hover{
+    color: black !important;
+}
+.elementor-icon :hover {
+    color: black !important;
+}
+.elementor-icon :focus {
+    color: black !important;
+}
+.fijos {
+    position: fixed;
+    right: 0;
+    top:12rem;
+    z-index: 999999999 !important;
+}
+.fijos a{
+    height:50px;
+    width:50px;
+}
+.hoverclass{
+    font-size:1.8em;
+    margin-top:12px;
+    color:#FFF;
+    font-weight:900;
+}
+.fijos a:hover > .hoverclass{
+    margin-top:8px;
+    font-size:2.4em;
+}
+@media (min-width: 100px)
+{
+    .fijo {
+        display: block;
+        margin-bottom: 5px;
+        vertical-align: middle;
+        border-radius: 50px;
+    }
+}
+
+.IconEmail:before{
+    display:inline-block;
+	margin:0 5px 0 0;
+	vertical-align:top;
+	line-height:14px;
+	font-family:FontAwesome;
+	font-size:18px;
+	content:"\f0e0";
+}
+.IconIntranet:before{
+    display:inline-block;
+	margin:0 5px 0 0;
+	vertical-align:top;
+	line-height:14px;
+	font-family:FontAwesome;
+	font-size:18px;
+	content:"\f022";
+}
+
+#modalVerDocumento{
+    width:80%;
+    left:10%;
+    margin-left:0px;
+}
+
+@media (max-width: 767px){
+    #modalVerDocumento{
+        width:90%;
+        left:5%;
+        margin-left:0px;
+    }
+}

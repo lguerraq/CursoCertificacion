@@ -61,3 +61,24 @@ D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrado
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.csproj.CopyComplete
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.dll
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Negocio.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Negocio.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Negocio.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Evento.Modelo.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Comun.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Datos.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\EntityFramework.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\Tanneryd.BulkOperations.EF6.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Evento.Modelo.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Evento.Modelo.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Comun.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Datos.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\DBR.Eventos.Datos.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\EntityFramework.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.csproj.AssemblyReference.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.csproj.CopyComplete
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Debug\DBR.Eventos.Negocio.pdb

@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es-es">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Certificado</title>
+    <style>
+        td,th{
+            border: 2px solid;
+            padding: 5px;
+        }
+        #background {
+               position: absolute;
+               display: block;
+               min-width: 100%;
+               opacity: 0.5;
+               text-align: center;
+               background-color: transparent;
+               padding-top:05%;
+           }
+           #bg-text {
+               color: lightgrey;
+               font-size: 120px;
+               opacity: 0.5;
+               filter: alpha(opacity=50);
+               background-color: transparent;
+               font-family:Arial;
+               font-weight:900;
+           }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <p id="bg-text">
+            100% <br />
+            INGENIEROS
+        </p>
+    </div>
+    <div style="width:100%;color:#1f5da8; text-align:center;font-family:Arial;font-weight:900;font-size:30px;">
+        @ViewBag.Evento.NombreEvento
+    </div>
+    <br />
+    <div>
+        <table style="border-collapse: collapse;width:100%;font-family:Arial;">
+            <thead>
+                <tr>
+                    <th style="width:70%;font-weight:900;font-size:20px;">MÓDULOS</th>
+                    <th style="width:70%;font-weight:900;font-size:20px;">PLANA DOCENTE</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ 
+                    var TotalHoras = 0;
+                }
+                @foreach (var item in ViewBag.Modulos)
+                {
+                    TotalHoras = TotalHoras + item.Horas;
+                    <tr>
+                        <td>
+                            <div style="width:100%;font-weight:700;">
+                                @item.Nombre
+                            </div>
+                            <div style="width:100%;padding:5px;padding-left:30px;">
+                                @item.Descripcion
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                @item.Expositor
+                            </div>
+                        </td>
+                    </tr>
+                }              
+                <tr>
+                    <td>
+                        <div style="width:100%;font-weight:900;">
+                            Promedio Final: @ViewBag.Promedio
+                        </div>
+                    </td>
+                    <td>
+                        <div style="width:100%;font-weight:900;">
+                            Total: @TotalHoras horas académicas
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

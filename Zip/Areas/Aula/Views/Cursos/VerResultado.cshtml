@@ -1,0 +1,316 @@
+﻿@model DBR.Evento.Modelo.Response.CuestionarioResponse
+@using DBR.Eventos.Comun;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="Aula Virtual">
+    <meta name="author" content="Ricardo La Rosa">
+    <meta name="author" content="Diego Ballena">
+    @if (Configuracion.CodigoEmpresa == 1)
+    {
+        <title>100% Ingenieroes | Resultado</title>
+        <link rel="icon" type="image/png" href="~/images/logo.ico" />
+    }
+    @if (Configuracion.CodigoEmpresa == 2)
+    {
+        <title>Avas Consultores | Resultado</title>
+        <link rel="icon" type="image/png" href="~/images/LogoEmpresa/logo_02.ico" />
+    }
+
+    <!-- Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet'>
+    <link href='@Url.Content("~/assets/vendor/unicons-2.0.1/css/unicons.css")' rel='stylesheet'>
+    <link href='@Url.Content("~/assets/css/vertical-responsive-menu1.min.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/css/style.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/css/responsive.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/css/night-mode.css")' rel="stylesheet">
+
+    <!-- Vendor Stylesheets -->
+    <link href='@Url.Content("~/assets/vendor/fontawesome-free/css/all.min.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/vendor/OwlCarousel/assets/owl.carousel.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/vendor/OwlCarousel/assets/owl.theme.default.min.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/vendor/bootstrap/css/bootstrap.min.css")' rel="stylesheet">
+    <link href='@Url.Content("~/assets/vendor/semantic/semantic.min.css")' rel="stylesheet" type="text/css">
+
+    <link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet" />
+
+    <!-- query toast -->
+    <link rel="stylesheet" href="~/Plugins/jquery-toastr/jquery.toast.min.css">
+
+    <style>
+        .knowledge_dts p {
+            text-align: left;
+        }
+
+        .login-btn {
+            margin-top: 0px;
+        }
+
+        ._215xd5 {
+            padding: 32px 0;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header Start -->
+    <header class="header clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="back_link" style="padding-top:10px;">
+                        <a href='@Url.Action("Detalle", "Cursos", new { area = "Aula", id=ViewBag.RowId })' class="hde151">Volver al detalle del curso</a>
+                        <a href='@Url.Action("Detalle", "Cursos", new { area = "Aula", id=ViewBag.RowId })' class="hde152">Volver</a>
+                    </div>
+                    <div class="ml_item" style="width:70%;margin-top:-15px;">
+                        <div class="main_logo main_logo15" id="logo">
+                            @if (Configuracion.CodigoEmpresa == 1)
+                            {
+                                <a href='@Url.Action("Index", "Cursos", new { area = "Aula" })'><img src='~/images/LogoEmpresa/logo_texto_aula_01.jpg' alt=""></a>
+                                <a href='@Url.Action("Index", "Cursos", new { area = "Aula" })'><img class="logo-inverse" src='~/images/LogoEmpresa/logo_texto_aula_01.jpg' alt=""></a>
+                            }
+                            @if (Configuracion.CodigoEmpresa == 2)
+                            {
+                                <a href='@Url.Action("Index", "Cursos", new { area = "Aula" })'><img src='~/images/LogoEmpresa/logo_letras_aula_02.png' alt=""></a>
+                                <a href='@Url.Action("Index", "Cursos", new { area = "Aula" })'><img class="logo-inverse" src='~/images/LogoEmpresa/logo_letras_aula_02.png' alt=""></a>
+                            }
+                        </div>
+                    </div>
+                    <div class="header_right pr-0">
+                        <ul>
+                            <li class="ui top right pointing dropdown">
+                                <a href="#" class="opts_account">
+                                    <img src='@Url.Content("~/assets/images/hd_dp.jpg")' alt="">
+                                </a>
+                                <div class="menu dropdown_account">
+                                    <div class="channel_my">
+                                        <div class="profile_link">
+                                            <img src='@Url.Content("~/assets/images/hd_dp.jpg")' alt="">
+                                            <div class="pd_content">
+                                                <div class="rhte85">
+                                                    <h6>@Session[NameSession.NombreUsuario].ToString()</h6>
+                                                    <div class="mef78" title="Verify">
+                                                        <i class='uil uil-check-circle'></i>
+                                                    </div>
+                                                </div>
+                                                <span>Últ. acceso</span>
+                                                <span>@Session[NameSession.UltimoAcceso].ToString()</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="night_mode_switch__btn">
+                                        <a href="#" id="night-mode" class="btn-night-mode">
+                                            <i class="uil uil-moon"></i> Modo nocturno
+                                            <span class="btn-night-mode-switch">
+                                                <span class="uk-switch-button"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <a href='@Url.Action("Index", "Cursos", new { area="Aula" })' class="item channel_item">Ver dashboard</a>
+                                    <a href="@Url.Action("Setting", "Cursos", new { area="Aula" })" class="item channel_item">Configuración</a>
+                                    <a href='@Url.Action("CerrarSession","Login", new { area = "" })' class="item channel_item">Cerrar sesión</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Body Start -->
+    <div class="wrapper _bg4586 _new89">
+        <input type="hidden" value="@ViewBag.IdEvento" id="txthdIdEvento" />
+        <div class="_215certibg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cert_banner_text">
+                            <h1>@ViewBag.Leccion</h1>
+                            @if (ViewBag.Abierto)
+                            {
+                                <p>Usted ya ha realizado todos los intentos para esta evaluación</p>
+                            }
+                            else
+                            {
+                                <p>Usted ya ha finalizado el curso</p>
+                            }
+                            <p style="padding-top: 20px;">Último resultado</p>
+                            <p style="font-size: 3rem; font-weight: bold; padding-top: 20px;">@ViewBag.Nota</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="_215td5">
+            <div class="container">
+                @foreach (var item in Model.Preguntas)
+                {
+                    <div class="row justify-content-md-start">
+                        <div class="col-lg-12" style="padding-top:30px;">
+                            <div class="title589">
+                                <h2 style="text-align:left;">
+                                    @item.Nombre
+                                    @if (item.EsRespondidaCorrecta)
+                                    {
+                                        <i style="color:green;" class="fa fa-check"></i>
+                                    }
+                                    else
+                                    {
+                                        <i style="color:red;" class="fa fa-times"></i>
+                                    }
+
+                                </h2>
+                                <p style="text-align:left; padding-left:0px;">@item.Ayuda</p>
+                            </div>
+                        </div>
+                        @foreach (var subitem in item.Respuestas)
+                        {
+                            <div class="col-md-12">
+                                <div class="mt-3">
+                                    @if (subitem.EsRespondida)
+                                    {
+                                        if (subitem.EsCorrecta)
+                                        {
+                                            <input type="radio" disabled="disabled" checked="checked" name="@item.IdPregunta" value="@subitem.IdRespuesta" id="@subitem.IdRespuesta" /><label style="cursor:pointer;" for="@subitem.IdRespuesta">&nbsp; @subitem.Descripcion <i style="color:green;" class="fa fa-check"></i></label>
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" disabled="disabled" checked="checked" name="@item.IdPregunta" value="@subitem.IdRespuesta" id="@subitem.IdRespuesta" /><label style="cursor:pointer;" for="@subitem.IdRespuesta">&nbsp; @subitem.Descripcion <i style="color:red;" class="fa fa-times"></i></label>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        if (subitem.EsCorrecta)
+                                        {
+                                            <input type="radio" disabled="disabled" name="@item.IdPregunta" value="@subitem.IdRespuesta" id="@subitem.IdRespuesta" /><label style="cursor:pointer;" for="@subitem.IdRespuesta">&nbsp; @subitem.Descripcion <i style="color:green;" class="fa fa-check"></i></label>
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" disabled="disabled" name="@item.IdPregunta" value="@subitem.IdRespuesta" id="@subitem.IdRespuesta" /><label style="cursor:pointer;" for="@subitem.IdRespuesta">&nbsp; @subitem.Descripcion</label>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                <div class="text-center">
+                    <button class="knowledge_btn btn-certificado" id="btnDescargarCertificado"><i class="fa fa-file-pdf"></i> Descargar certificado</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="_215xd5">
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                            @if (ViewBag.LeccionAnterior != null)
+                            {
+                                <button class="login-btn d-sm-none d-md-none d-lg-none" type="submit" data-id="@ViewBag.LeccionAnterior.IdLeccion" data-curso="@ViewBag.RowId" title="Lección anterior"><i class="fa fa-backward"></i></button>
+                                <button class="login-btn d-none d-sm-block d-md-block d-lg-block" type="submit" data-id="@ViewBag.LeccionAnterior.IdLeccion" data-curso="@ViewBag.RowId"><i class="fa fa-backward"></i> Lección anterior</button>
+                            }
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-3 offset-lg-6">
+                            @if (ViewBag.LeccionSiguiente != null)
+                            {
+                                <button class="login-btn d-sm-none d-md-none d-lg-none" type="submit" data-id="@ViewBag.LeccionSiguiente.IdLeccion" data-curso="@ViewBag.RowId" title="Lección siguiente"><i class="fa fa-forward"></i></button>
+                                <button class="login-btn d-none d-sm-block d-md-block d-lg-block" type="submit" data-id="@ViewBag.LeccionSiguiente.IdLeccion" data-curso="@ViewBag.RowId"><i class="fa fa-forward"></i> Lección siguiente</button>
+                            }
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="footer mt-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer_bottm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="fotb_left">
+                                        <li>
+                                            <a href='@Url.Action("Index", "Cursos", new { area = "Aula"})'>
+                                                <div class="footer_logo">
+                                                    <img src='@Url.Content("~/assets/images/logo1.svg")' alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <p>© @DateTime.Now.Year <strong>Aula Virtual</strong>. Todos los derechos reservados.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="edu_social_links">
+                                        @if (Configuracion.CodigoEmpresa == 1)
+                                        {
+                                            <a href="https://www.facebook.com/ingenierosx100"><i class="fab fa-facebook-f"></i></a>
+                                        }
+                                        @if (Configuracion.CodigoEmpresa == 2)
+                                        {
+                                            <a href="https://www.facebook.com/AVAS-Consultores-y-Auditores-109761429649585"><i class="fab fa-facebook-f"></i></a>
+                                        }
+                                        @*<a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-youtube"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <style>
+        .btn-certificado, .btn-si {
+            background: #1e5cac;
+        }
+    </style>
+    <!-- Body End -->
+    <script src='@Url.Content("~/assets/js/jquery-3.3.1.min.js")'></script>
+    <script src='@Url.Content("~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js")'></script>
+    <script src='@Url.Content("~/assets/vendor/OwlCarousel/owl.carousel.js")'></script>
+    <script src='@Url.Content("~/assets/vendor/semantic/semantic.min.js")'></script>
+    <script src='@Url.Content("~/assets/js/custom.js")'></script>
+    <script src='@Url.Content("~/assets/js/night-mode.js")'></script>
+
+    <!-- query toast -->
+    <script src="~/Plugins/jquery-toastr/jquery.toast.min.js"></script>
+
+    <!-- jQuery blockUI plugin -->
+    <script src="~/Plugins/blockUI/blockUI.min.js"></script>
+
+    <script src="~/js/util/DBR.min.js?v=@ViewBag.NumeroRelease"></script>
+
+    <script src='@Url.Content("~/js/pages/Virtual/ContenidoEvaluacion.js")'></script>
+
+    <script>
+        var urlLeccion = '@Url.Action("VerLeccion", "Cursos", new { area = "Aula", id="" })';
+        var urlSaveEvaluacion = '@Url.Action("SaveEvaluacion", "Cursos", new { area = "Aula", id="" })';
+        var urlCargarPdfCertificadoUtomatico = '@Url.Action("CargarPdfCertificadoUtomatico", "Cursos", new { area = "Aula" })';
+        var urlDescargarPdfGenerado = '@Url.Action("DescargarPdfGenerado", "Cursos", new { area = "Aula" })';
+    </script>
+    <script>
+        var urlValidarUsuarioActividad = '@Url.Action("ValidarUsuarioActividad", "Login", new { Area = "" })';
+        var urlCerrarSesionAutomatica = '@Url.Action("CerrarSesionAutomatica", "Login", new { Area = "" })';
+    </script>
+    <script src='@Url.Content("~/js/pages/LayoutAula.min.js?v=")@ViewBag.NumeroRelease'></script>
+</body>
+</html>

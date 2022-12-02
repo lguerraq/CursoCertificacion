@@ -1,0 +1,113 @@
+﻿@using System.Configuration;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @if (Configuracion.CodigoEmpresa == 1)
+    {
+        <title>100% Ingenieroes</title>
+        <link rel="icon" type="image/png" href="~/images/logo.ico" />
+    }
+    @if (Configuracion.CodigoEmpresa == 2)
+    {
+        <title>Avas Consultores</title>
+        <link rel="icon" type="image/png" href="~/images/LogoEmpresa/logo_02.ico" />
+    }
+    <title>Browse</title>
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/Plugins/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Plugins/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Plugins/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/dist/css/AdminLTE.min.css">
+</head>
+<body>
+    <section class="content">
+        <div class="row">
+            <!-- /.col -->
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <ul class="mailbox-attachments clearfix">
+                            @foreach (var fileInfo in ViewBag.Files)
+                            {
+                            <li class="fileExplorer" data-name="@fileInfo.Name">
+                                @if (@fileInfo.Extension.ToUpper() == ".PDF")
+                                {
+                                    <span class="mailbox-attachment-icon" style="min-height:150px;"><i class="fa fa-file-pdf-o"></i></span>
+                                    <div class="mailbox-attachment-info">
+                                        <a class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> @fileInfo.Name</a>
+                                        <span class="mailbox-attachment-size">
+                                            @fileInfo.Length KB
+                                        </span>
+                                    </div>
+                                }
+                                else if (@fileInfo.Extension.ToUpper() == ".JPG" || @fileInfo.Extension.ToUpper() == ".PNG" || @fileInfo.Extension.ToUpper() == ".JPEG")
+                                {
+                                    <span class="mailbox-attachment-icon has-img" style="height:150px;overflow-y:hidden;vertical-align: middle;"><img src="~/DocumentosCK/@fileInfo.Name" alt="Attachment"></span>
+                                    <div class="mailbox-attachment-info">
+                                        <a class="mailbox-attachment-name"><i class="fa fa-camera"></i> @fileInfo.Name</a>
+                                        <span class="mailbox-attachment-size">
+                                            @fileInfo.Length KB
+                                        </span>
+                                    </div>
+                                }
+                                else if (@fileInfo.Extension.ToUpper() == ".DOCX")
+                                {
+                                    <span class="mailbox-attachment-icon" style="min-height:150px;"><i class="fa fa-file-word-o"></i></span>
+                                    <div class="mailbox-attachment-info">
+                                        <a class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> @fileInfo.Name</a>
+                                        <span class="mailbox-attachment-size">
+                                            @fileInfo.Length KB
+                                        </span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <span class="mailbox-attachment-icon" style="min-height:150px;"><i class="fa fa-file-text"></i></span>
+                                    <div class="mailbox-attachment-info">
+                                        <a class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> @fileInfo.Name</a>
+                                        <span class="mailbox-attachment-size">
+                                            @fileInfo.Length KB
+                                        </span>
+                                    </div>
+                                }
+                            </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <!-- /. box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- jQuery 3 -->
+    <script src="~/Plugins/jquery/dist/jquery.min.js"></script>
+    <script src="~/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/plugins/ckeditor/lang/es.js"></script>
+    <script>
+        $(document).ready(function () {
+            var funcNum = @(Context.Request.QueryString["CKEditorFuncNum"] + ";")
+            var urlFileServerVisualizarCkEditor = "@ConfigurationManager.AppSettings["urlFileServerVisualizarCkEditor"]";
+            $(".fileExplorer").on("click", function () {
+                var selectedFileUrl = urlFileServerVisualizarCkEditor + $(this).data("name");
+                window.opener.CKEDITOR.tools.callFunction(funcNum, selectedFileUrl);
+                window.close();
+            }).hover(function () {
+                $(this).css("cursor", "pointer");
+            });
+        });
+    </script>
+</body>
+</html>

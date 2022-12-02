@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Reportes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridReporteCorreo" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Año</th>
+                            <th class="text-center">Mes</th>
+                            <th class="text-center">Total Enviados</th>
+                            <th class="text-center">Enviados Gratis</th>
+                            <th class="text-center">Enviados Adicionales</th>
+                            <th class="text-center">Costo Envio Adicional</th>
+                            <th class="text-center">Total Costo Adicional</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th colspan="6" style="text-align:right">Total:</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+
+    <script>
+        var urlListCorreoReportePaged = '@Url.Action("ListCorreoReportePaged", "Mantenimiento")';
+    </script>
+
+    <script src="~/js/pages/Mantenimiento/Reporte.js?v=@ViewBag.NumeroRelease"></script>
+}
+

@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle lección</title>
+</head>
+<body>
+    <div class="_htg451" id="ContenidoPreview">
+        @Html.Raw(ViewBag.Descripcion)
+    </div>
+    <script src='@Url.Content("~/assets/js/jquery-3.3.1.min.js")'></script>
+    <script>
+        $(document).ready(function () {
+            $("body").on("contextmenu", function (e) {
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

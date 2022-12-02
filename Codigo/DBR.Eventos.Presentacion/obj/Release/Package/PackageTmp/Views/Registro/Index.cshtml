@@ -1,0 +1,244 @@
+﻿
+@{
+    ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+}
+@section beforeStyles{
+    <link rel="stylesheet" href="~/dist/web/styles/bootstrap-personalizado.css">
+    <link rel="stylesheet" href="~/Plugins/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="~/Plugins/select2/dist/css/select2-bootstrap.css">
+    <style>
+        .span12 {
+            margin-left: 0% !important;
+        }
+
+        .vertical-registration-form {
+            border-top: 10px solid #0d68ae !important;
+            border: 1px solid rgba(0,0,0,0.3);
+            padding: 15px;
+            width: 100%;
+            max-width: 350px;
+            margin: auto;
+            -webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+            -webkit-background-clip: padding-box;
+        }
+
+        .vertical-registration-img {
+            border: 1px solid rgba(0,0,0,0.3);
+            padding: 8px;
+            width: 100%;
+            max-width: 550px;
+            margin: auto;
+            -webkit-background-clip: padding-box;
+        }
+
+        .bg-yellow, .callout.callout-warning, .alert-warning, .label-warning, .modal-warning .modal-body {
+            background-color: #f39c12 !important;
+        }
+
+        .callout.callout-warning {
+            border-color: #c87f0a;
+        }
+
+        .callout-warning h4 {
+            color: #FFF;
+            text-align: center;
+        }
+
+        .callout {
+            border-radius: 3px;
+            margin: 0 0 20px 0;
+            padding: 15px 30px 15px 15px;
+            border-left: 5px solid #eee;
+        }
+
+        .select2-selection {
+            height: 36px !important;
+            border-radius: 0px !important;
+            padding: 5px !important;
+        }
+
+        .select2-search__field {
+            text-transform: uppercase;
+        }
+    </style>
+}
+<div class="motopress-wrapper content-holder clearfix" style="padding:0px;">
+    @if (@ViewBag.EventosActivos.Count > 0)
+    {
+        <div class="container">
+            <div class="">
+                <div class="span12" data-motopress-wrapper-type="content">
+                    <div id="content" class="row row-fluid">
+                        <div class="span6" style="padding:2rem;padding-top: 0;">
+                            <div class="vertical-registration-img">
+                                <input type="hidden" id="txtIdEvento" value="@ViewBag.EventosActivos[0].IdEvento" />
+                                <img src="~/Documentos/@ViewBag.EventosActivos[0].ImagenEvento" alt="Sin imagen" style="width:100%;" />
+                            </div>
+                        </div>
+                        <div class="span6" style="padding:2rem;padding-top: 0;">
+                            <div class="vertical-registration-form">
+                                <div class="">
+                                    <h4 class="modal-title" style="font:bold 24px/24px Roboto,sans-serif;color: #0d68ae" id="myModalLabel">REGISTRO</h4>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span12" style="margin-left: 2.564102564102564%;">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtNombres" maxlength="50" placeholder="Nombres">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtApellidoPaterno" maxlength="50" placeholder="Apellido paterno">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtApellidoMaterno" maxlength="50" placeholder="Apellido Materno">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtNumeroDocumento" maxlength="8" placeholder="Numero Documento:(DNI/CE)">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtCelular" maxlength="9" placeholder="Celular">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtRegistroCip" maxlength="20" placeholder="Registro CIP (Opcional)">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtCorreo" maxlength="50" placeholder="Correo">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou" style="margin-bottom:10px;">
+                                            <select class="form-control select2" id="cboProfesion" style="height: 38px;width: calc(90% + 26px);">
+                                                <option value="0">SELECCIONE PROFESIÓN</option>
+                                                @foreach (var item in ViewBag.Profesion)
+                                                {
+                                                    <option value="@item.Value">@item.Descripcion</option>
+                                                }
+                                            </select>
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <select class="form-control" id="cboOcupacion" style="height: 38px;width: calc(90% + 26px);">
+                                                <option value="0">SELECCIONE GRADO ACADÉMICO</option>
+                                                @foreach (var item in ViewBag.Ocupacion)
+                                                {
+                                                    <option value="@item.Value">@item.Descripcion</option>
+                                                }
+                                            </select>
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                    <div class="span12">
+                                        <div class="input-grou">
+                                            <input type="text" class="form-control" id="txtOcupacionDescripcion" maxlength="150" placeholder="Ocupación y/o Centro laboral">
+                                            <span class="help-block hide">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <button type="button" id="btnRegistrarse" class="btn btn-info">Registrarse</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="callout callout-warning">
+            <h4>
+                NO SE ENCONTRO EVENTO ACTIVO <br />
+                ¡VUELVE EN OTRO MOMENTO!
+            </h4>
+        </div>
+    }
+
+</div>
+
+<div class="modal fade" id="modalConfirmacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="font:bold 24px/24px Roboto,sans-serif;color: #0d68ae" id="myModalLabel">REGISTRO EXITOSO</h4>
+            </div>
+            <div class="modal-body" style="color: #0d68ae;">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="input-grou" style="">
+                            Se registró satifactoriamente, recuerda que debes hacer el depósito en <br>
+                            cualquier agente o agencia del Banco de Crédito del Perú (BCP) al número <br>
+                            de cuenta: 570-2587746-0-21 | CCI: 00257000258774602109 y Enviar Voucher <br>
+                            (Escaneado o fotografia) a cualquiera de los correos <br>
+                            informes@engitrainingperu.com / informes@ingenierosx100.org o al <br>
+                            WhatsApp 947852211 para poder completar tu inscripción: <br><br>
+                            <br>
+                            ¡Gracias por registrarte!
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="border-top: 10px solid #890100 !important">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="font:bold 24px/24px Roboto,sans-serif;color: #890100" id="myModalLabel">MENSAJE</h4>
+            </div>
+            <div class="modal-body" style="color: #0d68ae;">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="input-grou" id="textMensaje">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/js/util/DBR.js"></script>
+    <script src="~/Plugins/Numeric/js/query.numeric.js"></script>
+    <script src="~/Plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/Plugins/select2/dist/js/select2.full.min.js"></script>
+    <script>
+        var urlSaveInscripcion = '@Url.Action("SaveInscripcionWeb", "Mantenimiento")';
+    </script>
+    <script src="~/js/web/Registro.min.js?v=@ViewBag.NumeroRelease"></script>
+}
+

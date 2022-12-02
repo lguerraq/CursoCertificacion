@@ -1,0 +1,350 @@
+﻿
+@{
+    ViewBag.Title = "Curso";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section beforeStyles{
+    
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="form-group">
+                        <a id="btnAgregarEvento" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                    </div>                   
+                </div>
+            </div>
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridEventos" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Activo</th>
+                            <th>Costo</th>
+                            <th title="Página de certificado">Páginas</th>
+                            <th title="Generación de certificado">Generación</th>
+                            <th>Documentos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>           
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalEvento">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleAgregarEvento">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                </div>
+                <div class="row">
+                    <input type="hidden" value="0" id="txtIdEvento" />
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Nombre<span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar" id="txtNombreEvento" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Descripcion<span class="required_field">*</span></label>
+                            <textarea class="form-control validar" id="txtDescripcion" rows="4" maxlength="1000" placeholder="Esta sección se usara para publicitar el curso" autocomplete="off"></textarea>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Tipo<span class="required_field">*</span></label>
+                            <select class="form-control" id="ddlTipo">
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Fecha<span class="required_field">*</span></label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control validar  pull-right" id="txtFecha" readonly style="background-color:#FFF;">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Expositor<span class="required_field">*</span></label>
+                            <input class="form-control validar " id="txtExpositor" autocomplete="off" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Modalidad<span class="required_field">*</span></label>
+                            <select class="form-control validar" id="cboModalidad">
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Tiene Costo<span class="required_field">*</span></label>
+                            <select class="form-control" id="cboCosto">
+                                <option value="0">Seleccione</option>
+                                <option value="SI">SI</option>
+                                <option value="NO">NO</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Costo real<span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar" id="txtCostoValor" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Costo tachado (Opcional)</label>
+                            <input type="text" class="form-control validar" id="txtCostoValorPromocional" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Nota aprobatoria<span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar " id="txtNotaAprobatoria" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Horas<span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar " id="txtHoras" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Foto (Max 1Mb - alto780px - ancho 450px)<span class="required_field">*</span></label>
+                            <input type="file" class="filestyle" id="fileFoto" accept="image/*" data-buttonname="btn-default">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Certificado impresión (PDF,Max 3Mb)</label>
+                            <input type="file" class="filestyle" id="fileCertificadoImprimir" accept="application/pdf" data-buttonname="btn-default">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Certificado expositor (PDF,Max 3Mb)</label>
+                            <input type="file" class="filestyle" id="fileCertificadoExpositor" accept="application/pdf" data-buttonname="btn-default">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Especialidad:</label>
+                            <select class="form-control select2" id="cboTema" multiple>
+                                <option value="0">Seleccione</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input id="chckDetallarCertificado" type="checkbox">
+                            <label for="chckDetallarCertificado" class=""> Habilitar segunda página de certificado</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input id="chckGenerarCertificado" type="checkbox">
+                            <label for="chckGenerarCertificado" class=""> Habilitar generación de certificado</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarEvento" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalModulosLista">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="">LISTA DE MÓDULOS</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtIdEvento2" value="0" />
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <div class="form-group">
+                            <a id="btnAgregarModulo" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive" >
+                    <table id="gridModulos" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>                                
+                                <th>Expositor</th>
+                                <th>Horas</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalModulo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleModal">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="">
+                    <input type="hidden" value="0" id="txtIdModulo" />
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Nombre<span class="required_field">*</span></label>
+                            <input type="text" class="form-control" id="txtModuloNombre" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Descripción<span class="required_field">*</span></label>
+                            <textarea class="form-control" id="txtModuloDescripcion"  autocomplete="off"></textarea>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="">Expositor<span class="required_field">*</span></label>
+                            <input class="form-control" id="txtModuloExpositor"  autocomplete="off"/>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Horas<span class="required_field">*</span></label>
+                            <input class="form-control" id="txtModuloHoras"  autocomplete="off"/>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarModulo" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalCodigo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Código de registro</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtCodigoRegistro" autocomplete="off" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        var urlValoresIniciales = '@Url.Action("ValoresInicialesEvento", "Mantenimiento")';
+
+
+        var urlListEvento = '@Url.Action("ListEvento", "Mantenimiento")';
+        var urlSaveEvento = '@Url.Action("SaveEvento", "Mantenimiento")';
+        var urlUpdateEvento = '@Url.Action("UpdateEvento", "Mantenimiento")';
+        var urlDeleteEvento = '@Url.Action("DeleteEvento", "Mantenimiento")';
+        var urUpdateEstadoEvento = '@Url.Action("UpdateEstadoEvento", "Mantenimiento")';
+        var urlGetEvento = '@Url.Action("GetEvento", "Mantenimiento")';
+        var urlDescargaDocumentos = '../../FileServer/' + @Configuracion.CodigoEmpresa + "/Evento/";
+        //Modulo
+        var urlModulos = '@Url.Action("Modulos", "Mantenimiento")';
+        var urlListModuloPaged = '@Url.Action("ListModuloPaged", "Mantenimiento")';
+        var urlSaveModulo = '@Url.Action("SaveModulo", "Mantenimiento")';
+        var urlDeleteModulo = '@Url.Action("DeleteModulo", "Mantenimiento")';
+        var urlGetModulo = '@Url.Action("GetModulo", "Mantenimiento")';
+    </script>
+    <script src="~/js/pages/Mantenimiento/Curso.min.js?v=@ViewBag.NumeroRelease"></script>
+}

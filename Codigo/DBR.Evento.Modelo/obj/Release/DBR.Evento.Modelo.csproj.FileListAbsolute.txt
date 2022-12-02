@@ -10,3 +10,15 @@ D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\ob
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.csproj.CopyComplete
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.dll
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Release\DBR.Evento.Modelo.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Release\DBR.Evento.Modelo.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Release\DBR.Evento.Modelo.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Release\EntityFramework.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Release\EntityFramework.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.csproj.AssemblyReference.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.csproj.CoreCompileInputs.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.csproj.CopyComplete
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Release\DBR.Evento.Modelo.pdb

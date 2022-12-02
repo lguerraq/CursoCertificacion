@@ -34,3 +34,15 @@ D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrado
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CopyComplete
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.dll
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\DBR.Evento.Modelo.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.AssemblyReference.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CoreCompileInputs.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.csproj.CopyComplete
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Evento.Modelo\obj\Debug\DBR.Evento.Modelo.pdb

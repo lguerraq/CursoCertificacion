@@ -1,0 +1,189 @@
+﻿@model  DBR.Evento.Modelo.Response.CuestionarioResponse
+
+@{
+    ViewBag.Title = "Cuestionario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section beforeStyles{
+
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-8 text-left">
+            <h4>@ViewBag.Titulo <span class="label label-info">@ViewBag.Peso</span></h4><br />
+        </div>
+        <div class="col-md-1">
+            
+        </div>
+        <div class="col-md-3 text-right">
+            <a href='@Url.Action("Modulos", "Mantenimiento", new { idCurso = ViewBag.IdCurso })' class="btn btn-warning"><i class="fa fa-backward"></i>  Volver al detalle del curso</a>
+        </div>
+    </div>
+    <div class="box-group" id="accordion">
+        <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+        @foreach (var item in Model.Preguntas)
+        {
+            <div class="panel box box-primary">
+                <div class="box-header with-border">
+                    <h4 class="box-title" style="padding-right: 100px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="@("#collapse" + item.IdPregunta)">
+                            @item.Nombre
+                        </a>
+                    </h4>
+                    <div class="box-tools pull-right">
+                        <!-- Buttons, labels, and many other things can be placed here! -->
+                        <!-- Here is a label for example -->
+                        @*<span class="label label-primary">@item.Expositor</span>
+                            <span class="label label-success">@item.Horas hrs.</span>*@
+                        <span class="label label-danger">@item.Puntaje</span>
+                        <!-- This will cause the box to be removed when clicked -->
+                        <button class="btn btn-box-tool btn-edit-pregunta" data-toggle="tooltip" title="Editar" data-pregunta="@item.IdPregunta"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-box-tool btn-delete-pregunta" data-toggle="tooltip" title="Eliminar" data-pregunta="@item.IdPregunta"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div id="@("collapse" + item.IdPregunta)" class="panel-collapse collapse">
+                    @*<div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <div class="form-group">
+                                    <a class="btn btn-primary btn-agregar-leccion" data-modulo="@item.IdPregunta"><i class="fa fa-plus-circle"></i>  Agregar lección</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped dt-responsive nowrap grid-lecciones" data-modulo="@item.IdPregunta" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <th>Nombre</th>
+                                        <th>Duracion</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        }
+        <div class="panel box box-success">
+            <div class="box-header with-border text-center">
+                <input type="hidden" id="txtIdCurso" value="@ViewBag.IdCurso" />
+                <input type="hidden" id="txtIdCuestionario" value="@ViewBag.IdCuestionario" />
+                <h4 class="box-title">
+                    <a id="btnAgregarPregunta" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar pregunta</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalPregunta">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleModal">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <input type="hidden" value="0" id="txtIdPregunta" />
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Tipo<span class="required_field">*</span></label>
+                            <select class="form-control" id="ddlPreguntaTipo">
+                                <option value="0">SELECCIONE</option>
+                                <option value="1">VERDADERO/FALSO</option>
+                                <option value="2">OPCIÓN MÚLTIPLE</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Nombre<span class="required_field">*</span></label>
+                            <textarea type="text" class="form-control" id="txtPreguntaNombre" autocomplete="off" maxlength="1000" rows="5"></textarea>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Explicación</label>
+                            <textarea class="form-control" id="txtPreguntaExplicacion" autocomplete="off" maxlength="1500"  rows="5"></textarea>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label for="">Ayuda</label>
+                            <input class="form-control" id="txtPreguntaAyuda" autocomplete="off" maxlength="250" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Puntaje<span class="required_field">*</span></label>
+                            <input class="form-control" id="txtPreguntPuntaje" autocomplete="off" maxlength="2" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="tableRespuestas" class="table">
+                            <thead id="headTable">
+                                <tr>
+                                    <th width="50">Item</th>
+                                    <th width="270">Respuesta</th>
+                                    <th width="150" class="text-center">¿Es opción correcta?</th>
+                                    <th width="100"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyTable">
+                               
+                            </tbody>
+                        </table>
+                        <br />
+                        <button class="btn btn-primary" id="btnAgregarRespuesta" style="display:none;">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarPregunta" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/plugins/ckeditor/lang/es.js"></script>
+    <script src="~/Plugins/bootstable/bootstable.js"></script>
+
+    <script>
+        var urlListModuloPaged = '@Url.Action("ListModuloPaged", "Mantenimiento")';
+        var urlSavePregunta = '@Url.Action("SavePregunta", "Cuestionario")';
+        var urlDeletePregunta = '@Url.Action("DeletePregunta", "Cuestionario")';
+        var urlGetPregunta = '@Url.Action("GetPregunta", "Cuestionario")';
+
+        var urlListLeccionPaged = '@Url.Action("ListLeccionesPaged", "Mantenimiento")';
+        var urlSaveLeccion = '@Url.Action("SaveLeccion", "Mantenimiento")';
+        var urlDeleteLeccion = '@Url.Action("DeleteLeccion", "Mantenimiento")';
+        var urlGetLeccion = '@Url.Action("GetLeccion", "Mantenimiento")';
+    </script>
+    <script src="~/js/pages/Mantenimiento/Cuestionario.js?v=@ViewBag.NumeroRelease"></script>
+}

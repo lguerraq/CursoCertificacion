@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Evento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="table-responsive" style="min-height:calc(100vh - 200px);">
+                <table id="gridEventos" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th style="width:40%;" id="roNombre">Nombre</th>
+                            <th style="width:10%;">Fecha</th>
+                            <th style="width:30%;">Expositor</th>
+                            <th style="width:10%;">Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+
+    <script>
+        var urlListEventoUsuarioPaged = '@Url.Action("ListEventoUsuarioPaged", "Virtual")';
+        var urlIrContenidoEvento = '@Url.Action("ContenidoEvento", "Virtual")';
+    </script>
+    <script src="~/js/pages/Virtual/ContenidoVirtual.min.js?v=@ViewBag.NumeroRelease"></script>
+}

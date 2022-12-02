@@ -16,3 +16,21 @@ D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\ob
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.csproj.CopyComplete
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.dll
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Eventos.Datos.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Eventos.Datos.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Eventos.Datos.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Evento.Modelo.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Eventos.Comun.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\EntityFramework.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\Tanneryd.BulkOperations.EF6.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Evento.Modelo.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Evento.Modelo.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\DBR.Eventos.Comun.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\EntityFramework.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.csproj.AssemblyReference.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.csproj.CoreCompileInputs.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.csproj.CopyComplete
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Datos\obj\Release\DBR.Eventos.Datos.pdb

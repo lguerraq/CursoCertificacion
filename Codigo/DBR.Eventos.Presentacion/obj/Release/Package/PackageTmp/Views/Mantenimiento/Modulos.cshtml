@@ -1,0 +1,277 @@
+﻿@model List<DBR.Evento.Modelo.Response.ModuloResponse>
+@{
+    ViewBag.Title = "Evento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section beforeStyles{
+
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-md-9 text-left">
+            <h4>@ViewBag.Titulo</h4><br />
+        </div>
+        <div class="col-md-3 text-right">
+            <a href='@Url.Action("Curso", "Mantenimiento")' class="btn btn-warning"><i class="fa fa-backward"></i>  Volver al listado de cursos</a>
+        </div>
+    </div>
+    <div class="box-group" id="accordion">
+        <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+        @foreach (var item in Model)
+        {
+            <div class="panel box box-primary">
+                <div class="box-header with-border">
+                    <h4 class="box-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="@("#collapse" + item.IdModulo)">
+                            @item.Nombre
+                        </a>
+                    </h4>
+                    <div class="box-tools pull-right">
+                        <!-- Buttons, labels, and many other things can be placed here! -->
+                        <!-- Here is a label for example -->
+                        <span class="label label-primary">@item.Expositor</span>
+                        <span class="label label-success">@item.Horas hrs.</span>
+                        <span class="label label-danger">@item.Peso</span>
+                        <!-- This will cause the box to be removed when clicked -->
+                        <button class="btn btn-box-tool btn-edit-modulo" data-toggle="tooltip" title="Editar" data-modulo="@item.IdModulo"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-box-tool btn-delete-modulo" data-toggle="tooltip" title="Eliminar" data-modulo="@item.IdModulo"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div id="@("collapse" + item.IdModulo)" class="panel-collapse collapse">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <div class="form-group">
+                                    <a class="btn btn-primary btn-agregar-leccion" data-modulo="@item.IdModulo"><i class="fa fa-plus-circle"></i>  Agregar lección</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped dt-responsive nowrap grid-lecciones" data-modulo="@item.IdModulo" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <th>Nombre</th>
+                                        <th>Duracion</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="panel box box-success">
+            <div class="box-header with-border text-center">
+                <input type="hidden" id="txtIdEvento" value="@ViewBag.IdEvento" />
+                <h4 class="box-title">
+                    <a id="btnAgregarModulo" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar módulo</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalModulo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleModal">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="">
+                    <input type="hidden" value="0" id="txtIdModulo" />
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Nombre<span class="required_field">*</span></label>
+                            <input type="text" class="form-control" id="txtModuloNombre" autocomplete="off" maxlength="100">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Descripción<span class="required_field">*</span></label>
+                            <textarea class="form-control" id="txtModuloDescripcion" autocomplete="off" rows="6" maxlength="500"></textarea>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Expositor<span class="required_field">*</span></label>
+                            <input class="form-control" id="txtModuloExpositor" autocomplete="off" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Horas<span class="required_field">*</span></label>
+                            <input class="form-control" id="txtModuloHoras" autocomplete="off" maxlength="2" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Peso<span class="required_field">*</span></label>
+                            <select class="form-control" id="ddlModuloPeso">
+                                <option value="0">SELECCIONE</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarModulo" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalLeccion">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleLeccion">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="">
+                    <input type="hidden" value="0" id="txtIdModuloLeccion" />
+                    <input type="hidden" value="0" id="txtIdLeccion" />
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Tipo<span class="required_field">*</span></label>
+                            <select class="form-control" id="ddlTipo">
+                            </select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="">Nombre<span class="required_field">*</span></label>
+                            <input type="text" class="form-control" id="txtLeccionNombre" autocomplete="off" maxlength="100">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="">Orden<span class="required_field">*</span></label>
+                            <input class="form-control" id="txtOrden" autocomplete="off" maxlength="2" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 div-leccion">
+                        <div class="form-group">
+                            <label>
+                                URL ONEDRIVE
+                                <input type="radio" name="rTipoUrl" class="minimal" value="1" checked>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 div-leccion">
+                        <div class="form-group">
+                            <label>
+                                IFRAME
+                                <input type="radio" name="rTipoUrl" class="minimal" value="2">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-10 div-leccion" id="conteinerUrl">
+                        <div class="form-group">
+                            <label for="">Url Video onedrive</label>
+                            <input class="form-control" id="txtUrlVideo" autocomplete="off" maxlength="1000" />
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-10 div-leccion hide" id="conteinerIframa">
+                        <div class="form-group">
+                            <label for="">Iframe Video</label>
+                            <textarea class="form-control" id="txtIframeVideo" autocomplete="off" rows="6" maxlength="1000"></textarea>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 div-leccion">
+                        <div class="form-group">
+                            <label for="">Duración<span class="required_field">*</span></label>
+                            <input type="text" class="form-control" id="txtDuracion" autocomplete="off" maxlength="2">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 div-leccion">
+                        <div class="form-group">
+                            <label for="">Descripción<span class="required_field">*</span></label>
+                            <textarea class="form-control" id="txtMensajeCompleto" rows="30" style="min-width:100%;">
+                                Ingrese en esta sección el detalle de la lección
+                            </textarea>
+                            <span class="help-block hide" id="textErrorObligatorio">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 div-peso" style="display:none;">
+                        <div class="form-group">
+                            <label for="">Peso<span class="required_field">*</span></label>
+                            <select class="form-control" id="ddlLeccionPeso">
+                                <option value="0">SELECCIONE</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <span class="help-block hide">Este campo es obligarorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarLeccion" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/plugins/ckeditor/lang/es.js"></script>
+
+    <script>
+        var urlFileServerBrowse = '@Url.Action("FileServerBrowse", "Mantenimiento")';
+        var urlSaveFileServerCkEditor = '@Url.Action("SaveFileServerCkEditor", "Mantenimiento")';
+
+        var urlValoresIniciales = '@Url.Action("ValoresInicialesModulo", "Mantenimiento")';
+
+        var urlListModuloPaged = '@Url.Action("ListModuloPaged", "Mantenimiento")';
+        var urlSaveModulo = '@Url.Action("SaveModulo", "Mantenimiento")';
+        var urlDeleteModulo = '@Url.Action("DeleteModulo", "Mantenimiento")';
+        var urlGetModulo = '@Url.Action("GetModulo", "Mantenimiento")';
+
+        var urlListLeccionPaged = '@Url.Action("ListLeccionesPaged", "Mantenimiento")';
+        var urlSaveLeccion = '@Url.Action("SaveLeccion", "Mantenimiento")';
+        var urlDeleteLeccion = '@Url.Action("DeleteLeccion", "Mantenimiento")';
+        var urlGetLeccion = '@Url.Action("GetLeccion", "Mantenimiento")';
+
+        var urlCuestionario = '@Url.Action("Editar", "Cuestionario")';
+    </script>
+    <script src="~/js/pages/Mantenimiento/Modulo.min.js?v=@ViewBag.NumeroRelease"></script>
+}

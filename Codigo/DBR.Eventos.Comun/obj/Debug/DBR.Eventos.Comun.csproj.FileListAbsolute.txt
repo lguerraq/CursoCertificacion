@@ -10,3 +10,9 @@ D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrado
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Comun\obj\Debug\DBR.Eventos.Comun.csproj.CoreCompileInputs.cache
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Comun\obj\Debug\DBR.Eventos.Comun.dll
 D:\OneDrive\OneDrive - Universidad Tecnologica del Peru\UTP\C9 - Curso Integrador II\Proyecto III\CODIGO FUENTE - L.Guerra\CODIGO FUENTE - L.Guerra\DBR.Eventos.Comun\obj\Debug\DBR.Eventos.Comun.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\bin\Debug\DBR.Eventos.Comun.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\bin\Debug\DBR.Eventos.Comun.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Debug\DBR.Eventos.Comun.csproj.AssemblyReference.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Debug\DBR.Eventos.Comun.csproj.CoreCompileInputs.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Debug\DBR.Eventos.Comun.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Debug\DBR.Eventos.Comun.pdb

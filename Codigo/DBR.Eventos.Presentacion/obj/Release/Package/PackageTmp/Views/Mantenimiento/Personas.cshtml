@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewBag.Title = "Personas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section beforeStyles{
+    <link href="~/plugins/select2/dist/css/select2-bootstrap.css" rel="stylesheet" />
+    <style>
+        .select2-search__field{
+            text-transform:uppercase;
+        }
+    </style>
+}
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <a id="btnAgregarCargaMasiva" class="btn btn-primary"><i class="fa fa-upload"></i>  Carga masiva</a>
+                        <a href="@Url.Action("DescargarPlantilla","Mantenimiento")" target="_blank" class="btn btn-primary"><i class="fa fa-cloud-download"></i>  Descargar plantilla</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-right">
+                    <div class="form-group">
+                        <a id="btnDescargarExcel" href="@Url.Action("DescargarPersonas","Mantenimiento")" class="btn btn-primary"><i class="fa fa-file-excel-o"></i>  Reporte</a>
+                        <a id="btnAgregarPersona" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridPersonas" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>Nombre</th>
+                            <th>DNI/CE</th>
+                            <th>Celular</th>
+                            <th>Correo</th>
+                            <th>CIP</th>
+                            <th>Ocupación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalPersona">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleAgregarPersona">Agregar</h4>
+            </div>
+            <div class="modal-body" id="formPersona">
+                <input type="hidden" value="0" id="txtIdPersona" />
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <div class="form-group">
+                            <label for="">DNI <span>(*)</span></label>
+                            <input type="text" class="form-control validar uppercase pull-right" id="txtDni" maxlength="11">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3  col-sm-4">
+                        <div class="form-group">
+                            <label for="">CIP</label>
+                            <input type="text" class="form-control uppercase pull-right" id="txtCip" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6  col-sm-4">
+                        <div class="form-group">
+                            <label for="">Nombres <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtNombres" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">                  
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Apellido paterno <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoPaterno" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Apellido materno <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtApellidoMaterno" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">                   
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Celular <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtCelular" maxlength="9">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Correo <span class="required_field">(*)</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtCorreo" maxlength="50">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Profesión <span class="required_field">(*)</span></label>
+                            <select class="form-control validar select2" id="cboProfesion"></select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Grado académico <span class="required_field">(*)</span></label>
+                            <select class="form-control validar" id="cboTipoOcupacion"></select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">                                                                             
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Ocupación y/o Centro laboral</label>
+                            <input type="text" class="form-control uppercase" id="txtDescripcionOcupacion" maxlength="150">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Pais <span class="required_field">(*)</span></label>
+                            <select class="form-control validar select2" id="cboPais"></select>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="">Ciudad</label>
+                            <input type="text" class="form-control uppercase" id="txtCiudad" maxlength="200">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarPersona" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalCargaMasiva">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Carga masiva</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">                  
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Plantilla (xlsx,Max 4Mb)</label>
+                            <input type="file" class="filestyle" id="filePlantilla"  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" data-buttonname="btn-default">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarCargaMasiva" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Plugins/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/plugins/select2/dist/js/i18n/es.js"></script>
+    <script>
+        var UrlValoresInicialesPersona = '@Url.Action("ValoresInicialesPersona", "Mantenimiento")';
+        var UrlListPersonaPaged = '@Url.Action("ListPersonaPaged", "Mantenimiento")';
+        var UrlSavePersona = '@Url.Action("SavePersona", "Mantenimiento")';
+        var UrlDeletePersona = '@Url.Action("DeletePersona", "Mantenimiento")';
+        var UrlSavePersonaMasivo = '@Url.Action("SavePersonaMasivo", "Mantenimiento")';
+        var UrlDescargarPlantillaErrores = '@Url.Action("DescargarPlantillaErrores", "Mantenimiento")';
+    </script>
+    <script src="~/js/pages/Mantenimiento/Persona.min.js?v=@ViewBag.NumeroRelease"></script>
+}
+

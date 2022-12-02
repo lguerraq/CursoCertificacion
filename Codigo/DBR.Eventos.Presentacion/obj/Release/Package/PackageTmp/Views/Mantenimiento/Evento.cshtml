@@ -1,0 +1,125 @@
+﻿@using DBR.Eventos.Comun;
+@{
+    ViewBag.Title = "Evento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1 style="text-transform: uppercase;">
+        @ViewBag.DescripcionHijo
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> @ViewBag.DescripcionPadre</a></li>
+        <li class="active">@ViewBag.DescripcionHijo</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="form-group">
+                        <a id="btnAgregarSuceso" class="btn btn-primary"><i class="fa fa-plus-circle"></i>  Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="min-height:calc(100vh - 250px);">
+                <table id="gridSucesos" class="table table-bordered table-striped dt-responsive nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th style="width:50%" class="ClNombreSuceso">Nombre</th>
+                            <th style="width:15%">Fecha</th>
+                            <th style="width:10%">Activo</th>
+                            <th style="width:10%">Foto</th>
+                            <th style="width:15%">Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalSuceso">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="lblTitleAgregarSuceso">Agregar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="formSuceso">
+                    <input type="hidden" value="0" id="txtIdSuceso" />
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Nombre<span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar" id="txtNombreSuceso" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Descripcion<span class="required_field">*</span></label>
+                            <textarea class="form-control validar" id="txtDescripcion" rows="4" maxlength="1000" placeholder="Esta sección se usara para publicitar el evento" autocomplete="off"></textarea>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Fecha<span class="required_field">*</span></label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control validar pull-right" id="txtFecha" readonly style="background-color:#FFF;">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Horas<span class="required_field">*</span></label>
+                            <input type="text" class="form-control validar uppercase" id="txtHoras" autocomplete="off">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Foto (Max 1Mb - alto780px - ancho 450px)<span class="required_field">*</span></label>
+                            <input type="file" class="filestyle" id="fileFoto" accept="image/*" data-buttonname="btn-default">
+                            <span class="help-block hide">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                <button type="button" id="btnGuardarSuceso" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        var urlListSucesoPaginado = '@Url.Action("ListSucesoPaginado", "Mantenimiento")';
+        var urlSaveSuceso = '@Url.Action("SaveSuceso", "Mantenimiento")';
+        var urlUpdateSuceso = '@Url.Action("UpdateSuceso", "Mantenimiento")';
+        var urlDeleteSuceso = '@Url.Action("DeleteSuceso", "Mantenimiento")';
+        var urUpdateEstadoSuceso = '@Url.Action("UpdateEstadoSuceso", "Mantenimiento")';
+        var urlGetSuceso = '@Url.Action("GetSuceso", "Mantenimiento")';
+        @{ 
+            var urlDescargaDocumentos = Configuracion.urlFileServerVer + @Configuracion.CodigoEmpresa + "/" + @NombreCarpeta.Suceso + "/";
+        }
+        var urlDescargaDocumentos = '@urlDescargaDocumentos'
+    </script>
+    <script src="~/js/pages/Mantenimiento/Suceso.min.js?v=@ViewBag.NumeroRelease"></script>
+}
+
+
+
+

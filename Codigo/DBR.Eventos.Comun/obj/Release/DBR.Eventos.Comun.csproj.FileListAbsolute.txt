@@ -4,3 +4,9 @@ D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Comun\ob
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Comun\obj\Release\DBR.Eventos.Comun.csproj.CoreCompileInputs.cache
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Comun\obj\Release\DBR.Eventos.Comun.dll
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Comun\obj\Release\DBR.Eventos.Comun.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\bin\Release\DBR.Eventos.Comun.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\bin\Release\DBR.Eventos.Comun.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Release\DBR.Eventos.Comun.csproj.AssemblyReference.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Release\DBR.Eventos.Comun.csproj.CoreCompileInputs.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Release\DBR.Eventos.Comun.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Comun\obj\Release\DBR.Eventos.Comun.pdb

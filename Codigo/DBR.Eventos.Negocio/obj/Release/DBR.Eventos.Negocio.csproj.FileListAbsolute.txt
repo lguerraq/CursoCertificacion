@@ -19,3 +19,24 @@ D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.csproj.CopyComplete
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.dll
 D:\PROYECTOS PERSONALES\02.AVASCONSULTORES\02.CODIGO FUENTE\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Negocio.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Negocio.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Negocio.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Evento.Modelo.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Comun.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Datos.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\EntityFramework.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\Tanneryd.BulkOperations.EF6.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Evento.Modelo.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Evento.Modelo.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Comun.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Datos.pdb
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\DBR.Eventos.Datos.dll.config
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\EntityFramework.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.csproj.AssemblyReference.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.csproj.CopyComplete
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.dll
+C:\Users\lmgue\Desktop\CursoCertificacion\Codigo\DBR.Eventos.Negocio\obj\Release\DBR.Eventos.Negocio.pdb
